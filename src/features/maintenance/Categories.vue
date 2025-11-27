@@ -1,42 +1,61 @@
 <script setup lang="ts">
-import stelasMobileIcon from '@/assets/icons/stelasMobile.svg'
-import type { CategoryItem } from './maintenance.types'
+import stelasMobileIcon from '@/assets/icons/stelasMobile.svg';
+import type { CategoryItem } from './maintenance.types';
 
 interface Props {
-    items: CategoryItem[]
+  items: CategoryItem[];
 }
 
-defineProps<Props>()
+defineProps<Props>();
 </script>
 
 <template>
-    <!-- Categories -->
-    <section class="py-10 w-full bg-white">
-        <div class="max-w-[1120px] mx-auto">
-            <h2 class="text-[32px] font-GarnettSemibold font-semibold text-amBluePremium leading-[42px]">
-                Nuestras Categorías
-            </h2>
+  <!-- Categories -->
+  <section class="py-10 w-full bg-white">
+    <div class="max-w-[1120px] mx-auto">
+      <h2
+        class="text-[32px] font-GarnettSemibold font-semibold text-amBluePremium leading-[42px]"
+      >
+        Nuestras Categorías
+      </h2>
 
-            <div class="mt-5 grid gap-x-8 gap-y-5 lg:grid-cols-2">
-                <article v-for="(cat, idx) in items" :key="idx"
-                    class="relative grid grid-cols-2 overflow-hidden rounded-sm bg-amBluePremium shadow-lg h-[230px]">
-                    <img :src="cat.img" alt="category" class="h-full w-full object-cover" />
+      <div class="mt-5 grid gap-x-8 gap-y-5 lg:grid-cols-2">
+        <article
+          v-for="(cat, idx) in items"
+          :key="idx"
+          class="relative grid grid-cols-2 overflow-hidden rounded-sm bg-amBluePremium shadow-lg h-[230px]"
+        >
+          <img
+            :src="cat.img"
+            alt="category"
+            class="h-full w-full object-cover"
+          />
 
-                    <div class="flex flex-col pt-[27px] pl-6 pr-16 text-white">
-                        <h3 class="text-2xl leading-[34px] font-GarnettSemibold font-semibold">
-                            {{ cat.title }}
-                        </h3>
+          <div class="flex flex-col pt-[27px] pl-6 pr-16 text-white">
+            <h3
+              class="text-2xl leading-[34px] font-GarnettSemibold font-semibold"
+            >
+              {{ cat.title }}
+            </h3>
 
-                        <p class="mt-2.5 text-sm leading-5">
-                            {{ cat.text }}
-                        </p>
+            <p class="mt-2.5 text-sm leading-5">
+              {{ cat.text }}
+            </p>
 
-                        <!-- Icono rojo -->
-                        <img :src="stelasMobileIcon" alt="estelas" class="absolute right-0 top-[17px]" />
-                        <img :src="stelasMobileIcon" alt="estelas" class="absolute right-0 top-10" />
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
+            <!-- Icono rojo -->
+            <img
+              :src="stelasMobileIcon"
+              alt="estelas"
+              class="absolute right-0 top-[17px]"
+            />
+            <img
+              :src="stelasMobileIcon"
+              alt="estelas"
+              class="absolute right-0 top-10"
+            />
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 </template>

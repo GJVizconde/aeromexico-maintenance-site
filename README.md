@@ -40,4 +40,5 @@ npm run preview
 - `pnpm dev` — Run Vite dev server.
 - `pnpm build` — Type-check with `vue-tsc` and generate the production build.
 - `pnpm preview` — Preview the production build locally.
+
 # aeromexico-maintenance-site
