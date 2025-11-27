@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Garnett';
+  src: url('@/assets/fonts/GarnettRegular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GarnettSemibold';
+  src: url('@/assets/fonts/GarnettSemibold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tailwind v4 THEME VARIABLES */
+@theme {
+  --font-sans: 'Garnett', 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-GarnettSemibold: 'GarnettSemibold', sans-serif;
+
+  --color-amBrandBlue: #0b2343;
+  --color-amBluePremium: #020c41;
+  --color-bgMain: #f2f2f0;
+  --color-amBlueInnovation: #035cf7;
+  --color-amNewLighterGray: #d9d9d7;
+  --color-amTextGray: #666665;
+  --color-warmWhite: #f2f2f0;
+  --color-rosaMexicano: #fa0073;
+  --color-heroBlue: #004990;
+  --color-amNewLightGray: #bfbfbd;
+  --color-searchBorder: rgba(255, 255, 255, 0.2);
+}
+
+@layer base {
+  :root {
+    font-family: 'Garnett', 'DM Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    @apply m-0 min-h-screen bg-bgMain;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  a:hover {
+    @apply text-rosaMexicano;
+  }
+}
