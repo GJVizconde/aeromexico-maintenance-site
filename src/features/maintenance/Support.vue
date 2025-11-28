@@ -1,35 +1,85 @@
 <script setup lang="ts">
-import stelasMobileIcon from '@/assets/icons/stelasMobile.svg';
+import { ref } from 'vue';
 import type { SupportItem } from './maintenance.types';
+
+import stelasMobileIcon from '@/assets/icons/stelasMobile.svg';
+import arrowIcon from '@/assets/icons/arrow.svg';
 
 interface Props {
   items: SupportItem[];
 }
 
 defineProps<Props>();
+
+const tabletSliderRef = ref<HTMLDivElement | null>(null);
+
+const scrollTablet = (direction: 'prev' | 'next') => {
+  const container = tabletSliderRef.value;
+  if (!container) return;
+
+  const firstCard = container.querySelector<HTMLElement>('article');
+  const cardWidth = firstCard?.clientWidth ?? 300;
+  const gap = 20; // matches md:gap-5
+  const offset = cardWidth + gap;
+
+  container.scrollBy({
+    left: direction === 'prev' ? -offset : offset,
+    behavior: 'smooth',
+  });
+};
 </script>
 
 <template>
   <!-- Support -->
   <section class="py-10 w-full">
     <div class="max-w-[1120px] mx-auto">
-      <h2
-        class="text-[32px] font-GarnettSemibold font-semibold text-amBluePremium leading-[42px]"
+      <div
+        class="flex items-center justify-between gap-3 md:max-w-[645px] md:mx-auto lg:max-w-none"
       >
-        Cómo apoyamos su negocio
-      </h2>
+        <h2
+          class="md:text-[22px] lg:text-[32px] font-GarnettSemibold font-semibold text-amBluePremium leading-[42px]"
+        >
+          Cómo apoyamos su negocio
+        </h2>
 
-      <div class="mt-5 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="hidden md:flex lg:hidden items-center gap-5">
+          <button
+            type="button"
+            class="flex h-8 w-8 items-center justify-center text-amBluePremium"
+            aria-label="Ver anterior"
+            @click="scrollTablet('prev')"
+          >
+            <img :src="arrowIcon" alt="" class="h-[16.45px] w-[21.06px]" />
+          </button>
+          <button
+            type="button"
+            class="flex h-8 w-8 items-center justify-center text-amBluePremium"
+            aria-label="Ver siguiente"
+            @click="scrollTablet('next')"
+          >
+            <img
+              :src="arrowIcon"
+              alt=""
+              class="h-[16.45px] w-[21.06px] rotate-180"
+            />
+          </button>
+        </div>
+      </div>
+
+      <div
+        ref="tabletSliderRef"
+        class="mt-5 grid grid-cols-1 gap-8 sm:grid-cols-2 md:flex md:flex-row md:gap-5 md:overflow-x-auto md:scroll-smooth md:w-full md:max-w-none md:pl-[calc((100%-645px)/2)] md:pr-0 lg:grid lg:grid-cols-4 lg:gap-8 lg:overflow-visible lg:max-w-none lg:mx-0 lg:px-0"
+      >
         <article
           v-for="(item, idx) in items"
           :key="idx"
-          class="group relative overflow-hidden rounded-sm shadow-lg"
+          class="group relative overflow-hidden rounded-sm shadow-lg md:shrink-0 lg:min-w-0 lg:max-w-none"
         >
           <!-- Imagen -->
           <img
             :src="item.img"
             alt=""
-            class="h-[382px] w-full object-cover transition duration-500 group-hover:scale-105"
+            class="h-[382px] w-[259px] lg:w-full object-cover transition duration-500 group-hover:scale-105"
           />
 
           <!-- Overlay opcional -->
@@ -38,7 +88,7 @@ defineProps<Props>();
           <!-- Panel azul dentro de la foto -->
           <div class="absolute left-[15px] right-[15px] bottom-[15px]">
             <div
-              class="flex items-start justify-between rounded-sm bg-amBluePremium pl-4 py-[15px] shadow-lg"
+              class="flex items-start justify-between max-w-[229px] lg:w-full rounded-sm bg-amBluePremium pl-4 py-[15px] shadow-lg"
             >
               <div>
                 <h3
