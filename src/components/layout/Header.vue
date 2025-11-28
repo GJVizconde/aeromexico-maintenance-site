@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import aeromexicoLogo from '@/assets/icons/new_aeromexico_business.svg';
+import amHeadLogo from '@/assets/icons/amHead.svg';
 
 interface Props {
   navItems: string[];
@@ -16,19 +17,22 @@ const emit = defineEmits<{
   <header
     class="flex items-center justify-between bg-amBluePremium h-[60px] px-6 text-white text-xs font-semibold"
   >
-    <div class="flex items-center">
+    <div class="flex items-center justify-center">
       <a href="/">
         <img
-          class="object-center min-w-[150px] pr-[9px]"
+          class="hidden lg:block object-center w-[150px] mr-[9px]"
           :src="aeromexicoLogo"
           alt="Aeromexico Business"
-          width="150"
-          height="17"
+        />
+        <img
+          class="lg:hidden object-center w-[30px] h-[22.91px] mr-[27px]"
+          :src="amHeadLogo"
+          alt="Aeromexico Business"
         />
       </a>
 
       <nav
-        class="hidden items-center lg:flex"
+        class="hidden items-center md:flex"
         aria-label="Navegación principal"
       >
         <ul class="flex gap-1">
