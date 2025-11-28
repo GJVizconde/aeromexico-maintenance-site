@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import aeromexicoLogo from '@/assets/icons/new_aeromexico_business.svg';
 import amHeadLogo from '@/assets/icons/amHead.svg';
+import burgerIcon from '@/assets/icons/burger.svg';
 
 interface Props {
   navItems: string[];
@@ -48,5 +49,8 @@ const emit = defineEmits<{
         </ul>
       </nav>
     </div>
+    <button type="button" class="md:hidden">
+      <img :src="burgerIcon" alt="" />
+    </button>
   </header>
 </template>
