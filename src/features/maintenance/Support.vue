@@ -37,12 +37,12 @@ const scrollTablet = (direction: 'prev' | 'next') => {
         class="flex items-center justify-between gap-3 md:max-w-[645px] md:mx-auto lg:max-w-none"
       >
         <h2
-          class="md:text-[22px] lg:text-[32px] font-GarnettSemibold font-semibold text-amBluePremium leading-[42px]"
+          class="md:text-[22px] lg:text-[32px] font-GarnettSemibold font-semibold text-amBluePremium md:leading-[42px]"
         >
           Cómo apoyamos su negocio
         </h2>
 
-        <div class="hidden md:flex lg:hidden items-center gap-5">
+        <div class="flex md:flex lg:hidden items-center gap-5">
           <button
             type="button"
             class="flex h-8 w-8 items-center justify-center text-amBluePremium"
@@ -68,12 +68,12 @@ const scrollTablet = (direction: 'prev' | 'next') => {
 
       <div
         ref="tabletSliderRef"
-        class="mt-5 grid grid-cols-1 gap-8 sm:grid-cols-2 md:flex md:flex-row md:gap-5 md:overflow-x-auto md:scroll-smooth md:w-full md:max-w-none md:pl-[calc((100%-645px)/2)] md:pr-0 lg:grid lg:grid-cols-4 lg:gap-8 lg:overflow-visible lg:max-w-none lg:mx-0 lg:px-0"
+        class="mt-5 flex gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory w-full md:w-full md:max-w-none md:pl-[calc((100%-645px)/2)] md:pr-0 lg:grid lg:grid-cols-4 lg:gap-8 lg:overflow-visible lg:max-w-none lg:mx-0 lg:px-0"
       >
         <article
           v-for="(item, idx) in items"
           :key="idx"
-          class="group relative overflow-hidden rounded-sm shadow-lg md:shrink-0 lg:min-w-0 lg:max-w-none"
+          class="group relative shrink-0 overflow-hidden rounded-sm shadow-lg snap-start md:shrink-0 lg:min-w-0 lg:max-w-none"
         >
           <!-- Imagen -->
           <img
