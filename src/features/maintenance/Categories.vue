@@ -12,7 +12,7 @@ defineProps<Props>();
 <template>
   <!-- Categories -->
   <section class="py-10 w-full bg-white">
-    <div class="max-w-[1120px] mx-auto">
+    <div class="md:max-w-[644px] lg:max-w-[1120px] mx-auto">
       <h2
         class="text-[32px] font-GarnettSemibold font-semibold text-amBluePremium leading-[42px]"
       >
@@ -23,7 +23,7 @@ defineProps<Props>();
         <article
           v-for="(cat, idx) in items"
           :key="idx"
-          class="relative grid grid-cols-2 overflow-hidden rounded-sm bg-amBluePremium shadow-lg h-[230px]"
+          class="relative grid grid-cols-[266px_1fr] lg:grid-cols-2 overflow-hidden rounded-sm bg-amBluePremium shadow-lg h-[134px] lg:h-[230px]"
         >
           <img
             :src="cat.img"
@@ -31,7 +31,9 @@ defineProps<Props>();
             class="h-full w-full object-cover"
           />
 
-          <div class="flex flex-col pt-[27px] pl-6 pr-16 text-white">
+          <div
+            class="flex flex-col pt-5 lg:pt-[27px] pl-5 lg:pl-6 pr-16 lg:pr-8 text-white"
+          >
             <h3
               class="text-2xl leading-[34px] font-GarnettSemibold font-semibold"
             >
