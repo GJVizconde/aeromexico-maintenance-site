@@ -23,7 +23,7 @@ withDefaults(defineProps<Props>(), {
     :is="as"
     :href="as === 'a' ? href : undefined"
     :disabled="as === 'button' ? disabled : undefined"
-    class="inline-flex items-center justify-center cursor-pointer rounded-md font-GarnettSemibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+    class="items-center justify-center cursor-pointer rounded-md font-GarnettSemibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
     :class="[
       // Variantes (no aplicamos nada si es 'custom')
       variant === 'primary' && 'bg-[#f90083] text-white hover:brightness-110',
