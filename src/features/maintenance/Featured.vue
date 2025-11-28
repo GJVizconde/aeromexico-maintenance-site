@@ -14,9 +14,9 @@ defineProps<Props>();
 <template>
   <!-- Featured -->
   <section class="w-full py-10">
-    <div class="max-w-[1120px] mx-auto">
+    <div class="md:max-w-[644px] lg:max-w-[1120px] mx-auto">
       <h2
-        class="text-[32px] font-GarnettSemibold font-semibold text-amBluePremium leading-[42px]"
+        class="md:text-[22px] lg:text-[32px] font-GarnettSemibold font-semibold text-amBluePremium leading-[42px]"
       >
         Contenido destacado
       </h2>
@@ -25,7 +25,10 @@ defineProps<Props>();
         <BaseCard
           v-for="(card, index) in items"
           :key="index"
-          class="pt-5 px-8 max-w-[352px] transition hover:-translate-y-0.5 hover:shadow-lg"
+          :class="[
+            'pt-5 px-8 max-w-[352px] transition hover:-translate-y-0.5 hover:shadow-lg',
+            index > 1 ? 'md:hidden lg:block' : '',
+          ]"
         >
           <p class="text-sm font-semibold text-amBlueInnovation leading-[22px]">
             {{ card.category }}
@@ -47,7 +50,9 @@ defineProps<Props>();
             {{ card.text }}
           </p>
 
-          <BaseButton class="mt-[19px] mb-5" size="sm"> PDF </BaseButton>
+          <BaseButton class="mt-[19px] mb-5 bg-amBlueInnovation" size="sm">
+            PDF
+          </BaseButton>
         </BaseCard>
       </div>
     </div>
