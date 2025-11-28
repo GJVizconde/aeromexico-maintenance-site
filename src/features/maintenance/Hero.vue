@@ -2,32 +2,35 @@
 import airplaneImg from '@/assets/images/airplane.png';
 import stelasIcon from '@/assets/icons/stelas.svg';
 import BaseButton from '@/components/ui/BaseButton.vue';
+import stelasMobileIcon from '@/assets/icons/stelasMobile.svg';
 </script>
 
 <template>
   <!-- Hero -->
   <section class="relative flex items-center">
     <img
-      class="h-[314px] w-full object-cover object-center"
+      class="h-[214px] md:h-[314px] w-full object-cover object-center"
       :src="airplaneImg"
       alt="Plane"
     />
 
     <div
-      class="flex absolute md:left-[62px] lg:left-20 top-5 md:max-w-[378px] lg:max-w-[514px] rounded-sm bg-amBluePremium text-white shadow-2xl"
+      class="flex absolute left-5 top-5 md:left-[62px] lg:left-20 md:top-5 max-w-[197px] h-[174px] md:h-auto md:max-w-[378px] lg:max-w-[514px] rounded-sm bg-amBluePremium text-white shadow-2xl"
     >
-      <div class="pl-[34px] py-5 md:pr-2 lg:pr-0">
-        <h2 class="md:text-lg lg:text-sm font-GarnettSemibold font-semibold">
+      <div class="px-5 md:px-0 md:pl-[34px] py-2.5 md:py-5 md:pr-2 lg:pr-0">
+        <h2
+          class="leading-[19px] text-[8px] md:text-lg lg:text-sm font-GarnettSemibold font-semibold"
+        >
           Servicio no disponible
         </h2>
 
         <h3
-          class="mt-5 md:text-[28px] lg:text-4xl font-GarnettSemibold font-semibold leading-tight"
+          class="my-2.5 md:mt-5 text-xs md:text-[28px] lg:text-4xl font-GarnettSemibold font-semibold leading-4.5 md:leading-tight"
         >
           Sitio en mantenimiento
         </h3>
 
-        <p class="md:mt-[15px] lg:mt-5 text-base">
+        <p class="text-[10px] md:mt-[15px] lg:mt-5 lg:text-base">
           Te sugerimos llamar a Global Support o escribirnos por el chat.
         </p>
 
@@ -39,12 +42,24 @@ import BaseButton from '@/components/ui/BaseButton.vue';
           Chat Aeroméxico
         </BaseButton>
 
-        <BaseButton class="hidden lg:hidden mt-[15px] py-3" variant="primary">
+        <BaseButton
+          class="inline-flex text-[11px] lg:hidden mt-4 md:mt-[15px] py-[6.5px] w-full md:w-auto"
+          variant="primary"
+        >
           Chat Aeroméxico
         </BaseButton>
       </div>
 
-      <img :src="stelasIcon" alt="estelas" class="relative h-full" />
+      <img
+        :src="stelasIcon"
+        alt="estelas"
+        class="relative hidden md:block h-full"
+      />
+      <!-- <img
+        :src="stelasMobileIcon"
+        alt="estelas"
+        class="relative w-full right-0 top-0 md:hidden"
+      /> -->
     </div>
   </section>
 </template>
