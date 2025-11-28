@@ -14,15 +14,15 @@ defineProps<Props>();
 <template>
   <!-- Featured -->
   <section class="w-full py-10">
-    <div class="md:max-w-[644px] lg:max-w-[1120px] mx-auto">
+    <div class="mx-5 md:max-w-[644px] lg:max-w-[1120px] md:mx-auto">
       <h2
-        class="md:text-[22px] lg:text-[32px] font-GarnettSemibold font-semibold text-amBluePremium leading-[42px]"
+        class="text-lg md:text-[22px] lg:text-[32px] font-GarnettSemibold font-semibold text-amBluePremium leading-[42px]"
       >
         Contenido destacado
       </h2>
 
       <div
-        class="mt-5 grid md:gap-8 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 select-none"
+        class="mt-5 grid gap-5 md:gap-8 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 select-none"
       >
         <BaseCard
           v-for="(card, index) in items"
@@ -39,7 +39,7 @@ defineProps<Props>();
           </p>
 
           <h3
-            class="mt-2 text-2xl font-GarnettSemibold font-semibold text-amBluePremium leading-[34px] mb-[13px]"
+            class="md:mt-2 text-2xl font-GarnettSemibold font-semibold text-amBluePremium leading-[34px] md:mb-[13px]"
           >
             {{ card.title }}
           </h3>
@@ -47,14 +47,17 @@ defineProps<Props>();
           <img
             :src="card.img"
             alt=""
-            class="h-[188px] w-full rounded-md object-cover"
+            class="hidden md:block h-[188px] w-full rounded-md object-cover"
           />
 
-          <p class="mt-5 text-sm leading-5 text-amTextGray">
+          <p class="md:mt-5 text-sm leading-5 text-amTextGray">
             {{ card.text }}
           </p>
 
-          <BaseButton class="mt-[19px] lg:mb-5 bg-amBlueInnovation" size="sm">
+          <BaseButton
+            class="mt-2 text-[11px] leading-[17px] md:mt-[19px] lg:mb-5 bg-amBlueInnovation"
+            size="sm"
+          >
             PDF
           </BaseButton>
         </BaseCard>
