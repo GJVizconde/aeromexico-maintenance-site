@@ -21,21 +21,25 @@ defineProps<Props>();
         Contenido destacado
       </h2>
 
-      <div class="mt-5 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 select-none">
+      <div
+        class="mt-5 grid md:gap-8 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 select-none"
+      >
         <BaseCard
           v-for="(card, index) in items"
           :key="index"
           :class="[
-            'pt-5 px-8 max-w-[352px] transition hover:-translate-y-0.5 hover:shadow-lg',
+            'pt-5 md:px-5 lg:px-8  lg:max-w-[352px] transition hover:-translate-y-0.5 hover:shadow-lg',
             index > 1 ? 'md:hidden lg:block' : '',
           ]"
         >
-          <p class="text-sm font-semibold text-amBlueInnovation leading-[22px]">
+          <p
+            class="text-sm lg:font-semibold text-amBlueInnovation leading-[22px]"
+          >
             {{ card.category }}
           </p>
 
           <h3
-            class="mt-2 text-2xl font-GarnettSemibold font-semibold text-amBluePremium leading-[34px]"
+            class="mt-2 text-2xl font-GarnettSemibold font-semibold text-amBluePremium leading-[34px] mb-[13px]"
           >
             {{ card.title }}
           </h3>
@@ -43,14 +47,14 @@ defineProps<Props>();
           <img
             :src="card.img"
             alt=""
-            class="mt-[13px] h-36 w-full rounded-md object-cover"
+            class="h-[188px] w-full rounded-md object-cover"
           />
 
           <p class="mt-5 text-sm leading-5 text-amTextGray">
             {{ card.text }}
           </p>
 
-          <BaseButton class="mt-[19px] mb-5 bg-amBlueInnovation" size="sm">
+          <BaseButton class="mt-[19px] lg:mb-5 bg-amBlueInnovation" size="sm">
             PDF
           </BaseButton>
         </BaseCard>
