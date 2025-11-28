@@ -316,11 +316,23 @@ import youtubeIcon from '@/assets/icons/youtube.svg';
         </div>
       </div>
 
-      <img
-        :src="stelasIcon"
-        alt="Estelas decorativas"
-        class="pointer-events-none absolute right-0 top-0 lg:h-full w-[18px] object-cover md:w-[26px]"
-      />
+      <div class="flex flex-col absolute right-0 top-0 lg:h-full">
+        <img
+          :src="stelasIcon"
+          alt="Estelas decorativas"
+          class="pointer-events- lg:h-full w-[18px] object-cover md:w-[26px]"
+        />
+        <img
+          :src="stelasIcon"
+          alt="Estelas decorativas"
+          class="pointer-events- lg:hidden w-[18px] object-cover md:w-[26px]"
+        />
+        <img
+          :src="stelasIcon"
+          alt="Estelas decorativas"
+          class="pointer-events- lg:hidden w-[18px] object-cover md:w-[26px]"
+        />
+      </div>
     </div>
 
     <div
