@@ -34,7 +34,7 @@ withDefaults(defineProps<Props>(), {
         'bg-transparent text-[#1c61ff] underline-offset-2 hover:underline',
 
       // Tamaños (no aplicamos nada si es 'none')
-      size === 'sm' && 'px-3 py-1.5 text-xs',
+      size === 'sm' && 'px-3 py-[6.5px] md:text-xs',
       size === 'md' && 'px-4 py-2 text-sm',
       size === 'lg' && 'px-[18px] py-5 text-sm',
     ]"
