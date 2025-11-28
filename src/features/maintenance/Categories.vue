@@ -12,9 +12,9 @@ defineProps<Props>();
 <template>
   <!-- Categories -->
   <section class="py-10 w-full bg-white">
-    <div class="md:max-w-[644px] lg:max-w-[1120px] mx-auto">
+    <div class="mx-5 md:max-w-[644px] lg:max-w-[1120px] md:mx-auto">
       <h2
-        class="text-[32px] font-GarnettSemibold font-semibold text-amBluePremium leading-[42px]"
+        class="text-lg md:text-[32px] font-GarnettSemibold font-semibold text-amBluePremium leading-[42px]"
       >
         Nuestras Categorías
       </h2>
@@ -23,16 +23,16 @@ defineProps<Props>();
         <article
           v-for="(cat, idx) in items"
           :key="idx"
-          class="relative grid grid-cols-[266px_1fr] lg:grid-cols-2 overflow-hidden rounded-sm bg-amBluePremium shadow-lg h-[134px] lg:h-[230px]"
+          class="relative grid grid-cols-[266px_1fr] lg:grid-cols-2 overflow-hidden rounded-sm bg-amBluePremium shadow-lg lg:h-[230px]"
         >
           <img
             :src="cat.img"
             alt="category"
-            class="h-full w-full object-cover"
+            class="hidden md:block h-full w-full object-cover"
           />
 
           <div
-            class="flex flex-col pt-5 lg:pt-[27px] pl-5 lg:pl-6 pr-16 lg:pr-8 text-white"
+            class="flex flex-col pt-5 pb-5 lg:pt-[27px] pl-5 lg:pl-6 pr-5 md:pr-16 lg:pr-8 text-white"
           >
             <h3
               class="text-2xl leading-[34px] font-GarnettSemibold font-semibold"
@@ -53,7 +53,7 @@ defineProps<Props>();
             <img
               :src="stelasMobileIcon"
               alt="estelas"
-              class="absolute right-0 top-10"
+              class="absolute right-0 top-8 md:top-10"
             />
           </div>
         </article>
