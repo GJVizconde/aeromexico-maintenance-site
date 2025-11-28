@@ -79,7 +79,7 @@ const scrollTablet = (direction: 'prev' | 'next') => {
           <img
             :src="item.img"
             alt=""
-            class="h-[382px] w-[259px] lg:w-full object-cover transition duration-500 group-hover:scale-105"
+            class="h-[382px] w-[256px] md:w-[259px] lg:w-full object-cover transition duration-500 group-hover:scale-105"
           />
 
           <!-- Overlay opcional -->
