@@ -34,7 +34,7 @@ const scrollTablet = (direction: 'prev' | 'next') => {
   <section class="py-10 w-full">
     <div class="max-w-[1120px] mx-auto">
       <div
-        class="flex items-center justify-between gap-3 md:max-w-[645px] md:mx-auto lg:max-w-none"
+        class="flex items-center mx-5 justify-between gap-3 md:max-w-[645px] md:mx-auto lg:max-w-none"
       >
         <h2
           class="md:text-[22px] lg:text-[32px] font-GarnettSemibold font-semibold text-amBluePremium md:leading-[42px]"
