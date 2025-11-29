@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import airplaneImg from '@/assets/images/airplane.png';
+import airplaneImg from '@/assets/images/airplane.webp';
 import stelasIcon from '@/assets/icons/stelas.svg';
 import BaseButton from '@/components/ui/BaseButton.vue';
 import stelasMobileIcon from '@/assets/icons/stelasMobile.svg';

@@ -1,14 +1,14 @@
-import distributionImg from '@/assets/images/distribution.jpg';
+import distributionImg from '@/assets/images/distribution.webp';
 
-import category1Img from '@/assets/images/category_1.jpg';
-import category2Img from '@/assets/images/category_2.jpg';
-import category3Img from '@/assets/images/category_3.jpg';
-import category4Img from '@/assets/images/category_4.jpg';
+import category1Img from '@/assets/images/category_1.webp';
+import category2Img from '@/assets/images/category_2.webp';
+import category3Img from '@/assets/images/category_3.webp';
+import category4Img from '@/assets/images/category_4.webp';
 
-import support1Img from '@/assets/images/support_1.jpg';
-import support2Img from '@/assets/images/support_2.jpg';
-import support3Img from '@/assets/images/support_3.jpg';
-import support4Img from '@/assets/images/support_4.jpg';
+import support1Img from '@/assets/images/support_1.webp';
+import support2Img from '@/assets/images/support_2.webp';
+import support3Img from '@/assets/images/support_3.webp';
+import support4Img from '@/assets/images/support_4.webp';
 
 import type {
   FeaturedItem,

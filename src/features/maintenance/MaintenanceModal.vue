@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import unpluggedImg from '@/assets/images/unplugged.png';
+import unpluggedImg from '@/assets/images/unplugged.webp';
 import modalCloseIcon from '@/assets/icons/modalClose.svg';
 
 interface Props {
