@@ -24,7 +24,7 @@ defineProps<Props>();
       >
         <Card
           v-for="(card, index) in items"
-          :key="index"
+          :key="card.id ?? index"
           :item="card"
           :class="index > 1 ? 'md:hidden lg:block' : ''"
         />
