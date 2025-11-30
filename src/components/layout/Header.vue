@@ -3,7 +3,7 @@ import aeromexicoLogo from '@/assets/icons/new-aeromexico-business.svg';
 import amHeadLogo from '@/assets/icons/am-head.svg';
 import burgerIcon from '@/assets/icons/burger.svg';
 import closeWhiteIcon from '@/assets/icons/close-white.svg';
-import { ref } from 'vue';
+import { onUnmounted, ref, watch } from 'vue';
 import MainMobileMenu from './MainMobileMenu.vue';
 
 interface Props {
@@ -19,9 +19,31 @@ const emit = defineEmits<{
   (event: 'open-mobile-menu', isOpen: boolean): void;
 }>();
 
+const updateBodyScroll = (isOpen: boolean) => {
+  if (typeof document === 'undefined') return;
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+};
+
+watch(
+  isMobileMenuOpen,
+  (isOpen) => {
+    updateBodyScroll(isOpen);
+  },
+  { immediate: true }
+);
+
+onUnmounted(() => {
+  updateBodyScroll(false);
+});
+
+const handleOpenMaintenance = () => {
+  isMobileMenuOpen.value = false;
+  emit('open-mobile-menu', isMobileMenuOpen.value);
+  emit('open-maintenance');
+};
+
 const handleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
-  console.log('isModalMenuOpen.value', isMobileMenuOpen.value);
   emit('open-mobile-menu', isMobileMenuOpen.value);
 };
 </script>
@@ -53,7 +75,7 @@ const handleMobileMenu = () => {
               <button
                 type="button"
                 class="rounded py-1.5 px-2.5 leading-[18px] hover:bg-searchBorder cursor-pointer font-GarnettSemibold font-semibold"
-                @click="emit('open-maintenance')"
+                @click="handleOpenMaintenance"
               >
                 {{ item }}
               </button>
@@ -85,9 +107,12 @@ const handleMobileMenu = () => {
     :style="{
       transform: isMobileMenuOpen ? 'translateX(0)' : 'translateX(130%)',
     }"
-    class="fixed top-[60px] right-0 h-full bg-white text-white transition-transform duration-700 z-50 md:hidden"
+    class="fixed top-[60px] right-0 h-full bg-white text-white transition-transform duration-700 z-50 md:hidden overflow-y-auto"
     style="width: 100%"
   >
-    <MainMobileMenu v-if="isMobileMenuOpen" />
+    <MainMobileMenu
+      v-if="isMobileMenuOpen"
+      @open-maintenance="handleOpenMaintenance"
+    />
   </div>
 </template>
