@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "titleKey": "featured-news.1.title",
+    "textKey": "featured-news.1.text",
+    "categoryKey": "featured-news.1.category",
+    "img": "distribution.webp",
+    "pdf": "maintace.pdf"
+  },
+  {
+    "id": "2",
+    "titleKey": "featured-news.2.title",
+    "textKey": "featured-news.2.text",
+    "categoryKey": "featured-news.2.category",
+    "img": "distribution.webp",
+    "pdf": "maintace.pdf"
+  },
+  {
+    "id": "3",
+    "titleKey": "featured-news.3.title",
+    "textKey": "featured-news.3.text",
+    "categoryKey": "featured-news.3.category",
+    "img": "distribution.webp",
+    "pdf": "maintace.pdf"
+  }
+]
