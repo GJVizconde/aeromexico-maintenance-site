@@ -46,7 +46,7 @@ const handleLinkClick = () => {
         >
           <button
             type="button"
-            class="cursor-pointer p-4 text-[#020C41] hover:text-amTextGray no-underline text-lg flex flex-start text-left w-full font-GarnettSemibold bg-transparent border-0 text-start"
+            class="cursor-pointer p-4 text-[#020C41] hover:text-amTextGray no-underline text-lg flex flex-start w-full font-GarnettSemibold bg-transparent border-0 text-start"
             @click="handleLinkClick"
           >
             {{ value.text }}
