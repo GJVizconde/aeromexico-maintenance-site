@@ -1,0 +1,27 @@
+[
+  {
+    "name": "news",
+    "label": "navbar.navigation-links.news",
+    "link": "/news"
+  },
+  {
+    "name": "products",
+    "label": "navbar.navigation-links.products",
+    "link": "/products"
+  },
+  {
+    "name": "policies",
+    "label": "navbar.navigation-links.policies",
+    "link": "/policies"
+  },
+  {
+    "name": "tools",
+    "label": "navbar.navigation-links.tools",
+    "link": "/tools"
+  },
+  {
+    "name": "ndc",
+    "label": "navbar.navigation-links.ndc",
+    "link": "/ndc/principal"
+  }
+]
