@@ -9,6 +9,8 @@ import support1Img from '@/assets/images/support-1.webp';
 import support2Img from '@/assets/images/support-2.webp';
 import support3Img from '@/assets/images/support-3.webp';
 import support4Img from '@/assets/images/support-4.webp';
+import navigationLinks from '@/data/navigationLinks.json';
+import { t } from '@/utils/i18n';
 
 import type {
   FeaturedItem,
@@ -16,13 +18,15 @@ import type {
   SupportItem,
 } from './maintenance.types';
 
-export const NAV_ITEMS: string[] = [
-  'Noticias',
-  'Productos',
-  'Políticas',
-  'Herramientas',
-  'NDC',
-];
+type NavigationLink = {
+  name: string;
+  label: string;
+  link: string;
+};
+
+export const NAV_ITEMS: string[] = (navigationLinks as NavigationLink[]).map(
+  ({ label }) => t(label)
+);
 
 export const FEATURED_ITEMS: FeaturedItem[] = Array.from({ length: 3 }).map(
   () => ({
