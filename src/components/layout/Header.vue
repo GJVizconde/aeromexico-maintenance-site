@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import aeromexicoLogo from '@/assets/icons/new_aeromexico_business.svg';
-import amHeadLogo from '@/assets/icons/amHead.svg';
+import aeromexicoLogo from '@/assets/icons/new-aeromexico-business.svg';
+import amHeadLogo from '@/assets/icons/am-head.svg';
 import burgerIcon from '@/assets/icons/burger.svg';
 
 interface Props {

@@ -14,7 +14,7 @@ import planeIcon from '@/assets/icons/plane.svg';
 import stelasIcon from '@/assets/icons/stelas.svg';
 import twitterIcon from '@/assets/icons/twitter.svg';
 import youtubeIcon from '@/assets/icons/youtube.svg';
-import caretDownIcon from '@/assets/icons/caretDown.svg';
+import caretDownIcon from '@/assets/icons/caret-down.svg';
 
 const mobileAccordion = ref<{ about: boolean; more: boolean }>({
   about: false,

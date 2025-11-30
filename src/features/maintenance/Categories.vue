@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import stelasMobileIcon from '@/assets/icons/stelasMobile.svg';
+import stelasMobileIcon from '@/assets/icons/stelas-mobile.svg';
 import type { CategoryItem } from './maintenance.types';
 
 interface Props {

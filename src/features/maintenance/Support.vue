@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import type { SupportItem } from './maintenance.types';
 
-import stelasMobileIcon from '@/assets/icons/stelasMobile.svg';
+import stelasMobileIcon from '@/assets/icons/stelas-mobile.svg';
 import arrowIcon from '@/assets/icons/arrow.svg';
 
 interface Props {

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import unpluggedImg from '@/assets/images/unplugged.webp';
-import modalCloseIcon from '@/assets/icons/modalClose.svg';
+import modalCloseIcon from '@/assets/icons/modal-close.svg';
 
 interface Props {
   modelValue: boolean;
