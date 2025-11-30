@@ -13,6 +13,14 @@ const links = (navigationLinks as NavigationLink[]).map((item) => ({
   text: t(item.label),
 }));
 
+const emit = defineEmits<{
+  (event: 'open-maintenance'): void;
+}>();
+
+const handleLinkClick = () => {
+  emit('open-maintenance');
+};
+
 // const currentPath =
 //   typeof window !== 'undefined' ? window.location.pathname : '';
 
@@ -36,12 +44,13 @@ const links = (navigationLinks as NavigationLink[]).map((item) => ({
           v-for="value in links"
           :key="value.name"
         >
-          <a
-            class="cursor-pointer p-4 text-[#020C41] hover:text-amTextGray no-underline text-lg flex flex-start text-left w-full font-GarnettSemibold"
-            :href="value.link"
+          <button
+            type="button"
+            class="cursor-pointer p-4 text-[#020C41] hover:text-amTextGray no-underline text-lg flex flex-start text-left w-full font-GarnettSemibold bg-transparent border-0 text-start"
+            @click="handleLinkClick"
           >
             {{ value.text }}
-          </a>
+          </button>
         </div>
       </div>
     </div>
