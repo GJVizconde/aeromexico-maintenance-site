@@ -1,0 +1,14 @@
+{
+  "navbar": {
+    "navigation-links": {
+      "news": "News",
+      "products": "Products",
+      "policies": "Policies",
+      "tools": "Tools",
+      "ndc": "NDC"
+    },
+    "side": {
+      "main-menu": "Main Menu"
+    }
+  }
+}
