@@ -1,0 +1,6 @@
+{
+  "badgeKey": "hero.badge",
+  "titleKey": "hero.title",
+  "descriptionKey": "hero.description",
+  "ctaLabelKey": "hero.cta"
+}
