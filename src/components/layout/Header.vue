@@ -84,7 +84,9 @@ const handleMobileMenu = () => {
         </nav>
       </div>
     </div>
-    <div class="flex items-center h-full border-l border-white/15">
+    <div
+      class="flex items-center h-full border-l border-white/15 md:border-none"
+    >
       <button
         type="button"
         class="md:hidden cursor-pointer h-full flex items-center justify-center px-[15px] ml-[15px] shrink-0"
