@@ -5,7 +5,7 @@
     "code": "es",
     "flag": "mx-flag.svg",
     "country": "México",
-    "locationn": "mx-es"
+    "location": "mx-es"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "code": "en",
     "flag": "us-flag.svg",
     "country": "United States",
-    "locationn": "us-en"
+    "location": "us-en"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "code": "pt",
     "flag": "br-flag.svg",
     "country": "Brasil",
-    "locationn": "br-pt"
+    "location": "br-pt"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "code": "fr",
     "flag": "fr-flag.svg",
     "country": "France",
-    "locationn": "fr-fr"
+    "location": "fr-fr"
   },
   {
     "id": 5,
@@ -37,6 +37,6 @@
     "code": "it",
     "flag": "it-flag.svg",
     "country": "Italia",
-    "locationn": "it-it"
+    "location": "it-it"
   }
 ]
