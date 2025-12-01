@@ -49,6 +49,10 @@ type FooterContent = {
 
 const content = footerData as FooterContent;
 
+const emit = defineEmits<{
+  (event: 'open-maintenance'): void;
+}>();
+
 const contactColumn = content.columns.find((col) => col.id === 'contact');
 const aboutColumn = content.columns.find((col) => col.id === 'about');
 const discoverColumn = content.columns.find((col) => col.id === 'discover');
@@ -123,6 +127,8 @@ const mobileAccordion = ref<{ about: boolean; more: boolean }>({
 const toggleMobileSection = (section: 'about' | 'more') => {
   mobileAccordion.value[section] = !mobileAccordion.value[section];
 };
+
+const openMaintenance = () => emit('open-maintenance');
 </script>
 
 <template>
@@ -148,6 +154,7 @@ const toggleMobileSection = (section: 'about' | 'more') => {
                 variant="custom"
                 size="none"
                 class="w-full flex cursor-pointer items-center justify-center gap-2.5 rounded bg-amBlueInnovation px-3 py-2.5 text-xs font-semibold leading-5 font-GarnettSemibold shadow-lg transition hover:brightness-110"
+                @click="openMaintenance"
               >
                 <img :src="chatIcon" alt="Chat" class="h-5 w-5" />
                 <span>{{ contactCopy.cta }}</span>
@@ -274,6 +281,7 @@ const toggleMobileSection = (section: 'about' | 'more') => {
                 variant="custom"
                 size="none"
                 class="flex cursor-pointer items-center justify-center gap-2.5 rounded-md bg-amBlueInnovation px-3 py-2.5 text-sm font-semibold leading-5 font-GarnettSemibold shadow-lg transition hover:brightness-110"
+                @click="openMaintenance"
               >
                 <img :src="chatIcon" alt="Chat" class="h-5 w-5" />
                 <span class="text-xs leading-5">{{ contactCopy.cta }}</span>
@@ -369,6 +377,7 @@ const toggleMobileSection = (section: 'about' | 'more') => {
                 variant="custom"
                 size="none"
                 class="mt-5 flex cursor-pointer items-center justify-center gap-2.5 rounded-md bg-amBlueInnovation px-4.5 py-5 text-sm font-semibold leading-5 font-GarnettSemibold shadow-lg transition hover:brightness-110"
+                @click="openMaintenance"
               >
                 <img :src="chatIcon" alt="Chat" class="h-5 w-5" />
                 <span>{{ contactCopy.cta }}</span>

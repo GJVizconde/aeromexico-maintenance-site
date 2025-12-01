@@ -37,7 +37,7 @@ const openMaintenanceModal = () => {
       </section>
     </main>
 
-    <Footer />
+    <Footer @open-maintenance="openMaintenanceModal" />
 
     <MaintenanceModal v-model="isMaintenanceOpen" />
   </div>
