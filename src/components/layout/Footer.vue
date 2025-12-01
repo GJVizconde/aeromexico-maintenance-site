@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import BaseButton from '@/components/ui/BaseButton.vue';
 import allyIcon from '@/assets/icons/ally.svg';
 import chatIcon from '@/assets/icons/chat.svg';
@@ -15,6 +15,105 @@ import stelasIcon from '@/assets/icons/stelas.svg';
 import twitterIcon from '@/assets/icons/twitter.svg';
 import youtubeIcon from '@/assets/icons/youtube.svg';
 import caretDownIcon from '@/assets/icons/caret-down.svg';
+import footerData from '@/data/footer.json';
+import { t } from '@/utils/i18n';
+
+type FooterLink = {
+  name: string;
+  labelKey: string;
+  link: string;
+  icon?: string;
+};
+
+type FooterColumn = {
+  id: string;
+  titleKey: string;
+  subtitleKey?: string;
+  ctaLabelKey?: string;
+  socialLabelKey?: string;
+  descriptionKey?: string;
+  links?: FooterLink[];
+};
+
+type FooterRow = {
+  titleKey: string;
+  certifiedKey: string;
+  links: FooterLink[];
+};
+
+type FooterContent = {
+  columns: FooterColumn[];
+  social: FooterLink[];
+  rows: FooterRow[];
+};
+
+const content = footerData as FooterContent;
+
+const contactColumn = content.columns.find((col) => col.id === 'contact');
+const aboutColumn = content.columns.find((col) => col.id === 'about');
+const discoverColumn = content.columns.find((col) => col.id === 'discover');
+const footerRow = content.rows[0];
+
+const iconMap: Record<string, string> = {
+  'invest.svg': investIcon,
+  'ally.svg': allyIcon,
+  'compliance.svg': complianceIcon,
+  'fly.svg': flyIcon,
+  'plane.svg': planeIcon,
+  'fb.svg': fbIcon,
+  'twitter.svg': twitterIcon,
+  'instagram.svg': instagramIcon,
+  'li.svg': liIcon,
+  'youtube.svg': youtubeIcon,
+};
+
+const mapIcon = (icon?: string) => (icon ? iconMap[icon] ?? '' : '');
+
+const contactCopy = computed(() => ({
+  title: t(contactColumn?.titleKey ?? ''),
+  subtitle: t(contactColumn?.subtitleKey ?? ''),
+  cta: t(contactColumn?.ctaLabelKey ?? ''),
+  socialLabel: t(contactColumn?.socialLabelKey ?? ''),
+}));
+
+const aboutLinks = computed(() =>
+  (aboutColumn?.links ?? []).map((link) => ({
+    ...link,
+    iconSrc: mapIcon(link.icon),
+    label: t(link.labelKey),
+  }))
+);
+
+const discoverLinks = computed(() =>
+  (discoverColumn?.links ?? []).map((link) => ({
+    ...link,
+    label: t(link.labelKey),
+  }))
+);
+
+const discoverCopy = computed(() => ({
+  title: t(discoverColumn?.titleKey ?? ''),
+  description: discoverColumn?.descriptionKey
+    ? t(discoverColumn.descriptionKey)
+    : '',
+}));
+
+const socialLinks = computed(() =>
+  (content.social ?? []).map((link) => ({
+    ...link,
+    iconSrc: mapIcon(link.icon),
+  }))
+);
+
+const bottomCopy = computed(() => ({
+  title: t(footerRow?.titleKey ?? ''),
+  certified: t(footerRow?.certifiedKey ?? ''),
+  links:
+    footerRow?.links.map((link) => ({
+      ...link,
+      label: t(link.labelKey),
+    })) ?? [],
+}));
 
 const mobileAccordion = ref<{ about: boolean; more: boolean }>({
   about: false,
@@ -39,11 +138,10 @@ const toggleMobileSection = (section: 'about' | 'more') => {
               <h3
                 class="text-[21px] font-GarnettSemibold font-semibold leading-[100%] text-warmWhite"
               >
-                ¿Tienes preguntas?
+                {{ contactCopy.title }}
               </h3>
               <p class="text-[10px] leading-4 text-warmWhite/60">
-                Si tu agencia cuenta con el servicio de Global Sales Support haz
-                clic en el siguiente botón.
+                {{ contactCopy.subtitle }}
               </p>
               <BaseButton
                 as="button"
@@ -51,8 +149,8 @@ const toggleMobileSection = (section: 'about' | 'more') => {
                 size="none"
                 class="w-full flex cursor-pointer items-center justify-center gap-2.5 rounded bg-amBlueInnovation px-3 py-2.5 text-xs font-semibold leading-5 font-GarnettSemibold shadow-lg transition hover:brightness-110"
               >
-                <img :src="chatIcon" alt="Chat en vivo" class="h-5 w-5" />
-                <span>Chat en vivo</span>
+                <img :src="chatIcon" alt="Chat" class="h-5 w-5" />
+                <span>{{ contactCopy.cta }}</span>
               </BaseButton>
             </div>
 
@@ -60,23 +158,22 @@ const toggleMobileSection = (section: 'about' | 'more') => {
               class="flex flex-col gap-2.5 border-b border-white/15 pb-8 mt-8"
             >
               <span class="text-[11px] leading-[100%] text-warmWhite">
-                Síguenos en
+                {{ contactCopy.socialLabel }}
               </span>
               <div class="flex items-center gap-5 text-warmWhite">
-                <a href="#" aria-label="Facebook">
-                  <img :src="fbIcon" alt="Facebook" class="h-3 w-3" />
-                </a>
-                <a href="#" aria-label="Twitter">
-                  <img :src="twitterIcon" alt="Twitter" class="h-3 w-3" />
-                </a>
-                <a href="#" aria-label="Instagram">
-                  <img :src="instagramIcon" alt="Instagram" class="h-3 w-3" />
-                </a>
-                <a href="#" aria-label="LinkedIn">
-                  <img :src="liIcon" alt="LinkedIn" class="h-3 w-3" />
-                </a>
-                <a href="#" aria-label="YouTube">
-                  <img :src="youtubeIcon" alt="YouTube" class="h-3 w-3" />
+                <a
+                  v-for="social in socialLinks"
+                  :key="social.name"
+                  :href="social.link"
+                  target="_blank"
+                  rel="noreferrer"
+                  :aria-label="social.name"
+                >
+                  <img
+                    :src="social.iconSrc"
+                    :alt="social.name"
+                    class="h-3 w-3"
+                  />
                 </a>
               </div>
             </div>
@@ -91,11 +188,11 @@ const toggleMobileSection = (section: 'about' | 'more') => {
                   <span
                     class="text-xs font-GarnettSemibold font-semibold leading-[100%]"
                   >
-                    Sobre Aeroméxico
+                    {{ t(aboutColumn?.titleKey ?? '') }}
                   </span>
                   <img
                     :src="caretDownIcon"
-                    alt="Alternar Sobre Aeroméxico"
+                    :alt="t(aboutColumn?.titleKey ?? '')"
                     class="h-1.5 w-2.5 transition-transform duration-200"
                     :class="mobileAccordion.about ? 'rotate-180' : 'rotate-0'"
                   />
@@ -104,41 +201,16 @@ const toggleMobileSection = (section: 'about' | 'more') => {
                   v-if="mobileAccordion.about"
                   class="mt-4 flex flex-col gap-3 text-xs text-warmWhite/60"
                 >
-                  <a class="flex items-center gap-3" href="#">
-                    <img
-                      :src="investIcon"
-                      alt="Inversionistas"
-                      class="h-5 w-5"
-                    />
-                    <span>Inversionistas</span>
-                  </a>
-                  <a class="flex items-center gap-3" href="#">
-                    <img
-                      :src="allyIcon"
-                      alt="Alianzas comerciales"
-                      class="h-5 w-5"
-                    />
-                    <span>Alianzas comerciales</span>
-                  </a>
-                  <a class="flex items-center gap-3" href="#">
-                    <img
-                      :src="complianceIcon"
-                      alt="Compliance"
-                      class="h-5 w-5"
-                    />
-                    <span>Compliance</span>
-                  </a>
-                  <a class="flex items-center gap-3" href="#">
-                    <img
-                      :src="flyIcon"
-                      alt="Vuela con nosotros"
-                      class="h-5 w-5"
-                    />
-                    <span>Vuela con nosotros</span>
-                  </a>
-                  <a class="flex items-center gap-3" href="#">
-                    <img :src="planeIcon" alt="Nuestra flota" class="h-5 w-5" />
-                    <span>Nuestra flota</span>
+                  <a
+                    v-for="link in aboutLinks"
+                    :key="link.name"
+                    class="flex items-center gap-3"
+                    :href="link.link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img :src="link.iconSrc" :alt="link.label" class="h-5 w-5" />
+                    <span>{{ link.label }}</span>
                   </a>
                 </div>
               </div>
@@ -152,11 +224,11 @@ const toggleMobileSection = (section: 'about' | 'more') => {
                   <span
                     class="text-xs font-GarnettSemibold font-semibold leading-[100%]"
                   >
-                    Descubre más de Aeroméxico
+                    {{ discoverCopy.title }}
                   </span>
                   <img
                     :src="caretDownIcon"
-                    alt="Alternar Descubre más de Aeroméxico"
+                    :alt="discoverCopy.title"
                     class="h-1.5 w-2.5 transition-transform duration-200"
                     :class="mobileAccordion.more ? 'rotate-180' : 'rotate-0'"
                   />
@@ -166,13 +238,19 @@ const toggleMobileSection = (section: 'about' | 'more') => {
                   class="mt-4 flex flex-col gap-3 text-xs text-warmWhite/60"
                 >
                   <p class="text-xs leading-4 text-warmWhite/80">
-                    Consulta las guías de nuestro centro de soporte (CAAV):
+                    {{ discoverCopy.description }}
                   </p>
                   <ul class="flex flex-col gap-2">
-                    <li><a href="#" class="block">México</a></li>
-                    <li><a href="#" class="block">Estados Unidos</a></li>
-                    <li><a href="#" class="block">Europa/Asia</a></li>
-                    <li><a href="#" class="block">Latinoamérica</a></li>
+                    <li v-for="link in discoverLinks" :key="link.name">
+                      <a
+                        :href="link.link"
+                        class="block"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {{ link.label }}
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -182,7 +260,6 @@ const toggleMobileSection = (section: 'about' | 'more') => {
 
         <!-- Tablet layout -->
         <div class="hidden md:block lg:hidden md:pt-[24.25px]">
-          <!-- CTA -->
           <div
             class="flex md:flex-col md:justify-between md:pb-4.5 border-b border-white/15"
           >
@@ -190,7 +267,7 @@ const toggleMobileSection = (section: 'about' | 'more') => {
               <h3
                 class="text-[21px] font-GarnettSemibold font-semibold leading-8"
               >
-                ¿Tienes preguntas?
+                {{ contactCopy.title }}
               </h3>
               <BaseButton
                 as="button"
@@ -198,131 +275,78 @@ const toggleMobileSection = (section: 'about' | 'more') => {
                 size="none"
                 class="flex cursor-pointer items-center justify-center gap-2.5 rounded-md bg-amBlueInnovation px-3 py-2.5 text-sm font-semibold leading-5 font-GarnettSemibold shadow-lg transition hover:brightness-110"
               >
-                <img :src="chatIcon" alt="Chat en vivo" class="h-5 w-5" />
-                <span class="text-xs leading-5">Chat en vivo</span>
+                <img :src="chatIcon" alt="Chat" class="h-5 w-5" />
+                <span class="text-xs leading-5">{{ contactCopy.cta }}</span>
               </BaseButton>
             </div>
             <div class="text-[10px] leading-4 text-warmWhite/60">
-              <p>Si tu agencia cuenta con el servicio de Global</p>
-              <p>sales Support haz clic en el siguiente botón</p>
+              <p>{{ contactCopy.subtitle }}</p>
             </div>
           </div>
 
-          <!-- Social -->
           <div
             class="mt-8 pb-8 flex items-center gap-3 text-warmWhite border-b border-white/15"
           >
-            <span class="text-[11px] leading-4.5">Síguenos en</span>
+            <span class="text-[11px] leading-4.5">{{ contactCopy.socialLabel }}</span>
             <div class="flex items-center gap-4.5">
-              <a href="#" aria-label="Facebook">
-                <img :src="fbIcon" alt="Facebook" class="h-3 w-3" />
-              </a>
-              <a href="#" aria-label="Twitter">
-                <img :src="twitterIcon" alt="Twitter" class="h-3 w-3" />
-              </a>
-              <a href="#" aria-label="Instagram">
-                <img :src="instagramIcon" alt="Instagram" class="h-3 w-3" />
-              </a>
-              <a href="#" aria-label="LinkedIn">
-                <img :src="liIcon" alt="LinkedIn" class="h-3 w-3" />
-              </a>
-              <a href="#" aria-label="YouTube">
-                <img :src="youtubeIcon" alt="YouTube" class="h-3 w-3" />
+              <a
+                v-for="social in socialLinks"
+                :key="social.name"
+                :href="social.link"
+                target="_blank"
+                rel="noreferrer"
+                :aria-label="social.name"
+              >
+                <img :src="social.iconSrc" :alt="social.name" class="h-3 w-3" />
               </a>
             </div>
           </div>
 
-          <!-- Links -->
           <div
             class="mt-6 grid gap-8 pt-2 md:grid-cols-[0.7fr_1.3fr] md:items-start"
           >
             <div class="md:border-r md:border-white/15">
               <h3 class="text-lg font-semibold leading-7 font-GarnettSemibold">
-                Sobre Aeroméxico
+                {{ t(aboutColumn?.titleKey ?? '') }}
               </h3>
               <ul
                 class="mt-5 flex flex-col gap-1.5 text-xs leading-[17px] text-warmWhite"
               >
-                <li>
-                  <a class="flex items-center gap-3 py-[6.75px]" href="#">
+                <li v-for="link in aboutLinks" :key="link.name">
+                  <a
+                    class="flex items-center gap-3 py-[6.75px]"
+                    :href="link.link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <img
-                      :src="investIcon"
-                      alt="Inversionistas"
+                      :src="link.iconSrc"
+                      :alt="link.label"
                       class="h-[25px] w-[25px]"
                     />
-                    <span>Inversionistas</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="flex items-center gap-3 py-[6.75px]" href="#">
-                    <img
-                      :src="allyIcon"
-                      alt="Alianzas comerciales"
-                      class="h-[25px] w-[25px]"
-                    />
-                    <span>Alianzas comerciales</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="flex items-center gap-3 py-[6.75px]" href="#">
-                    <img
-                      :src="complianceIcon"
-                      alt="Compliance"
-                      class="h-[25px] w-[25px]"
-                    />
-                    <span>Compliance</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="flex items-center gap-3 py-[6.75px]" href="#">
-                    <img
-                      :src="flyIcon"
-                      alt="Vuela con nosotros"
-                      class="h-[25px] w-[25px]"
-                    />
-                    <span>Vuela con nosotros</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="flex items-center gap-3 py-[6.75px]" href="#">
-                    <img
-                      :src="planeIcon"
-                      alt="Nuestra flota"
-                      class="h-[25px] w-[25px]"
-                    />
-                    <span>Nuestra flota</span>
+                    <span>{{ link.label }}</span>
                   </a>
                 </li>
               </ul>
             </div>
 
-            <div class="">
+            <div>
               <h3
                 class="text-[11px] pt-[7px] font-GarnettSemibold font-semibold leading-[100%]"
               >
-                Descubre más de Aeroméxico
+                {{ discoverCopy.title }}
               </h3>
               <ul
                 class="mt-2 flex flex-col gap-3 text-[11px] text-warmWhite md:mt-3 py-[5px] leading-4"
               >
-                <li>
-                  <a href="#" class="block py-[5px]">
-                    Documentación para Agencias de Viajes (CAAV) México
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="block py-[5px]">
-                    Documentación para Agencias de Viajes (CAAV) Estados Unidos
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="block py-[5px]">
-                    Documentación para Agencias de Viajes (CAAV) Europa/Asia
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="block py-[5px]">
-                    Documentación para Agencias de Viajes (CAAV) Latinoamérica
+                <li v-for="link in discoverLinks" :key="link.name">
+                  <a
+                    :href="link.link"
+                    class="block py-[5px]"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {{ link.label }}
                   </a>
                 </li>
               </ul>
@@ -330,17 +354,15 @@ const toggleMobileSection = (section: 'about' | 'more') => {
           </div>
         </div>
 
-        <!-- Desktop layout (igual al original) -->
+        <!-- Desktop layout -->
         <div class="hidden lg:block">
           <div class="grid w-full grid-cols-[30%_25%_40%] gap-8 pt-2">
-            <!-- Col 1 -->
             <div class="border-r border-white/15 pr-10">
               <h3 class="text-lg font-semibold leading-7 font-GarnettSemibold">
-                ¿Tienes preguntas?
+                {{ contactCopy.title }}
               </h3>
               <p class="mt-2.5 text-[10px] leading-4 text-warmWhite/60">
-                Si tu agencia cuenta con el servicio de Global Sales Support haz
-                clic en el siguiente botón.
+                {{ contactCopy.subtitle }}
               </p>
               <BaseButton
                 as="button"
@@ -348,123 +370,73 @@ const toggleMobileSection = (section: 'about' | 'more') => {
                 size="none"
                 class="mt-5 flex cursor-pointer items-center justify-center gap-2.5 rounded-md bg-amBlueInnovation px-4.5 py-5 text-sm font-semibold leading-5 font-GarnettSemibold shadow-lg transition hover:brightness-110"
               >
-                <img :src="chatIcon" alt="Chat en vivo" class="h-5 w-5" />
-                <span>Chat en vivo</span>
+                <img :src="chatIcon" alt="Chat" class="h-5 w-5" />
+                <span>{{ contactCopy.cta }}</span>
               </BaseButton>
 
               <div class="mt-[30.5px] flex flex-col gap-2.5 text-warmWhite">
-                <span class="text-xs font-normal leading-4.5">Síguenos en</span>
+                <span class="text-xs font-normal leading-4.5">{{
+                  contactCopy.socialLabel
+                }}</span>
                 <div class="flex items-center gap-5 text-lg">
-                  <a href="#" aria-label="Facebook"
-                    ><img :src="fbIcon" alt="Facebook"
-                  /></a>
-                  <a href="#" aria-label="Twitter"
-                    ><img :src="twitterIcon" alt="Twitter"
-                  /></a>
-                  <a href="#" aria-label="Instagram"
-                    ><img :src="instagramIcon" alt="Instagram"
-                  /></a>
-                  <a href="#" aria-label="LinkedIn"
-                    ><img :src="liIcon" alt="LinkedIn"
-                  /></a>
-                  <a href="#" aria-label="YouTube"
-                    ><img :src="youtubeIcon" alt="YouTube"
-                  /></a>
+                  <a
+                    v-for="social in socialLinks"
+                    :key="social.name"
+                    :href="social.link"
+                    target="_blank"
+                    rel="noreferrer"
+                    :aria-label="social.name"
+                  >
+                    <img :src="social.iconSrc" :alt="social.name" />
+                  </a>
                 </div>
               </div>
             </div>
 
-            <!-- Col 2 -->
             <div class="border-r border-white/15">
               <h3
                 class="mb-5 text-lg font-semibold leading-7 font-GarnettSemibold"
               >
-                Sobre Aeroméxico
+                {{ t(aboutColumn?.titleKey ?? '') }}
               </h3>
               <ul
                 class="flex flex-col gap-3 text-xs leading-4.5 text-warmWhite"
               >
-                <li>
-                  <a class="flex items-center gap-3" href="#">
+                <li v-for="link in aboutLinks" :key="link.name">
+                  <a
+                    class="flex items-center gap-3"
+                    :href="link.link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <img
-                      :src="investIcon"
-                      alt="Inversionistas"
+                      :src="link.iconSrc"
+                      :alt="link.label"
                       class="h-[25px] w-[25px]"
                     />
-                    <span>Inversionistas</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="flex items-center gap-3" href="#">
-                    <img
-                      :src="allyIcon"
-                      alt="Alianzas comerciales"
-                      class="h-[25px] w-[25px]"
-                    />
-                    <span>Alianzas comerciales</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="flex items-center gap-3" href="#">
-                    <img
-                      :src="complianceIcon"
-                      alt="Compliance"
-                      class="h-[25px] w-[25px]"
-                    />
-                    <span>Compliance</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="flex items-center gap-3" href="#">
-                    <img
-                      :src="flyIcon"
-                      alt="Vuela con nosotros"
-                      class="h-[25px] w-[25px]"
-                    />
-                    <span>Vuela con nosotros</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="flex items-center gap-3" href="#">
-                    <img
-                      :src="planeIcon"
-                      alt="Nuestra flota"
-                      class="h-[25px] w-[25px]"
-                    />
-                    <span>Nuestra flota</span>
+                    <span>{{ link.label }}</span>
                   </a>
                 </li>
               </ul>
             </div>
 
-            <!-- Col 3 -->
             <div>
               <h3
                 class="mb-5 text-lg font-semibold leading-7 font-GarnettSemibold"
               >
-                Descubre más de Aeroméxico
+                {{ discoverCopy.title }}
               </h3>
               <ul
                 class="flex flex-col gap-2 text-[10px] leading-4 text-warmWhite"
               >
-                <li>
-                  <a href="#" class="block py-1.5">
-                    Documentación para Agencias de Viajes (CAAV) México
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="block py-1.5">
-                    Documentación para Agencias de Viajes (CAAV) Estados Unidos
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="block py-1.5">
-                    Documentación para Agencias de Viajes (CAAV) Europa/Asia
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="block py-1.5">
-                    Documentación para Agencias de Viajes (CAAV) Latinoamérica
+                <li v-for="link in discoverLinks" :key="link.name">
+                  <a
+                    :href="link.link"
+                    class="block py-1.5"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {{ link.label }}
                   </a>
                 </li>
               </ul>
@@ -501,31 +473,38 @@ const toggleMobileSection = (section: 'about' | 'more') => {
         class="mx-auto flex md:max-w-[644px] max-w-[1120px] flex-col items-center justify-between gap-3 lg:px-6 md:flex-row"
       >
         <p class="hidden md:block md:text-left">
-          © 2023 Aeroméxico. Todos los derechos reservados |
-          <a href="#" class="underline-offset-2 hover:underline">Legal</a> |
-          <a href="#" class="underline-offset-2 hover:underline"
-            >Aviso de privacidad</a
-          >
-          |
-          <a href="#" class="underline-offset-2 hover:underline"
-            >Sitio accesible</a
-          >
+          {{ bottomCopy.title }}
+          <span v-for="(link, idx) in bottomCopy.links" :key="link.name">
+            <span v-if="idx === 0"> | </span>
+            <a
+              :href="link.link"
+              class="underline-offset-2 hover:underline"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {{ link.label }}
+            </a>
+            <span v-if="idx < bottomCopy.links.length - 1"> | </span>
+          </span>
         </p>
         <div class="text-center leading-6.5 text-warmWhite md:hidden">
-          <p>© 2023 Aeroméxico. Todos los derechos reservados</p>
+          <p>{{ bottomCopy.title }}</p>
           <p>
-            <a href="#" class="underline-offset-2 hover:underline">Legal</a> |
-            <a href="#" class="underline-offset-2 hover:underline"
-              >Aviso de privacidad</a
-            >
-            |
-            <a href="#" class="underline-offset-2 hover:underline"
-              >Sitio accesible</a
-            >
+            <template v-for="(link, idx) in bottomCopy.links" :key="link.name">
+              <a
+                :href="link.link"
+                class="underline-offset-2 hover:underline"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {{ link.label }}
+              </a>
+              <span v-if="idx < bottomCopy.links.length - 1"> | </span>
+            </template>
           </p>
         </div>
         <div class="flex items-center gap-2">
-          <span>Certificados por</span>
+          <span>{{ bottomCopy.certified }}</span>
           <img :src="pciLogo" alt="PCI" class="h-6.5 w-6.5" />
         </div>
       </div>

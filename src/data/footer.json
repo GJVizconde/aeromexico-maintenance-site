@@ -1,0 +1,104 @@
+{
+  "columns": [
+    {
+      "id": "contact",
+      "titleKey": "footer.contact.title",
+      "subtitleKey": "footer.contact.subtitle",
+      "ctaLabelKey": "footer.contact.cta",
+      "socialLabelKey": "footer.contact.social"
+    },
+    {
+      "id": "about",
+      "titleKey": "footer.about.title",
+      "links": [
+        {
+          "name": "investors",
+          "labelKey": "footer.links.investors",
+          "icon": "invest.svg",
+          "link": "https://aeromexico.com/es-mx/inversionistas"
+        },
+        {
+          "name": "alliances",
+          "labelKey": "footer.links.alliances",
+          "icon": "ally.svg",
+          "link": "https://aeromexico.com/es-mx/vuela-con-nosotros/otras-alianzas"
+        },
+        {
+          "name": "compliance",
+          "labelKey": "footer.links.compliance",
+          "icon": "compliance.svg",
+          "link": "https://compliance.aeromexico.com/?_ga=2.154051640.1628337106.1608067820-361651239.1599170126"
+        },
+        {
+          "name": "fly-with-us",
+          "labelKey": "footer.links.fly-with-us",
+          "icon": "fly.svg",
+          "link": "https://aeromexico.com/es-mx/vuela-con-nosotros"
+        },
+        {
+          "name": "fleet",
+          "labelKey": "footer.links.fleet",
+          "icon": "plane.svg",
+          "link": "https://aeromexico.com/es-mx/vuela-con-nosotros/flota-aeromexico"
+        }
+      ]
+    },
+    {
+      "id": "discover",
+      "titleKey": "footer.discover.title",
+      "descriptionKey": "footer.discover.description",
+      "links": [
+        {
+          "name": "agency-mx",
+          "labelKey": "footer.links.agency-mx",
+          "link": "https://vuela.aeromexico.com/agencias-de-viaje-mexico/"
+        },
+        {
+          "name": "agency-us",
+          "labelKey": "footer.links.agency-us",
+          "link": "https://vuela.aeromexico.com/agencias-de-viaje-norteamerica/"
+        },
+        {
+          "name": "agency-eur",
+          "labelKey": "footer.links.agency-eur",
+          "link": "https://vuela.aeromexico.com/agencias-de-viaje-europa/"
+        },
+        {
+          "name": "agency-lat",
+          "labelKey": "footer.links.agency-lat",
+          "link": "https://vuela.aeromexico.com/agencias-de-viaje-latam/"
+        }
+      ]
+    }
+  ],
+  "social": [
+    { "name": "facebook", "icon": "fb.svg", "link": "https://www.facebook.com/AeromexicoMX" },
+    { "name": "twitter", "icon": "twitter.svg", "link": "https://twitter.com/aeromexico" },
+    { "name": "instagram", "icon": "instagram.svg", "link": "https://www.instagram.com/aeromexico/" },
+    { "name": "linkedin", "icon": "li.svg", "link": "https://www.linkedin.com/company/aeromexico" },
+    { "name": "youtube", "icon": "youtube.svg", "link": "https://www.youtube.com/user/Aeromexico" }
+  ],
+  "rows": [
+    {
+      "titleKey": "footer.row.rights",
+      "certifiedKey": "footer.row.certified",
+      "links": [
+        {
+          "name": "legal",
+          "labelKey": "footer.row.links.legal",
+          "link": "https://aeromexicob2b.my.salesforce-sites.com/terminosycondiciones"
+        },
+        {
+          "name": "privacy",
+          "labelKey": "footer.row.links.privacy",
+          "link": "https://aeromexico.com/es-mx/informacion-legal"
+        },
+        {
+          "name": "accessible",
+          "labelKey": "footer.row.links.accessible",
+          "link": "https://aeromexico.com/es-mx/accesibilidad"
+        }
+      ]
+    }
+  ]
+}

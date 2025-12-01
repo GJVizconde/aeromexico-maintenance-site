@@ -69,5 +69,40 @@
       "title": "Chat 24 horas",
       "text": "Tendrás una ayuda 24 horas para poder solucionar dudas que llegues a tener."
     }
+  },
+  "footer": {
+    "contact": {
+      "title": "¿Tienes preguntas?",
+      "subtitle": "Si tu agencia cuenta con el servicio de Global Sales Support haz clic en el siguiente botón.",
+      "cta": "Chat en vivo",
+      "social": "Síguenos en"
+    },
+    "about": {
+      "title": "Sobre Aeroméxico"
+    },
+    "discover": {
+      "title": "Descubre más de Aeroméxico",
+      "description": "Consulta las guías de nuestro centro de soporte (CAAV):"
+    },
+    "links": {
+      "investors": "Inversionistas",
+      "alliances": "Alianzas comerciales",
+      "compliance": "Compliance",
+      "fly-with-us": "Vuela con nosotros",
+      "fleet": "Nuestra flota",
+      "agency-mx": "Documentación para Agencias de Viajes (CAAV) México",
+      "agency-us": "Documentación para Agencias de Viajes (CAAV) Estados Unidos",
+      "agency-eur": "Documentación para Agencias de Viajes (CAAV) Europa/Asia",
+      "agency-lat": "Documentación para Agencias de Viajes (CAAV) Latinoamérica"
+    },
+    "row": {
+      "rights": "c 2024 Aeroméxico. Todos los derechos reservados",
+      "certified": "Certificado por",
+      "links": {
+        "legal": "Legal",
+        "privacy": "Aviso de privacidad",
+        "accessible": "Sitio accesible"
+      }
+    }
   }
 }
