@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Español",
+    "code": "es",
+    "flag": "mx-flag.svg",
+    "country": "México",
+    "locationn": "mx-es"
+  },
+  {
+    "id": 2,
+    "name": "English",
+    "code": "en",
+    "flag": "us-flag.svg",
+    "country": "United States",
+    "locationn": "us-en"
+  },
+  {
+    "id": 3,
+    "name": "Português",
+    "code": "pt",
+    "flag": "br-flag.svg",
+    "country": "Brasil",
+    "locationn": "br-pt"
+  },
+  {
+    "id": 4,
+    "name": "Français",
+    "code": "fr",
+    "flag": "fr-flag.svg",
+    "country": "France",
+    "locationn": "fr-fr"
+  },
+  {
+    "id": 5,
+    "name": "Italiano",
+    "code": "it",
+    "flag": "it-flag.svg",
+    "country": "Italia",
+    "locationn": "it-it"
+  }
+]
