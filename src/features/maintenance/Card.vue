@@ -54,7 +54,7 @@ const downloadPdf = () => {
     </p>
 
     <BaseButton
-      class="mt-2 text-[11px] leading-[17px] md:mt-[19px] lg:mb-5 bg-amBlueInnovation"
+      class="mt-2 text-[11px] leading-[17px] md:mt-[19px] bg-amBlueInnovation"
       size="sm"
       @click="downloadPdf"
     >
