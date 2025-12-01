@@ -5,20 +5,23 @@ interface Props {
   variant?: CardVariant;
   padding?: 'none' | 'sm' | 'md' | 'lg';
   as?: 'div' | 'article' | 'section';
+  bgClass?: string;
 }
 
 withDefaults(defineProps<Props>(), {
   variant: 'default',
   padding: 'md',
   as: 'div',
+  bgClass: 'bg-white',
 });
 </script>
 
 <template>
   <component
     :is="as"
-    class="rounded-sm bg-white transition"
+    class="rounded-sm transition"
     :class="[
+      bgClass,
       // Variantes del card
       variant === 'default' && 'shadow-sm border border-gray-200',
       variant === 'elevated' && 'shadow-lg border border-transparent',

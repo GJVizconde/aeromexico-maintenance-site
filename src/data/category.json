@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "titleKey": "categories.1.title",
+    "textKey": "categories.1.text",
+    "img": "category-1.webp"
+  },
+  {
+    "id": "2",
+    "titleKey": "categories.2.title",
+    "textKey": "categories.2.text",
+    "img": "category-2.webp"
+  },
+  {
+    "id": "3",
+    "titleKey": "categories.3.title",
+    "textKey": "categories.3.text",
+    "img": "category-3.webp"
+  },
+  {
+    "id": "4",
+    "titleKey": "categories.4.title",
+    "textKey": "categories.4.text",
+    "img": "category-4.webp"
+  }
+]

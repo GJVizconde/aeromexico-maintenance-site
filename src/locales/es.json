@@ -33,5 +33,23 @@
     "title": "Sitio en mantenimiento",
     "description": "Te sugerimos llamar a Global Support o escribirnos por el chat.",
     "cta": "Chat Aeroméxico"
+  },
+  "categories": {
+    "1": {
+      "title": "Noticias",
+      "text": "Obtén más información sobre la experiencia limpia y consistente que los viajeros pueden..."
+    },
+    "2": {
+      "title": "Productos Aeroméxico",
+      "text": "Obtén más información sobre la experiencia limpia y consistente que los viajeros pueden..."
+    },
+    "3": {
+      "title": "Políticas Aeroméxico",
+      "text": "Obtén más información sobre la experiencia limpia y consistente que los viajeros pueden..."
+    },
+    "4": {
+      "title": "NDC",
+      "text": "Obtén más información sobre la experiencia limpia y consistente que los viajeros pueden..."
+    }
   }
 }
