@@ -12,6 +12,20 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   ctaLabel: 'PDF',
 });
+
+const downloadPdf = () => {
+  const pdf = props.item.pdf;
+  if (!pdf) return;
+
+  const link = document.createElement('a');
+  link.href = `/docs/${pdf}`;
+  link.download = pdf;
+  link.target = '_blank';
+
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+};
 </script>
 
 <template>
@@ -42,6 +56,7 @@ const props = withDefaults(defineProps<Props>(), {
     <BaseButton
       class="mt-2 text-[11px] leading-[17px] md:mt-[19px] lg:mb-5 bg-amBlueInnovation"
       size="sm"
+      @click="downloadPdf"
     >
       {{ props.ctaLabel }}
     </BaseButton>
