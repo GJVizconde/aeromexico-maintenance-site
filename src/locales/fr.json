@@ -104,5 +104,30 @@
         "accessible": "Site accessible"
       }
     }
+  },
+  "home": {
+    "featured": "Contenu mis en avant",
+    "featuredCta": "PDF",
+    "categories": "Nos catégories",
+    "support": {
+      "title": "Comment nous soutenons votre activité",
+      "prev": "Voir précédent",
+      "next": "Voir suivant"
+    }
+  },
+  "maintenance-modal": {
+    "close": "Fermer le message de maintenance",
+    "title": "Site en maintenance",
+    "intro": "Nous sommes désolés pour la gêne occasionnée.",
+    "body-1": "Le site que vous essayez de visiter est en maintenance planifiée ou rencontre des problèmes techniques temporaires.",
+    "body-2": "Notre équipe travaille déjà pour rétablir le service au plus vite et assurer une meilleure expérience.",
+    "help-title": "Besoin d'aide immédiate ?",
+    "help-body": "Nous sommes là pour vous aider. Vous pouvez nous contacter via les canaux suivants :",
+    "global-support-title": "Global Support :",
+    "global-support-body": "Notre équipe d'assistance est disponible pour répondre à toute question ou demande.",
+    "chat-title": "Chat Aeroméxico Business :",
+    "chat-body": "Si vous préférez une assistance plus directe, écrivez-nous via le chat de notre plateforme entreprise.",
+    "thanks-1": "Merci pour votre compréhension et votre patience.",
+    "thanks-2": "Nous serons bientôt de retour en ligne pour continuer à vous offrir le service que vous méritez."
   }
 }

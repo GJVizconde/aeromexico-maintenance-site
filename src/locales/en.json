@@ -104,5 +104,30 @@
         "accessible": "Accessible site"
       }
     }
+  },
+  "home": {
+    "featured": "Featured content",
+    "featuredCta": "PDF",
+    "categories": "Our categories",
+    "support": {
+      "title": "How we support your business",
+      "prev": "View previous",
+      "next": "View next"
+    }
+  },
+  "maintenance-modal": {
+    "close": "Close maintenance message",
+    "title": "Site under maintenance",
+    "intro": "We’re sorry for the inconvenience.",
+    "body-1": "The site you’re trying to visit is under scheduled maintenance or experiencing temporary technical issues.",
+    "body-2": "Our team is already working to restore service as soon as possible and ensure a better experience.",
+    "help-title": "Need immediate assistance?",
+    "help-body": "We’re here to help. You can reach us through the following channels:",
+    "global-support-title": "Global Support:",
+    "global-support-body": "Our support team is available to resolve any questions or requests you may have.",
+    "chat-title": "Aeroméxico Business Chat:",
+    "chat-body": "If you prefer more direct assistance, message us through the chat on our business platform.",
+    "thanks-1": "Thank you for your understanding and patience.",
+    "thanks-2": "We’ll be back online soon to keep offering the service you deserve."
   }
 }
