@@ -11,6 +11,7 @@ import support3Img from '@/assets/images/support-3.webp';
 import support4Img from '@/assets/images/support-4.webp';
 import featuredNews from '@/data/featuredNews.json';
 import categoriesData from '@/data/category.json';
+import supportData from '@/data/support.json';
 import navigationLinks from '@/data/navigationLinks.json';
 import { t } from '@/utils/i18n';
 
@@ -42,6 +43,13 @@ type CategoryEntry = {
   img: string;
 };
 
+type SupportEntry = {
+  id: string;
+  titleKey: string;
+  textKey: string;
+  img: string;
+};
+
 const featuredImages: Record<string, string> = {
   'distribution.webp': distributionImg,
 };
@@ -51,6 +59,13 @@ const categoryImages: Record<string, string> = {
   'category-2.webp': category2Img,
   'category-3.webp': category3Img,
   'category-4.webp': category4Img,
+};
+
+const supportImages: Record<string, string> = {
+  'support-1.webp': support1Img,
+  'support-2.webp': support2Img,
+  'support-3.webp': support3Img,
+  'support-4.webp': support4Img,
 };
 
 export const NAV_ITEMS: string[] = (navigationLinks as NavigationLink[]).map(
@@ -76,25 +91,10 @@ export const CATEGORY_ITEMS: CategoryItem[] = (
   img: categoryImages[img] ?? category1Img,
 }));
 
-export const SUPPORT_ITEMS: SupportItem[] = [
-  {
-    title: 'Chat 24 horas',
-    text: 'Tendrás una ayuda 24 horas para poder solucionar dudas que llegues a tener.',
-    img: support1Img,
-  },
-  {
-    title: 'Chat 24 horas',
-    text: 'Tendrás una ayuda 24 horas para poder solucionar dudas que llegues a tener.',
-    img: support2Img,
-  },
-  {
-    title: 'Chat 24 horas',
-    text: 'Tendrás una ayuda 24 horas para poder solucionar dudas que llegues a tener.',
-    img: support3Img,
-  },
-  {
-    title: 'Chat 24 horas',
-    text: 'Tendrás una ayuda 24 horas para poder solucionar dudas que llegues a tener.',
-    img: support4Img,
-  },
-];
+export const SUPPORT_ITEMS: SupportItem[] = (
+  supportData as SupportEntry[]
+).map(({ titleKey, textKey, img }) => ({
+  title: t(titleKey),
+  text: t(textKey),
+  img: supportImages[img] ?? support1Img,
+}));

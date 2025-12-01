@@ -4,9 +4,12 @@ import type { SupportItem } from './maintenance.types';
 
 interface Props {
   item: SupportItem;
+  isEven?: boolean;
 }
 
-const props = defineProps<Props>();
+const props = withDefaults(defineProps<Props>(), {
+  isEven: false,
+});
 </script>
 
 <template>
@@ -23,14 +26,27 @@ const props = defineProps<Props>();
 
     <div class="absolute left-[15px] right-[15px] bottom-[15px]">
       <div
-        class="flex items-start justify-between max-w-[229px] lg:w-full rounded-sm bg-amBluePremium pl-4 py-[15px] shadow-lg"
+        :class="[
+          'flex items-start justify-between max-w-[229px] lg:w-full rounded-sm pl-4 py-[15px] shadow-lg',
+          props.isEven ? 'bg-white text-amBluePremium' : 'bg-amBluePremium text-white',
+        ]"
       >
         <div>
-          <h3 class="text-[22px] font-GarnettSemibold font-semibold text-white">
+          <h3
+            :class="[
+              'text-[22px] font-GarnettSemibold font-semibold',
+              props.isEven ? 'text-amBluePremium' : 'text-white',
+            ]"
+          >
             {{ props.item.title }}
           </h3>
 
-          <p class="mt-2.5 text-sm leading-5 text-white">
+          <p
+            :class="[
+              'mt-2.5 text-sm leading-5',
+              props.isEven ? 'text-amBluePremium' : 'text-white',
+            ]"
+          >
             {{ props.item.text }}
           </p>
         </div>

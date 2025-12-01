@@ -69,7 +69,12 @@ const scrollTablet = (direction: 'prev' | 'next') => {
         ref="tabletSliderRef"
         class="mt-5 flex gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory w-full md:w-full md:max-w-none md:pl-[calc((100%-645px)/2)] md:pr-0 lg:grid lg:grid-cols-4 lg:gap-8 lg:overflow-visible lg:max-w-none lg:mx-0 lg:px-0"
       >
-        <SupportCard v-for="(item, idx) in items" :key="idx" :item="item" />
+        <SupportCard
+          v-for="(item, idx) in items"
+          :key="idx"
+          :item="item"
+          :is-even="(idx + 1) % 2 === 0"
+        />
       </div>
     </div>
   </section>

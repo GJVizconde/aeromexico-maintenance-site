@@ -51,5 +51,23 @@
       "title": "NDC",
       "text": "Obtén más información sobre la experiencia limpia y consistente que los viajeros pueden..."
     }
+  },
+  "support": {
+    "1": {
+      "title": "Chat 24 horas",
+      "text": "Tendrás una ayuda 24 horas para poder solucionar dudas que llegues a tener."
+    },
+    "2": {
+      "title": "Chat 24 horas",
+      "text": "Tendrás una ayuda 24 horas para poder solucionar dudas que llegues a tener."
+    },
+    "3": {
+      "title": "Chat 24 horas",
+      "text": "Tendrás una ayuda 24 horas para poder solucionar dudas que llegues a tener."
+    },
+    "4": {
+      "title": "Chat 24 horas",
+      "text": "Tendrás una ayuda 24 horas para poder solucionar dudas que llegues a tener."
+    }
   }
 }

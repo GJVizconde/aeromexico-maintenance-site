@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "titleKey": "support.1.title",
+    "textKey": "support.1.text",
+    "img": "support-1.webp"
+  },
+  {
+    "id": "2",
+    "titleKey": "support.2.title",
+    "textKey": "support.2.text",
+    "img": "support-2.webp"
+  },
+  {
+    "id": "3",
+    "titleKey": "support.3.title",
+    "textKey": "support.3.text",
+    "img": "support-3.webp"
+  },
+  {
+    "id": "4",
+    "titleKey": "support.4.title",
+    "textKey": "support.4.text",
+    "img": "support-4.webp"
+  }
+]
