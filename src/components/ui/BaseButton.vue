@@ -7,6 +7,9 @@ interface Props {
   size?: ButtonSize;
   as?: 'button' | 'a';
   href?: string;
+  target?: string;
+  rel?: string;
+  download?: string | boolean;
   disabled?: boolean;
 }
 
@@ -22,6 +25,9 @@ withDefaults(defineProps<Props>(), {
   <component
     :is="as"
     :href="as === 'a' ? href : undefined"
+    :target="as === 'a' ? target : undefined"
+    :rel="as === 'a' ? rel : undefined"
+    :download="as === 'a' ? download : undefined"
     :disabled="as === 'button' ? disabled : undefined"
     class="items-center justify-center cursor-pointer rounded-md font-GarnettSemibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
     :class="[
