@@ -27,8 +27,10 @@ const props = withDefaults(defineProps<Props>(), {
     <div class="absolute left-[15px] right-[15px] bottom-[15px]">
       <div
         :class="[
-          'flex items-start justify-between max-w-[229px] lg:w-full rounded-sm pl-4 py-[15px] shadow-lg',
-          props.isEven ? 'bg-white text-amBluePremium' : 'bg-amBluePremium text-white',
+          'flex items-start justify-between max-w-[229px] lg:w-full rounded-sm pl-4 py-[15px] shadow-lg min-h-[150px]',
+          props.isEven
+            ? 'bg-white text-amBluePremium'
+            : 'bg-amBluePremium text-white',
         ]"
       >
         <div>
