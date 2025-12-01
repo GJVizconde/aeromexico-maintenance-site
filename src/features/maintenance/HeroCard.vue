@@ -10,6 +10,10 @@ interface Props {
   ctaLabel: string;
 }
 
+const emit = defineEmits<{
+  (event: 'open-maintenance'): void;
+}>();
+
 defineProps<Props>();
 </script>
 
@@ -38,6 +42,7 @@ defineProps<Props>();
         class="hidden md:hidden lg:block lg:mt-5"
         variant="primary"
         size="lg"
+        @click="emit('open-maintenance')"
       >
         {{ ctaLabel }}
       </BaseButton>
@@ -45,6 +50,7 @@ defineProps<Props>();
       <BaseButton
         class="inline-flex text-[11px] lg:hidden mt-4 md:mt-[15px] py-[6.5px] w-full md:w-auto"
         variant="primary"
+        @click="emit('open-maintenance')"
       >
         {{ ctaLabel }}
       </BaseButton>

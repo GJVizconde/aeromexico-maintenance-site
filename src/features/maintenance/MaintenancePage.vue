@@ -28,7 +28,7 @@ const openMaintenanceModal = () => {
     <main class="flex-1 w-full overflow-hidden shadow-2xl">
       <Header :nav-items="NAV_ITEMS" @open-maintenance="openMaintenanceModal" />
 
-      <Hero />
+      <Hero @open-maintenance="openMaintenanceModal" />
 
       <section class="mx-auto">
         <Featured :items="FEATURED_ITEMS" />

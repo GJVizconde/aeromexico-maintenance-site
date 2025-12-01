@@ -11,6 +11,10 @@ type HeroCardContent = {
   ctaLabel: string;
 };
 
+const emit = defineEmits<{
+  (event: 'open-maintenance'): void;
+}>();
+
 const heroCardContent: HeroCardContent = {
   badge: t(heroContent.badgeKey),
   title: t(heroContent.titleKey),
@@ -29,7 +33,10 @@ const heroCardContent: HeroCardContent = {
     />
 
     <div class="absolute left-5 top-5 md:left-[62px] lg:left-20 md:top-5 z-10">
-      <HeroCard v-bind="heroCardContent" />
+      <HeroCard
+        v-bind="heroCardContent"
+        @open-maintenance="emit('open-maintenance')"
+      />
     </div>
   </section>
 </template>
