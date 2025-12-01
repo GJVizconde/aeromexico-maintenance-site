@@ -8,7 +8,101 @@
       "ndc": "NDC"
     },
     "side": {
-      "main-menu": "Menù"
+      "main-menu": "Menu principale"
+    }
+  },
+  "featured-news": {
+    "1": {
+      "title": "La nostra visione della distribuzione",
+      "text": "Scopri di più sull'esperienza chiara e coerente che i viaggiatori possono...",
+      "category": "Prodotti e servizi"
+    },
+    "2": {
+      "title": "La nostra visione della distribuzione",
+      "text": "Scopri di più sull'esperienza chiara e coerente che i viaggiatori possono...",
+      "category": "Prodotti e servizi"
+    },
+    "3": {
+      "title": "La nostra visione della distribuzione",
+      "text": "Scopri di più sull'esperienza chiara e coerente che i viaggiatori possono...",
+      "category": "Prodotti e servizi"
+    }
+  },
+  "hero": {
+    "badge": "Servizio non disponibile",
+    "title": "Sito in manutenzione",
+    "description": "Ti consigliamo di chiamare il Global Support o scriverci in chat.",
+    "cta": "Chat Aeroméxico"
+  },
+  "categories": {
+    "1": {
+      "title": "NDC",
+      "text": "Scopri AM NDC, una soluzione in più per la gestione dei voli."
+    },
+    "2": {
+      "title": "Prodotti",
+      "text": "Informazioni sui nostri servizi e programmi."
+    },
+    "3": {
+      "title": "Notizie",
+      "text": "Resta informato sulle novità di Aeroméxico."
+    },
+    "4": {
+      "title": "Politiche",
+      "text": "Trova facilmente le nostre politiche di protezione, flessibilità e distribuzione."
+    }
+  },
+  "support": {
+    "1": {
+      "title": "Strumenti",
+      "text": "Offriamo risorse self-service per un supporto più rapido."
+    },
+    "2": {
+      "title": "Assistenza",
+      "text": "Chat dal vivo per aiutarti quando ne hai bisogno."
+    },
+    "3": {
+      "title": "Informazioni",
+      "text": "Notizie, avvisi e altro. Tutto in un unico posto!"
+    },
+    "4": {
+      "title": "Supporto",
+      "text": "Siamo al tuo fianco per proteggere i nostri clienti."
+    }
+  },
+  "footer": {
+    "contact": {
+      "title": "Hai domande?",
+      "subtitle": "Se la tua agenzia dispone del servizio Global Sales Support, fai clic sul pulsante seguente.",
+      "cta": "Chat dal vivo",
+      "social": "Seguici su"
+    },
+    "about": {
+      "title": "Informazioni su Aeroméxico"
+    },
+    "discover": {
+      "title": "Scopri di più su Aeroméxico",
+      "description": "Consulta le guide del nostro centro di supporto (CAAV):"
+    },
+    "links": {
+      "investors": "Investitori",
+      "alliances": "Alleanze commerciali",
+      "compliance": "Conformità",
+      "fly-with-us": "Vola con noi",
+      "fleet": "La nostra flotta",
+      "agency-mx": "Documentazione per agenzie di viaggio (CAAV) Messico",
+      "agency-us": "Documentazione per agenzie di viaggio (CAAV) Stati Uniti",
+      "agency-eur": "Documentazione per agenzie di viaggio (CAAV) Europa/Asia",
+      "agency-lat": "Documentazione per agenzie di viaggio (CAAV) America Latina"
+    },
+    "row": {
+      "rights": "© 2024 Aeroméxico. Tutti i diritti riservati",
+      "certified": "Certificato da",
+      "links": {
+        "legal": "Note legali",
+        "privacy": "Informativa sulla privacy",
+        "accessible": "Sito accessibile"
+      }
     }
   }
 }

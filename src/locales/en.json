@@ -10,5 +10,99 @@
     "side": {
       "main-menu": "Main Menu"
     }
+  },
+  "featured-news": {
+    "1": {
+      "title": "Our distribution vision",
+      "text": "Learn more about the clean and consistent experience travelers can...",
+      "category": "Products & Services"
+    },
+    "2": {
+      "title": "Our distribution vision",
+      "text": "Learn more about the clean and consistent experience travelers can...",
+      "category": "Products & Services"
+    },
+    "3": {
+      "title": "Our distribution vision",
+      "text": "Learn more about the clean and consistent experience travelers can...",
+      "category": "Products & Services"
+    }
+  },
+  "hero": {
+    "badge": "Service unavailable",
+    "title": "Site under maintenance",
+    "description": "We suggest calling Global Support or messaging us via chat.",
+    "cta": "Aeroméxico Chat"
+  },
+  "categories": {
+    "1": {
+      "title": "NDC",
+      "text": "Discover AM NDC, another solution for flight management."
+    },
+    "2": {
+      "title": "Products",
+      "text": "Information about our services and programs."
+    },
+    "3": {
+      "title": "News",
+      "text": "Stay informed about Aeroméxico updates."
+    },
+    "4": {
+      "title": "Policies",
+      "text": "Easily find our protection, flexibility, and distribution policies."
+    }
+  },
+  "support": {
+    "1": {
+      "title": "Tools",
+      "text": "We provide self-service resources for faster support."
+    },
+    "2": {
+      "title": "Assistance",
+      "text": "Live chat to help you whenever you need it."
+    },
+    "3": {
+      "title": "Information",
+      "text": "News, notices, and more. All in one place!"
+    },
+    "4": {
+      "title": "Support",
+      "text": "We are here with you to protect our customers."
+    }
+  },
+  "footer": {
+    "contact": {
+      "title": "Got questions?",
+      "subtitle": "If your agency has the Global Sales Support service, click the button below.",
+      "cta": "Live chat",
+      "social": "Follow us on"
+    },
+    "about": {
+      "title": "About Aeroméxico"
+    },
+    "discover": {
+      "title": "Discover more from Aeroméxico",
+      "description": "Check the guides in our support center (CAAV):"
+    },
+    "links": {
+      "investors": "Investors",
+      "alliances": "Commercial alliances",
+      "compliance": "Compliance",
+      "fly-with-us": "Fly with us",
+      "fleet": "Our fleet",
+      "agency-mx": "Travel Agency Documentation (CAAV) Mexico",
+      "agency-us": "Travel Agency Documentation (CAAV) United States",
+      "agency-eur": "Travel Agency Documentation (CAAV) Europe/Asia",
+      "agency-lat": "Travel Agency Documentation (CAAV) Latin America"
+    },
+    "row": {
+      "rights": "© 2024 Aeroméxico. All rights reserved",
+      "certified": "Certified by",
+      "links": {
+        "legal": "Legal",
+        "privacy": "Privacy notice",
+        "accessible": "Accessible site"
+      }
+    }
   }
 }
