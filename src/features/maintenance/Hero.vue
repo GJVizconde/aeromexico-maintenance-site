@@ -25,18 +25,21 @@ const heroCardContent: HeroCardContent = {
 
 <template>
   <!-- Hero -->
-  <section class="relative flex items-center">
+  <section class="relative">
     <img
       class="h-[214px] md:h-[314px] w-full object-cover object-center"
       :src="airplaneImg"
       alt="Plane"
     />
-
-    <div class="absolute left-5 top-5 md:left-[62px] lg:left-20 md:top-5 z-10">
-      <HeroCard
-        v-bind="heroCardContent"
-        @open-maintenance="emit('open-maintenance')"
-      />
+    <div class="absolute inset-0">
+      <div class="relative w-full md:max-w-[645px] lg:max-w-[1120px] mx-auto">
+        <div class="absolute left-5 top-5 md:left-0 md:top-5 z-10">
+          <HeroCard
+            v-bind="heroCardContent"
+            @open-maintenance="emit('open-maintenance')"
+          />
+        </div>
+      </div>
     </div>
   </section>
 </template>
