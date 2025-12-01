@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { computed } from 'vue';
+import { t } from '@/utils/i18n';
 import BaseButton from '@/components/ui/BaseButton.vue';
 import BaseCard from '@/components/ui/BaseCard.vue';
 
@@ -9,9 +11,8 @@ interface Props {
   ctaLabel?: string;
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  ctaLabel: 'PDF',
-});
+const props = defineProps<Props>();
+const resolvedCtaLabel = computed(() => props.ctaLabel ?? t('home.featuredCta'));
 
 const downloadPdf = () => {
   const pdf = props.item.pdf;
@@ -58,7 +59,7 @@ const downloadPdf = () => {
       size="sm"
       @click="downloadPdf"
     >
-      {{ props.ctaLabel }}
+      {{ resolvedCtaLabel }}
     </BaseButton>
   </BaseCard>
 </template>

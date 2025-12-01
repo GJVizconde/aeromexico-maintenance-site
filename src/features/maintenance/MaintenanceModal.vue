@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import unpluggedImg from '@/assets/images/unplugged.webp';
 import modalCloseIcon from '@/assets/icons/modal-close.svg';
+import { t } from '@/utils/i18n';
 
 interface Props {
   modelValue: boolean;
@@ -36,7 +37,7 @@ const close = () => {
         type="button"
         class="absolute right-6 top-6 text-amBluePremium hover:text-black text-2xl cursor-pointer"
         @click="close"
-        aria-label="Cerrar mensaje de mantenimiento"
+        :aria-label="t('maintenance-modal.close')"
       >
         <img :src="modalCloseIcon" class="h-6 w-6" alt="" />
       </button>
@@ -51,55 +52,43 @@ const close = () => {
           id="maintenance-title"
           class="mb-10 text-2xl font-GarnettSemibold text-heroBlue text-center"
         >
-          Página en Mantenimiento
+          {{ t('maintenance-modal.title') }}
         </h2>
 
         <div id="maintenance-description" class="space-y-5">
-          <p>Lamentamos los inconvenientes.</p>
-          <p>
-            En este momento, el sitio que intentas visitar se encuentra en
-            mantenimiento programado o experimenta problemas técnicos
-            temporales.
-          </p>
-          <p>
-            Nuestro equipo ya está trabajando para restablecer el servicio lo
-            antes posible y garantizar una mejor experiencia para nuestros
-            usuarios.
-          </p>
+          <p>{{ t('maintenance-modal.intro') }}</p>
+          <p>{{ t('maintenance-modal.body-1') }}</p>
+          <p>{{ t('maintenance-modal.body-2') }}</p>
         </div>
 
         <section class="mt-6 w-full space-y-6">
           <p class="mb-4 font-GarnettSemibold font-semibold">
-            ¿Necesitas asistencia inmediata?
+            {{ t('maintenance-modal.help-title') }}
           </p>
 
-          <p>
-            Estamos aquí para ayudarte. Puedes ponerte en contacto a través de
-            los siguientes canales:
-          </p>
+          <p>{{ t('maintenance-modal.help-body') }}</p>
 
           <ul class="list-disc pl-8 space-y-5 text-left">
             <li>
-              ✉️ <span>Global Support:</span>
-              Nuestro equipo de soporte está disponible para resolver cualquier
-              duda o requerimiento que tengas.
+              <span class="font-semibold">
+                {{ t('maintenance-modal.global-support-title') }}
+              </span>
+              {{ t('maintenance-modal.global-support-body') }}
             </li>
 
             <li>
-              💬 <span>Chat de Aeroméxico Business:</span>
-              Si prefieres una atención más directa, puedes escribirnos a través
-              del chat en nuestra plataforma de atención empresarial.
+              <span class="font-semibold">
+                {{ t('maintenance-modal.chat-title') }}
+              </span>
+              {{ t('maintenance-modal.chat-body') }}
             </li>
           </ul>
         </section>
 
         <!-- Last Message -->
         <div class="mt-6">
-          <p>Agradecemos tu comprensión y paciencia.</p>
-          <p>
-            Muy pronto estaremos nuevamente en línea para seguir ofreciéndote el
-            servicio que mereces.
-          </p>
+          <p>{{ t('maintenance-modal.thanks-1') }}</p>
+          <p>{{ t('maintenance-modal.thanks-2') }}</p>
         </div>
       </div>
     </div>

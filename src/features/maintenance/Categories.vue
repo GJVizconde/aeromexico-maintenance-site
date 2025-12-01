@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { t } from '@/utils/i18n';
 import CategoryCard from './CategoryCard.vue';
 import type { CategoryItem } from './maintenance.types';
 
@@ -16,7 +17,7 @@ defineProps<Props>();
       <h2
         class="text-lg md:text-[32px] font-GarnettSemibold font-semibold text-amBluePremium leading-[42px]"
       >
-        Nuestras Categorías
+        {{ t('home.categories') }}
       </h2>
 
       <div class="mt-5 grid gap-x-8 gap-y-5 lg:grid-cols-2">

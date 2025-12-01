@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { t } from '@/utils/i18n';
 import arrowIcon from '@/assets/icons/arrow.svg';
 import SupportCard from './SupportCard.vue';
 import type { SupportItem } from './maintenance.types';
@@ -38,14 +39,14 @@ const scrollTablet = (direction: 'prev' | 'next') => {
         <h2
           class="md:text-[22px] lg:text-[32px] font-GarnettSemibold font-semibold text-amBluePremium md:leading-[42px]"
         >
-          Cómo apoyamos su negocio
+          {{ t('home.support.title') }}
         </h2>
 
         <div class="flex md:flex lg:hidden items-center gap-5">
           <button
             type="button"
             class="flex h-8 w-8 items-center justify-center text-amBluePremium"
-            aria-label="Ver anterior"
+            :aria-label="t('home.support.prev')"
             @click="scrollTablet('prev')"
           >
             <img :src="arrowIcon" alt="" class="h-[16.45px] w-[21.06px]" />
@@ -53,7 +54,7 @@ const scrollTablet = (direction: 'prev' | 'next') => {
           <button
             type="button"
             class="flex h-8 w-8 items-center justify-center text-amBluePremium"
-            aria-label="Ver siguiente"
+            :aria-label="t('home.support.next')"
             @click="scrollTablet('next')"
           >
             <img

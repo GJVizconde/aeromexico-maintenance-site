@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Card from './Card.vue';
+import { t } from '@/utils/i18n';
 import type { FeaturedItem } from './maintenance.types';
 
 interface Props {
@@ -16,7 +17,7 @@ defineProps<Props>();
       <h2
         class="text-lg md:text-[22px] lg:text-[32px] font-GarnettSemibold font-semibold text-amBluePremium leading-[42px]"
       >
-        Contenido destacado
+        {{ t('home.featured') }}
       </h2>
 
       <div
