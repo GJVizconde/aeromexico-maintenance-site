@@ -48,7 +48,7 @@ export function readLanguageCookie(): string | null {
 export function persistLanguageCookie(code: string): void {
   if (typeof document === 'undefined') return;
 
-  const maxAgeSeconds = 60 * 60 * 24 * 365; // 1 año
+  const maxAgeSeconds = 60 * 60 * 24 * 365; // 1 year
   document.cookie = `${LANGUAGE_COOKIE_NAME}=${encodeURIComponent(
     code
   )}; path=/; max-age=${maxAgeSeconds}; SameSite=Lax`;
