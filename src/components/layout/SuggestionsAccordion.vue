@@ -5,7 +5,7 @@ import LocationCard from '../ui/LocationCard.vue';
 import type { LocationData } from '@/data/locations';
 import { t } from '@/utils/i18n';
 
-const props = defineProps<{
+defineProps<{
   suggestions: LocationData[];
   currentLocation: string;
   isOpen: boolean;
