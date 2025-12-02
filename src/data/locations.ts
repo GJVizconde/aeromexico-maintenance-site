@@ -29,4 +29,4 @@ export const locationsData: LocationData[] = (languages as LanguageEntry[]).map(
   mapLanguageToLocation
 );
 
-export const suggestedLocations: LocationData[] = locationsData.slice(0, 3);
+export const suggestedLocations: LocationData[] = locationsData.slice(0, 2);
