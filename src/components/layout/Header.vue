@@ -11,6 +11,8 @@ import { useUserPreferencesStore } from '@/stores/userPreferences';
 import { storeToRefs } from 'pinia';
 import { getLocaleFlag } from '@/data/localeFlags';
 import MobileSelectLocation from './MobileSelectLocation.vue';
+import LocationMobileMenu from './LocationMobileMenu.vue';
+import { locationsData, suggestedLocations } from '@/data/locations';
 
 interface Props {
   navItems: string[];
@@ -37,6 +39,8 @@ const userPreferences = useUserPreferencesStore();
 const { language, languageCode } = storeToRefs(userPreferences);
 
 const flagSrc = computed(() => getLocaleFlag(languageCode.value));
+const newLocationsData = locationsData;
+const suggestions = suggestedLocations;
 
 watch(
   isMobileMenuOpen,
@@ -72,6 +76,20 @@ const handleCloseLangModal = () => {
 
 const handleSelectMenu = () => {
   isMainMobileMenu.value = !isMainMobileMenu.value;
+};
+
+const handleMobileLocation = () => {
+  isMainMobileMenu.value = true;
+};
+
+const handleSideBar = () => {
+  isMobileMenuOpen.value = false;
+  isMainMobileMenu.value = true;
+  emit('open-mobile-menu', isMobileMenuOpen.value);
+};
+
+const handleLocation = () => {
+  handleSideBar();
 };
 </script>
 
@@ -149,6 +167,14 @@ const handleSelectMenu = () => {
     <MainMobileMenu
       v-if="isMainMobileMenu"
       @open-maintenance="handleOpenMaintenance"
+    />
+    <LocationMobileMenu
+      v-if="!isMainMobileMenu"
+      @showSelectMobileMenu="handleMobileLocation"
+      :locationsData="newLocationsData"
+      :suggestions="suggestions"
+      @locationEvent="handleLocation"
+      :onClose="handleSideBar"
     />
   </div>
 
