@@ -26,7 +26,7 @@ const emit = defineEmits<{
 const preferences = useUserPreferencesStore();
 const { language } = storeToRefs(preferences);
 
-const isSuggestionsOpen = ref(true);
+const isSuggestionsOpen = ref(false);
 const isChangingLocation = ref(false);
 
 const locations = computed(
