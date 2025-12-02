@@ -1,6 +1,5 @@
 import type { UserPreferencesStore } from '@/stores/userPreferences';
-import { detectLanguage, persistLanguageCookie } from './language';
-import { setLocale } from './i18n';
+import { detectLanguage } from './language';
 
 export function initializeUserLanguage(
   userPreferencesStore: UserPreferencesStore
@@ -8,8 +7,6 @@ export function initializeUserLanguage(
   const language = detectLanguage();
 
   userPreferencesStore.setLanguage(language);
-  setLocale(language.code);
-  persistLanguageCookie(language.code);
 
   return language;
 }

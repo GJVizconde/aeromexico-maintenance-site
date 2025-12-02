@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import navigationLinks from '@/data/navigationLinks.json';
 import { t } from '@/utils/i18n';
+import { computed } from 'vue';
 
 type NavigationLink = {
   name: string;
@@ -8,16 +9,19 @@ type NavigationLink = {
   link: string;
 };
 
-const links = (navigationLinks as NavigationLink[]).map((item) => ({
-  ...item,
-  text: t(item.label),
-}));
+const translatedLinks = computed(() =>
+  (navigationLinks as NavigationLink[]).map((item) => ({
+    ...item,
+    text: t(item.label),
+  }))
+);
 
 const emit = defineEmits<{
   (event: 'open-maintenance'): void;
 }>();
 
 const handleLinkClick = () => {
+  console.log('handleLinkClick');
   emit('open-maintenance');
 };
 
@@ -38,10 +42,10 @@ const handleLinkClick = () => {
       {{ t('navbar.side.main-menu') }}
     </div>
     <div class="flex px-5 flex-col">
-      <div class="border-t border-b">
+      <div class="border-t border-b border-amUltraLightGray">
         <div
           class="flex w-full gap-[15px] font-extrabold text-amBluePremium no-underline"
-          v-for="value in links"
+          v-for="value in translatedLinks"
           :key="value.name"
         >
           <button

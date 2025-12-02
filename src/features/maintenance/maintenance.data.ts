@@ -1,3 +1,4 @@
+import { computed } from 'vue';
 import distributionImg from '@/assets/images/distribution.webp';
 
 import category1Img from '@/assets/images/category-1.webp';
@@ -68,33 +69,35 @@ const supportImages: Record<string, string> = {
   'support-4.webp': support4Img,
 };
 
-export const NAV_ITEMS: string[] = (navigationLinks as NavigationLink[]).map(
-  ({ label }) => t(label)
+export const NAV_ITEMS = computed<string[]>(() =>
+  (navigationLinks as NavigationLink[]).map(({ label }) => t(label))
 );
 
-export const FEATURED_ITEMS: FeaturedItem[] = (
-  featuredNews as FeaturedNewsEntry[]
-).map(({ id, titleKey, textKey, categoryKey, img, pdf }) => ({
-  id,
-  category: t(categoryKey),
-  title: t(titleKey),
-  text: t(textKey),
-  img: featuredImages[img] ?? distributionImg,
-  pdf,
-}));
+export const FEATURED_ITEMS = computed<FeaturedItem[]>(() =>
+  (featuredNews as FeaturedNewsEntry[]).map(
+    ({ id, titleKey, textKey, categoryKey, img, pdf }) => ({
+      id,
+      category: t(categoryKey),
+      title: t(titleKey),
+      text: t(textKey),
+      img: featuredImages[img] ?? distributionImg,
+      pdf,
+    })
+  )
+);
 
-export const CATEGORY_ITEMS: CategoryItem[] = (
-  categoriesData as CategoryEntry[]
-).map(({ titleKey, textKey, img }) => ({
-  title: t(titleKey),
-  text: t(textKey),
-  img: categoryImages[img] ?? category1Img,
-}));
+export const CATEGORY_ITEMS = computed<CategoryItem[]>(() =>
+  (categoriesData as CategoryEntry[]).map(({ titleKey, textKey, img }) => ({
+    title: t(titleKey),
+    text: t(textKey),
+    img: categoryImages[img] ?? category1Img,
+  }))
+);
 
-export const SUPPORT_ITEMS: SupportItem[] = (
-  supportData as SupportEntry[]
-).map(({ titleKey, textKey, img }) => ({
-  title: t(titleKey),
-  text: t(textKey),
-  img: supportImages[img] ?? support1Img,
-}));
+export const SUPPORT_ITEMS = computed<SupportItem[]>(() =>
+  (supportData as SupportEntry[]).map(({ titleKey, textKey, img }) => ({
+    title: t(titleKey),
+    text: t(textKey),
+    img: supportImages[img] ?? support1Img,
+  }))
+);

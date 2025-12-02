@@ -1,3 +1,4 @@
+import { ref } from 'vue';
 import en from '@/locales/en.json';
 import es from '@/locales/es.json';
 import fr from '@/locales/fr.json';
@@ -44,22 +45,33 @@ const translateFrom = (
   return typeof value === 'string' ? value : undefined;
 };
 
-let currentLang: LocaleKey = normalizeLocale(detectLanguage().code);
+const currentLang = ref<LocaleKey>(normalizeLocale(detectLanguage().code));
+
+const missingKeys = new Set<string>();
 
 export function setLocale(locale: string | null | undefined): void {
-  currentLang = normalizeLocale(locale);
+  currentLang.value = normalizeLocale(locale);
 }
 
 export function getLocale(): LocaleKey {
-  return currentLang;
+  return currentLang.value;
 }
 
 export function t(key: string): string {
   const parts = key.split('.');
+  const locale = currentLang.value;
 
-  return (
-    translateFrom(currentLang, parts) ??
-    translateFrom(fallbackLocale, parts) ??
-    key
-  );
+  const translated =
+    translateFrom(locale, parts) ?? translateFrom(fallbackLocale, parts);
+
+  if (translated) return translated;
+
+  if (!missingKeys.has(key) && typeof console !== 'undefined') {
+    missingKeys.add(key);
+    console.warn(
+      `[i18n] Missing translation for "${key}" in locales "${locale}" and "${fallbackLocale}"`
+    );
+  }
+
+  return key;
 }

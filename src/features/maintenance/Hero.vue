@@ -3,6 +3,7 @@ import airplaneImg from '@/assets/images/airplane.webp';
 import heroContent from '@/data/hero.json';
 import { t } from '@/utils/i18n';
 import HeroCard from './HeroCard.vue';
+import { computed } from 'vue';
 
 type HeroCardContent = {
   badge: string;
@@ -15,19 +16,19 @@ const emit = defineEmits<{
   (event: 'open-maintenance'): void;
 }>();
 
-const heroCardContent: HeroCardContent = {
+const heroCardContent = computed<HeroCardContent>(() => ({
   badge: t(heroContent.badgeKey),
   title: t(heroContent.titleKey),
   description: t(heroContent.descriptionKey),
   ctaLabel: t(heroContent.ctaLabelKey),
-};
+}));
 </script>
 
 <template>
   <!-- Hero -->
   <section class="relative">
     <img
-      class="h-[214px] md:h-[314px] w-full object-cover object-center"
+      class="h-[214px] md:h-[415px] w-full object-cover object-center"
       :src="airplaneImg"
       alt="Plane"
     />

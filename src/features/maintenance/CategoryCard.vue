@@ -17,7 +17,7 @@ const props = defineProps<Props>();
     variant="elevated"
     padding="none"
     bg-class="bg-amBluePremium"
-    class="relative grid grid-cols-[266px_1fr] lg:grid-cols-2 overflow-hidden text-white lg:h-[230px]"
+    class="relative grid grid-cols-1 md:grid-cols-[266px_1fr] lg:grid-cols-2 overflow-hidden text-white md:h-[230px]"
   >
     <img
       v-if="props.item.img"
