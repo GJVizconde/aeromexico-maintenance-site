@@ -28,7 +28,7 @@ const heroCardContent = computed<HeroCardContent>(() => ({
   <!-- Hero -->
   <section class="relative">
     <img
-      class="h-[214px] md:h-[314px] w-full object-cover object-center"
+      class="h-[214px] md:h-[415px] w-full object-cover object-center"
       :src="airplaneImg"
       alt="Plane"
     />
