@@ -2,8 +2,7 @@
 import { computed, ref, watch } from 'vue';
 import { storeToRefs } from 'pinia';
 
-import languages from '@/data/languages.json';
-import { getLocaleFlag } from '@/data/localeFlags';
+import { locationsData, suggestedLocations } from '@/data/locations';
 import { useUserPreferencesStore } from '@/stores/userPreferences';
 import { t } from '@/utils/i18n';
 import LocationCard from '../ui/LocationCard.vue';
@@ -23,26 +22,10 @@ const emit = defineEmits<{
   (event: 'locationEvent', location: string): void;
 }>();
 
-type LanguageEntry = (typeof languages)[number];
-
 const preferences = useUserPreferencesStore();
 const { language } = storeToRefs(preferences);
 
-const locationsData = computed(() =>
-  (languages as LanguageEntry[]).map((item) => ({
-    code: item.location ?? item.code,
-    name: item.country ?? item.name,
-    flag: getLocaleFlag(item.code),
-    languages: [
-      {
-        label_menu: item.name,
-        code: item.code,
-      },
-    ],
-  }))
-);
-
-const suggestions = computed(() => locationsData.value.slice(0, 3));
+const suggestions = suggestedLocations;
 const selectedLocation = ref('');
 
 watch(
