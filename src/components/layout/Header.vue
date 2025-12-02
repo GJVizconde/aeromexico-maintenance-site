@@ -6,6 +6,7 @@ import closeWhiteIcon from '@/assets/icons/close-white.svg';
 import { computed, onUnmounted, ref, watch } from 'vue';
 import MainMobileMenu from './MainMobileMenu.vue';
 import LocationTrigger from './LocationTrigger.vue';
+import LocationModal from './LocationModal.vue';
 import { useUserPreferencesStore } from '@/stores/userPreferences';
 import { storeToRefs } from 'pinia';
 import { getLocaleFlag } from '@/data/localeFlags';
@@ -60,6 +61,10 @@ const handleMobileMenu = () => {
 
 const handleOpenLangModal = () => {
   isModalOpen.value = !isModalOpen.value;
+};
+
+const handleCloseLangModal = () => {
+  isModalOpen.value = false;
 };
 </script>
 
@@ -138,4 +143,6 @@ const handleOpenLangModal = () => {
       @open-lang-modal="handleOpenLangModal"
     />
   </div>
+
+  <LocationModal :is-open="isModalOpen" :on-close="handleCloseLangModal" />
 </template>
