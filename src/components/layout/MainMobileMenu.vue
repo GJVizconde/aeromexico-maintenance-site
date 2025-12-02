@@ -21,6 +21,7 @@ const emit = defineEmits<{
 }>();
 
 const handleLinkClick = () => {
+  console.log('handleLinkClick');
   emit('open-maintenance');
 };
 

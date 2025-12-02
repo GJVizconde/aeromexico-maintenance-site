@@ -140,7 +140,7 @@ const handleCloseLangModal = () => {
   >
     <MainMobileMenu
       v-if="isMobileMenuOpen"
-      @open-lang-modal="handleOpenLangModal"
+      @open-maintenance="handleOpenMaintenance"
     />
   </div>
 
