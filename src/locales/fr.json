@@ -9,6 +9,11 @@
     },
     "side": {
       "main-menu": "Menu principal"
+    },
+    "lang": {
+      "all": "Toutes les localisations",
+      "suggested": "Localisations suggerees",
+      "title": "Choisissez votre localisation"
     }
   },
   "featured-news": {
