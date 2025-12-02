@@ -10,6 +10,7 @@ import LocationModal from './LocationModal.vue';
 import { useUserPreferencesStore } from '@/stores/userPreferences';
 import { storeToRefs } from 'pinia';
 import { getLocaleFlag } from '@/data/localeFlags';
+import MobileSelectLocation from './MobileSelectLocation.vue';
 
 interface Props {
   navItems: string[];
@@ -18,6 +19,7 @@ interface Props {
 defineProps<Props>();
 
 const isMobileMenuOpen = ref(false);
+const isMainMobileMenu = ref(true);
 
 const emit = defineEmits<{
   (event: 'open-maintenance'): void;
@@ -55,6 +57,7 @@ const handleOpenMaintenance = () => {
 };
 
 const handleMobileMenu = () => {
+  isMainMobileMenu.value = true;
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
   emit('open-mobile-menu', isMobileMenuOpen.value);
 };
@@ -65,6 +68,10 @@ const handleOpenLangModal = () => {
 
 const handleCloseLangModal = () => {
   isModalOpen.value = false;
+};
+
+const handleSelectMenu = () => {
+  isMainMobileMenu.value = !isMainMobileMenu.value;
 };
 </script>
 
@@ -138,8 +145,9 @@ const handleCloseLangModal = () => {
     class="fixed top-[60px] right-0 h-full bg-white text-white transition-transform duration-700 z-50 md:hidden overflow-y-auto"
     style="width: 100%"
   >
+    <MobileSelectLocation :main="isMainMobileMenu" @click="handleSelectMenu" />
     <MainMobileMenu
-      v-if="isMobileMenuOpen"
+      v-if="isMainMobileMenu"
       @open-maintenance="handleOpenMaintenance"
     />
   </div>
