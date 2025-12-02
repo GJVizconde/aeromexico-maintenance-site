@@ -35,7 +35,7 @@ defineProps<Props>();
         >
           {{ title }}
         </h3>
-        <p class="text-[10px] md:mt-[15px] lg:mt-5 lg:text-base">
+        <p class="text-[10px] md:mt-[15px] lg:mt-5 lg:text-base lg:pr-1">
           {{ description }}
         </p>
       </div>
