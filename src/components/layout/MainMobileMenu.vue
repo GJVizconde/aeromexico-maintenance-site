@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import navigationLinks from '@/data/navigationLinks.json';
 import { t } from '@/utils/i18n';
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
+import MobileSelectLocation from './MobileSelectLocation.vue';
 
 type NavigationLink = {
   name: string;
@@ -32,17 +33,24 @@ const handleLinkClick = () => {
 //   if (!currentPath) return false;
 //   return href === '/' ? currentPath === '/' : currentPath.startsWith(href);
 // };
+
+const main = ref(true);
+
+const handleSelectMenu = () => {
+  main.value = !main.value;
+};
 </script>
 
 <template>
   <div class="text-amDarkGray text-[14px]">
+    <MobileSelectLocation :main="main" @click="handleSelectMenu" />
     <div
       class="flex items-center px-5 h-[50px] tracking-wider text-xs text-amBlueInnovation"
     >
       {{ t('navbar.side.main-menu') }}
     </div>
     <div class="flex px-5 flex-col">
-      <div class="border-t border-b">
+      <div class="border-t border-b border-amUltraLightGray">
         <div
           class="flex w-full gap-[15px] font-extrabold text-amBluePremium no-underline"
           v-for="value in translatedLinks"
