@@ -39,6 +39,8 @@
   --color-amNewLightGray: #bfbfbd;
   --color-amMediumBlue: #0256e6;
   --color-amUltraLightGray: #d6d6d6;
+  --color-amDarkGray: #666666;
+  --color-amGreen: rgba(72, 168, 62, 0.1);
   --color-searchBorder: rgba(255, 255, 255, 0.2);
 }
 
