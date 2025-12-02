@@ -3,8 +3,12 @@ import aeromexicoLogo from '@/assets/icons/new-aeromexico-business.svg';
 import amHeadLogo from '@/assets/icons/am-head.svg';
 import burgerIcon from '@/assets/icons/burger.svg';
 import closeWhiteIcon from '@/assets/icons/close-white.svg';
-import { onUnmounted, ref, watch } from 'vue';
+import { computed, onUnmounted, ref, watch } from 'vue';
 import MainMobileMenu from './MainMobileMenu.vue';
+import LocationTrigger from './LocationTrigger.vue';
+import { useUserPreferencesStore } from '@/stores/userPreferences';
+import { storeToRefs } from 'pinia';
+import { getLocaleFlag } from '@/data/localeFlags';
 
 interface Props {
   navItems: string[];
@@ -23,6 +27,12 @@ const updateBodyScroll = (isOpen: boolean) => {
   if (typeof document === 'undefined') return;
   document.body.style.overflow = isOpen ? 'hidden' : '';
 };
+
+const userPreferences = useUserPreferencesStore();
+const { language, languageCode } = storeToRefs(userPreferences);
+console.log(language.value);
+console.log(languageCode.value);
+const flagSrc = computed(() => getLocaleFlag(languageCode.value));
 
 watch(
   isMobileMenuOpen,
@@ -87,6 +97,13 @@ const handleMobileMenu = () => {
     <div
       class="flex items-center h-full border-l border-white/15 md:border-none"
     >
+      <LocationTrigger
+        class="hidden md:block"
+        :user-location="'hola'"
+        :lang="languageCode"
+        :is-modal-open="false"
+        :flag="flagSrc"
+      />
       <button
         type="button"
         class="md:hidden cursor-pointer h-full flex items-center justify-center px-[15px] ml-[15px] shrink-0"

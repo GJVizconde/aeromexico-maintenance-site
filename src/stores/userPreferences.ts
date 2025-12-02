@@ -1,7 +1,7 @@
+import { computed, ref } from 'vue';
 import { defineStore } from 'pinia';
 import type { Language } from '@/utils/language';
 import {
-  detectLanguage,
   findLanguageByCode,
   getFallbackLanguage,
   persistLanguageCookie,
@@ -10,24 +10,30 @@ import { setLocale } from '@/utils/i18n';
 
 export type UserPreferencesStore = ReturnType<typeof useUserPreferencesStore>;
 
-export const useUserPreferencesStore = defineStore('userPreferences', {
-  state: () => ({
-    language: detectLanguage(),
-  }),
-  getters: {
-    languageCode: (state) => state.language.code,
-  },
-  actions: {
-    setLanguage(language: Language) {
-      this.language = language;
-      setLocale(language.code);
-      persistLanguageCookie(language.code);
-    },
-    setLanguageByCode(code: string) {
-      this.setLanguage(findLanguageByCode(code));
-    },
-    resetLanguage() {
-      this.setLanguage(getFallbackLanguage());
-    },
-  },
+export const useUserPreferencesStore = defineStore('userPreferences', () => {
+  const language = ref<Language>(getFallbackLanguage());
+
+  const languageCode = computed(() => language.value.code);
+
+  const setLanguage = (value: Language) => {
+    language.value = value;
+    setLocale(value.code);
+    persistLanguageCookie(value.code);
+  };
+
+  const setLanguageByCode = (code: string) => {
+    setLanguage(findLanguageByCode(code));
+  };
+
+  const resetLanguage = () => {
+    setLanguage(getFallbackLanguage());
+  };
+
+  return {
+    language,
+    languageCode,
+    setLanguage,
+    setLanguageByCode,
+    resetLanguage,
+  };
 });
