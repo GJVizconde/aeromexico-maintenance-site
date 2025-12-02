@@ -50,7 +50,7 @@ defineProps<Props>();
       </BaseButton>
 
       <BaseButton
-        class="inline-flex text-[11px] lg:hidden md:self-start mt-4 py-[6.5px] md:py-2.5 md:px-3 w-full md:w-auto"
+        class="inline-flex text-[11px] lg:hidden md:self-start mt-4 py-[6.5px] md:py-2.5 md:px-3 w-full md:w-auto md:text-xs"
         variant="primary"
         @click="emit('open-maintenance')"
       >
