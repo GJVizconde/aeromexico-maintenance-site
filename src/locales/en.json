@@ -13,7 +13,8 @@
     "lang": {
       "title": "Select your location",
       "suggested": "Suggested locations",
-      "all": "All locations"
+      "all": "All locations",
+      "location-language": "Location and language"
     }
   },
   "featured-news": {
@@ -118,6 +119,20 @@
       "title": "How we support your business",
       "prev": "View previous",
       "next": "View next"
+    }
+  },
+  "accessibility": {
+    "aria": {
+      "main-navigation": "Main navigation"
+    },
+    "alt": {
+      "brand": "Aeromexico Business logo",
+      "hero-plane": "Aeromexico airplane",
+      "decorative-trails": "Decorative trails graphic",
+      "flag": "Selected location flag",
+      "chat": "Chat icon",
+      "pci": "PCI certification badge",
+      "language-toggle": "Open language selector"
     }
   },
   "maintenance-modal": {

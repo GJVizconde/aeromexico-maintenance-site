@@ -2,6 +2,7 @@
 import { toRefs } from 'vue';
 import vectorArrowIcon from '@/assets/icons/vector-arrow.svg';
 import caretDownIcon from '@/assets/icons/caret-down.svg';
+import { t } from '@/utils/i18n';
 
 interface Props {
   userLocation: string;
@@ -44,7 +45,7 @@ const handleSelectLocation = () => {
     <img
       class="w-3 h-3"
       :src="isModalLangOpen ? vectorArrowIcon : caretDownIcon"
-      alt="search"
+      :alt="t('accessibility.alt.language-toggle')"
     />
   </div>
 </template>

@@ -2,6 +2,7 @@
 import BaseButton from '@/components/ui/BaseButton.vue';
 import stelasIcon from '@/assets/icons/stelas.svg';
 import stelasMobileIcon from '@/assets/icons/stelas-mobile.svg';
+import { t } from '@/utils/i18n';
 
 interface Props {
   badge: string;
@@ -60,12 +61,12 @@ defineProps<Props>();
 
     <img
       :src="stelasMobileIcon"
-      alt="estelas"
+      :alt="t('accessibility.alt.decorative-trails')"
       class="absolute right-0 top-2.5 w-8 md:hidden"
     />
     <img
       :src="stelasIcon"
-      alt="estelas"
+      :alt="t('accessibility.alt.decorative-trails')"
       class="relative hidden md:block h-full"
     />
   </div>

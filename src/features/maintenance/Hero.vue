@@ -30,7 +30,7 @@ const heroCardContent = computed<HeroCardContent>(() => ({
     <img
       class="h-[214px] md:h-[415px] w-full object-cover object-center"
       :src="airplaneImg"
-      alt="Plane"
+      :alt="t('accessibility.alt.hero-plane')"
     />
     <div class="absolute inset-0">
       <div class="relative w-full md:max-w-[645px] lg:max-w-[1120px] mx-auto">

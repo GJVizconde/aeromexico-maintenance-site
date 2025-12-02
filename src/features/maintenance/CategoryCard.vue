@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BaseCard from '@/components/ui/BaseCard.vue';
 import stelasMobileIcon from '@/assets/icons/stelas-mobile.svg';
+import { t } from '@/utils/i18n';
 
 import type { CategoryItem } from './maintenance.types';
 
@@ -39,12 +40,12 @@ const props = defineProps<Props>();
 
       <img
         :src="stelasMobileIcon"
-        alt="estelas"
+        :alt="t('accessibility.alt.decorative-trails')"
         class="absolute right-0 top-[17px]"
       />
       <img
         :src="stelasMobileIcon"
-        alt="estelas"
+        :alt="t('accessibility.alt.decorative-trails')"
         class="absolute right-0 top-8 md:top-10"
       />
     </div>

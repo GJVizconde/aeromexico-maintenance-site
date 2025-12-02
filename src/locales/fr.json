@@ -13,7 +13,8 @@
     "lang": {
       "all": "Toutes les localisations",
       "suggested": "Localisations suggerees",
-      "title": "Choisissez votre localisation"
+      "title": "Choisissez votre localisation",
+      "location-language": "Localisation et langue"
     }
   },
   "featured-news": {
@@ -118,6 +119,20 @@
       "title": "Comment nous soutenons votre activité",
       "prev": "Voir précédent",
       "next": "Voir suivant"
+    }
+  },
+  "accessibility": {
+    "aria": {
+      "main-navigation": "Navigation principale"
+    },
+    "alt": {
+      "brand": "Logo Aeroméxico Business",
+      "hero-plane": "Avion Aeroméxico",
+      "decorative-trails": "Motif décoratif de traînées",
+      "flag": "Drapeau de la localisation sélectionnée",
+      "chat": "Icône de chat",
+      "pci": "Badge de certification PCI",
+      "language-toggle": "Ouvrir le sélecteur de langue"
     }
   },
   "maintenance-modal": {

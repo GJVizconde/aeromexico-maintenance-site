@@ -156,7 +156,11 @@ const openMaintenance = () => emit('open-maintenance');
                 class="w-full flex cursor-pointer items-center justify-center gap-2.5 rounded bg-amBlueInnovation px-3 py-2.5 text-xs font-semibold leading-5 font-GarnettSemibold shadow-lg transition hover:brightness-110"
                 @click="openMaintenance"
               >
-                <img :src="chatIcon" alt="Chat" class="h-5 w-5" />
+                <img
+                  :src="chatIcon"
+                  :alt="t('accessibility.alt.chat')"
+                  class="h-5 w-5"
+                />
                 <span>{{ contactCopy.cta }}</span>
               </BaseButton>
             </div>
@@ -283,7 +287,11 @@ const openMaintenance = () => emit('open-maintenance');
                 class="flex cursor-pointer items-center justify-center gap-2.5 rounded-md bg-amBlueInnovation px-3 py-2.5 text-sm font-semibold leading-5 font-GarnettSemibold shadow-lg transition hover:brightness-110"
                 @click="openMaintenance"
               >
-                <img :src="chatIcon" alt="Chat" class="h-5 w-5" />
+                <img
+                  :src="chatIcon"
+                  :alt="t('accessibility.alt.chat')"
+                  class="h-5 w-5"
+                />
                 <span class="text-xs leading-5">{{ contactCopy.cta }}</span>
               </BaseButton>
             </div>
@@ -379,7 +387,11 @@ const openMaintenance = () => emit('open-maintenance');
                 class="mt-5 flex cursor-pointer items-center justify-center gap-2.5 rounded-md bg-amBlueInnovation px-4.5 py-5 text-sm font-semibold leading-5 font-GarnettSemibold shadow-lg transition hover:brightness-110"
                 @click="openMaintenance"
               >
-                <img :src="chatIcon" alt="Chat" class="h-5 w-5" />
+                <img
+                  :src="chatIcon"
+                  :alt="t('accessibility.alt.chat')"
+                  class="h-5 w-5"
+                />
                 <span>{{ contactCopy.cta }}</span>
               </BaseButton>
 
@@ -459,17 +471,17 @@ const openMaintenance = () => emit('open-maintenance');
       <div class="hidden md:flex md:flex-col absolute right-0 top-0 lg:h-full">
         <img
           :src="stelasIcon"
-          alt="Estelas decorativas"
+          :alt="t('accessibility.alt.decorative-trails')"
           class="pointer-events- lg:h-full w-[18px] object-cover md:w-[26px]"
         />
         <img
           :src="stelasIcon"
-          alt="Estelas decorativas"
+          :alt="t('accessibility.alt.decorative-trails')"
           class="pointer-events- lg:hidden w-[18px] object-cover md:w-[26px]"
         />
         <img
           :src="stelasIcon"
-          alt="Estelas decorativas"
+          :alt="t('accessibility.alt.decorative-trails')"
           class="pointer-events- lg:hidden w-[18px] object-cover md:w-[26px]"
         />
       </div>
@@ -514,7 +526,11 @@ const openMaintenance = () => emit('open-maintenance');
         </div>
         <div class="flex items-center gap-2">
           <span>{{ bottomCopy.certified }}</span>
-          <img :src="pciLogo" alt="PCI" class="h-6.5 w-6.5" />
+          <img
+            :src="pciLogo"
+            :alt="t('accessibility.alt.pci')"
+            class="h-6.5 w-6.5"
+          />
         </div>
       </div>
     </div>

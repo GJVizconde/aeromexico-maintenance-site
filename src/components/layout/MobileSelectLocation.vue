@@ -1,10 +1,11 @@
 <script setup>
-import { computed, onMounted, watch } from 'vue';
+import { computed } from 'vue';
 import { storeToRefs } from 'pinia';
 
 import blueArrowRightIcon from '@/assets/icons/blue-arrow-right.svg';
-import { useUserPreferencesStore } from '@/stores/userPreferences';
 import { getLocaleFlag } from '@/data/localeFlags';
+import { useUserPreferencesStore } from '@/stores/userPreferences';
+import { t } from '@/utils/i18n';
 
 const preferences = useUserPreferencesStore();
 const { language } = storeToRefs(preferences);
@@ -24,7 +25,11 @@ const flag = computed(() => getLocaleFlag(language.value.code));
   >
     <div v-if="main" class="flex px-5 justify-between items-center w-full">
       <div class="flex gap-2.5 items-center justify-center">
-        <img class="w-[25px] h-[25px]" :src="flag" alt="flag" />
+        <img
+          class="w-[25px] h-[25px]"
+          :src="flag"
+          :alt="t('accessibility.alt.flag')"
+        />
         <span class="text-base font-medium text-amBluePremium">{{
           language.name
         }}</span>
@@ -41,7 +46,7 @@ const flag = computed(() => getLocaleFlag(language.value.code));
         />
         <span
           class="text-lg font-GarnettSemibold font-semibold text-amBluePremium tracking-wider"
-          >Ubicación e Idioma</span
+          >{{ t('navbar.lang.location-language') }}</span
         >
       </div>
     </div>

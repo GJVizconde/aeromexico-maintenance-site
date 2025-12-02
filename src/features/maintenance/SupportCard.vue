@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import stelasMobileIcon from '@/assets/icons/stelas-mobile.svg';
+import { t } from '@/utils/i18n';
 import type { SupportItem } from './maintenance.types';
 
 interface Props {
@@ -54,8 +55,15 @@ const props = withDefaults(defineProps<Props>(), {
         </div>
 
         <div class="mt-1 w-auto shrink-0">
-          <img :src="stelasMobileIcon" alt="estelas" />
-          <img :src="stelasMobileIcon" class="mt-1" alt="estelas" />
+          <img
+            :src="stelasMobileIcon"
+            :alt="t('accessibility.alt.decorative-trails')"
+          />
+          <img
+            :src="stelasMobileIcon"
+            class="mt-1"
+            :alt="t('accessibility.alt.decorative-trails')"
+          />
         </div>
       </div>
     </div>
