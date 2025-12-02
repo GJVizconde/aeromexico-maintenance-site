@@ -1,45 +1,50 @@
 <script setup lang="ts">
+import { toRefs } from 'vue';
+import vectorArrowIcon from '@/assets/icons/vector-arrow.svg';
+import caretDownIcon from '@/assets/icons/caret-down.svg';
+
 interface Props {
   userLocation: string;
   lang: string;
-  isModalOpen: boolean;
+  isModalLangOpen: boolean;
   flag: string;
 }
 
-const { userLocation, lang, isModalOpen, flag } = withDefaults(
-  defineProps<Props>(),
-  {
-    userLocation: '',
-    lang: '',
-    isModalOpen: false,
-    flag: '',
-  }
-);
+const props = withDefaults(defineProps<Props>(), {
+  userLocation: '',
+  lang: '',
+  isModalLangOpen: false,
+  flag: '',
+});
+
+const { userLocation, lang, isModalLangOpen, flag } = toRefs(props);
+
+const emit = defineEmits<{
+  (event: 'open-lang-modal'): void;
+}>();
 
 const handleSelectLocation = () => {
-  console.log('handleSelectLocation');
+  emit('open-lang-modal');
 };
 </script>
 
 <template>
   <div
     v-if="userLocation"
-    class="hidden md:flex text-white text-[14px] space-x-2 py-[7px] px-2.5 items-center w-[90px] cursor-pointer select-none rounded hover:bg-[#FFFFFF26]"
+    class="hidden md:flex text-white text-[14px] space-x-2 py-[7px] pl-2.5 items-center w-[90px] cursor-pointer select-none rounded hover:bg-[#FFFFFF26]"
     @click="handleSelectLocation"
   >
-    <img :src="flag" alt="" width="16" height="16" class="min-w-4 min-h-4" />
-    <div class="text-xs cursor-pointer font-semibold uppercase tracking-wider">
+    <img :src="flag" alt="" class="w-4 h-4" />
+    <div
+      class="text-xs cursor-pointer font-GarnettSemibold font-semibold uppercase tracking-wider"
+    >
       {{ lang }}
     </div>
 
     <img
-      class=""
-      :src="`/images/newIconography/${
-        isModalOpen ? 'Vectorarrow' : 'caret-down'
-      }.svg`"
+      class="w-3 h-3"
+      :src="isModalLangOpen ? vectorArrowIcon : caretDownIcon"
       alt="search"
-      width="12"
-      height="12"
     />
   </div>
 </template>

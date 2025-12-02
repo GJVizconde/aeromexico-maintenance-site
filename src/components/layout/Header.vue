@@ -28,10 +28,11 @@ const updateBodyScroll = (isOpen: boolean) => {
   document.body.style.overflow = isOpen ? 'hidden' : '';
 };
 
+const isModalOpen = ref(false);
+
 const userPreferences = useUserPreferencesStore();
 const { language, languageCode } = storeToRefs(userPreferences);
-console.log(language.value);
-console.log(languageCode.value);
+
 const flagSrc = computed(() => getLocaleFlag(languageCode.value));
 
 watch(
@@ -56,11 +57,15 @@ const handleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
   emit('open-mobile-menu', isMobileMenuOpen.value);
 };
+
+const handleOpenLangModal = () => {
+  isModalOpen.value = !isModalOpen.value;
+};
 </script>
 
 <template>
   <header
-    class="flex items-center justify-between bg-amBluePremium h-[60px] pl-[15px] md:px-6 text-white text-xs font-semibold"
+    class="flex items-center justify-between bg-amBluePremium h-[60px] pl-[15px] md:px-2 text-white text-xs font-semibold"
   >
     <div class="flex flex-1 items-center justify-between">
       <div class="flex items-center justify-center">
@@ -94,14 +99,13 @@ const handleMobileMenu = () => {
         </nav>
       </div>
     </div>
-    <div
-      class="flex items-center h-full border-l border-white/15 md:border-none"
-    >
+    <div class="flex items-center h-full border-l border-white/15">
       <LocationTrigger
-        class="hidden md:block"
-        :user-location="'hola'"
+        class="hidden md:block ml-[15px]"
+        :user-location="language.location"
         :lang="languageCode"
-        :is-modal-open="false"
+        :is-modal-lang-open="isModalOpen"
+        @open-lang-modal="handleOpenLangModal"
         :flag="flagSrc"
       />
       <button
@@ -131,7 +135,7 @@ const handleMobileMenu = () => {
   >
     <MainMobileMenu
       v-if="isMobileMenuOpen"
-      @open-maintenance="handleOpenMaintenance"
+      @open-lang-modal="handleOpenLangModal"
     />
   </div>
 </template>
