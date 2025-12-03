@@ -15,7 +15,11 @@ type HeroCardContent = {
   ctaLabel: string;
 };
 
-const { src: heroSrc, srcset: heroSrcset, sizes: heroSizes } = useHeroImage({
+const {
+  src: heroSrc,
+  srcset: heroSrcset,
+  sizes: heroSizes,
+} = useHeroImage({
   src: airplaneImg,
   srcSm: airplaneImgSm,
   srcLg: airplaneImgLg,
@@ -35,7 +39,7 @@ const heroCardContent = computed<HeroCardContent>(() => ({
 
 <template>
   <!-- Hero -->
-  <section class="relative">
+  <section class="relative mx-auto">
     <img
       class="h-[214px] md:h-[415px] w-full object-cover object-center"
       :src="heroSrc"
