@@ -123,7 +123,9 @@
   },
   "accessibility": {
     "aria": {
-      "main-navigation": "Navegação principal"
+      "main-navigation": "Navegação principal",
+      "open-menu": "Abrir menu principal",
+      "close-menu": "Fechar menu principal"
     },
     "alt": {
       "brand": "Logotipo da Aeromexico Business",

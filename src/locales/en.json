@@ -123,7 +123,9 @@
   },
   "accessibility": {
     "aria": {
-      "main-navigation": "Main navigation"
+      "main-navigation": "Main navigation",
+      "open-menu": "Open main menu",
+      "close-menu": "Close main menu"
     },
     "alt": {
       "brand": "Aeromexico Business logo",

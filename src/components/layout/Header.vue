@@ -147,6 +147,12 @@ const handleLocation = () => {
           'bg-amBluePremium': !isMobileMenuOpen,
         }"
         @click="handleMobileMenu"
+        :aria-label="
+          isMobileMenuOpen
+            ? t('accessibility.aria.close-menu')
+            : t('accessibility.aria.open-menu')
+        "
+        :aria-expanded="isMobileMenuOpen"
       >
         <img
           :src="isMobileMenuOpen ? closeWhiteIcon : burgerIcon"

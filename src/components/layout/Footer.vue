@@ -203,7 +203,8 @@ const openMaintenance = () => emit('open-maintenance');
                   </span>
                   <img
                     :src="caretDownIcon"
-                    :alt="t(aboutColumn?.titleKey ?? '')"
+                    alt=""
+                    aria-hidden="true"
                     class="h-1.5 w-2.5 transition-transform duration-200"
                     :class="mobileAccordion.about ? 'rotate-180' : 'rotate-0'"
                   />
@@ -220,7 +221,12 @@ const openMaintenance = () => emit('open-maintenance');
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img :src="link.iconSrc" :alt="link.label" class="h-5 w-5" />
+                    <img
+                      :src="link.iconSrc"
+                      alt=""
+                      aria-hidden="true"
+                      class="h-5 w-5"
+                    />
                     <span>{{ link.label }}</span>
                   </a>
                 </div>
@@ -239,7 +245,8 @@ const openMaintenance = () => emit('open-maintenance');
                   </span>
                   <img
                     :src="caretDownIcon"
-                    :alt="discoverCopy.title"
+                    alt=""
+                    aria-hidden="true"
                     class="h-1.5 w-2.5 transition-transform duration-200"
                     :class="mobileAccordion.more ? 'rotate-180' : 'rotate-0'"
                   />
@@ -337,7 +344,8 @@ const openMaintenance = () => emit('open-maintenance');
                   >
                     <img
                       :src="link.iconSrc"
-                      :alt="link.label"
+                      alt=""
+                      aria-hidden="true"
                       class="h-[25px] w-[25px]"
                     />
                     <span>{{ link.label }}</span>
@@ -432,7 +440,8 @@ const openMaintenance = () => emit('open-maintenance');
                   >
                     <img
                       :src="link.iconSrc"
-                      :alt="link.label"
+                      alt=""
+                      aria-hidden="true"
                       class="h-[25px] w-[25px]"
                     />
                     <span>{{ link.label }}</span>
