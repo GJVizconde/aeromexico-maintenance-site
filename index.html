@@ -1,10 +1,49 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aeromexico Business</title>
+    <meta
+      name="description"
+      content="Aerom&eacute;xico Business - P&aacute;gina de mantenimiento temporal. Volveremos pronto."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- (Opcional pero recomendado para compartir enlaces) -->
+    <meta
+      property="og:title"
+      content="Aerom&eacute;xico Business &middot; Mantenimiento temporal"
+    />
+    <meta
+      property="og:description"
+      content="Aerom&eacute;xico Business - P&aacute;gina de mantenimiento temporal. Volveremos pronto."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="pt_BR" />
+    <meta property="og:locale:alternate" content="it_IT" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+
+    <script type="module">
+      import garnettRegular from '/src/assets/fonts/garnett-regular.woff2';
+      import garnettSemibold from '/src/assets/fonts/garnett-semibold.woff2';
+
+      const preloadFont = (href) => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'font';
+        link.type = 'font/woff2';
+        link.crossOrigin = 'anonymous';
+        link.href = href;
+        document.head.appendChild(link);
+      };
+
+      preloadFont(garnettRegular);
+      preloadFont(garnettSemibold);
+    </script>
+    <title>Aerom&eacute;xico Business</title>
   </head>
   <body class="font-sans">
     <div id="app"></div>
