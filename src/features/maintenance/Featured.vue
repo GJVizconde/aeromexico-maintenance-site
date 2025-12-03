@@ -15,7 +15,7 @@ defineProps<Props>();
   <section class="w-full py-10">
     <div class="mx-5 md:max-w-[644px] lg:max-w-[1120px] md:mx-auto">
       <h2
-        class="text-lg md:text-[22px] lg:text-[32px] font-GarnettSemibold font-semibold text-amBluePremium leading-[42px]"
+        class="text-lg md:text-[22px] lg:text-[32px] font-sans font-semibold text-amBluePremium leading-[42px]"
       >
         {{ t('home.featured') }}
       </h2>

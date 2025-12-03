@@ -37,7 +37,7 @@ const handleSelectLocation = () => {
   >
     <img :src="flag" alt="" class="w-4 h-4" />
     <div
-      class="text-xs cursor-pointer font-GarnettSemibold font-semibold uppercase tracking-wider"
+      class="text-xs cursor-pointer font-sans font-semibold uppercase tracking-wider"
     >
       {{ lang }}
     </div>

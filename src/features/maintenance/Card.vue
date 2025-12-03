@@ -38,7 +38,7 @@ const downloadPdf = () => {
     </p>
 
     <h3
-      class="md:mt-2 text-2xl font-GarnettSemibold font-semibold text-amBluePremium leading-[34px] md:mb-[13px]"
+      class="md:mt-2 text-2xl font-sans font-semibold text-amBluePremium leading-[34px] md:mb-[13px]"
     >
       {{ props.item.title }}
     </h3>

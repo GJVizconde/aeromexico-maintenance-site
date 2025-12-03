@@ -4,13 +4,15 @@
   font-family: 'Garnett';
   src: url('@/assets/fonts/Garnett-Regular.woff2') format('woff2');
   font-weight: 400;
+  font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'GarnettSemibold';
+  font-family: 'Garnett';
   src: url('@/assets/fonts/Garnett-Semibold.woff2') format('woff2');
   font-weight: 600;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -23,8 +25,7 @@
 
 /* Tailwind v4 THEME VARIABLES */
 @theme {
-  --font-sans: 'Garnett', sans-serif;
-  --font-GarnettSemibold: 'GarnettSemibold', sans-serif;
+  --font-sans: 'Garnett', 'DM Sans', system-ui, -apple-system, sans-serif;
 
   --color-amBrandBlue: #0b2343;
   --color-amBluePremium: #020c41;

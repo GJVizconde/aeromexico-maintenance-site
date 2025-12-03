@@ -63,7 +63,7 @@ const classHover = computed(() => ({
 
       <div>
         <div
-          class="text-amBluePremium leading-5 font-GarnettSemibold font-semibold group-hover:text-[#0074B8]"
+          class="text-amBluePremium leading-5 font-sans font-semibold group-hover:text-[#0074B8]"
         >
           {{ name }}
         </div>

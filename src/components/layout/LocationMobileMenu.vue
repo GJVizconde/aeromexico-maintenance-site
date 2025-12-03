@@ -76,7 +76,7 @@ const toggleAccordion = () => {
     />
 
     <div
-      class="flex w-full h-[60px] items-center px-5 text-amBluePremium font-GarnettSemibold font-semibold text-xs tracking-widest shrink-0"
+      class="flex w-full h-[60px] items-center px-5 text-amBluePremium font-sans font-semibold text-xs tracking-widest shrink-0"
     >
       {{ t('navbar.lang.all') }}
     </div>

@@ -60,7 +60,7 @@ const changeLocation = (codeLocation: string) => {
       >
         <div class="flex gap-4 items-center">
           <img class="h-[31.5px] w-[31.5px]" :src="blueWorldIcon" alt="" />
-          <h3 class="text-[28px] font-GarnettSemibold">
+          <h3 class="text-[28px] font-sans font-semibold">
             {{ t('navbar.lang.title') }}
           </h3>
         </div>

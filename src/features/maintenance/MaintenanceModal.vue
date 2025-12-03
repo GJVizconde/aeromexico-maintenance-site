@@ -50,7 +50,7 @@ const close = () => {
         <!-- Title -->
         <h2
           id="maintenance-title"
-          class="mb-10 text-2xl font-GarnettSemibold text-heroBlue text-center"
+          class="mb-10 text-2xl font-sans font-semibold text-heroBlue text-center"
         >
           {{ t('maintenance-modal.title') }}
         </h2>
@@ -62,7 +62,7 @@ const close = () => {
         </div>
 
         <section class="mt-6 w-full space-y-6">
-          <p class="mb-4 font-GarnettSemibold font-semibold">
+          <p class="mb-4 font-sans font-semibold">
             {{ t('maintenance-modal.help-title') }}
           </p>
 

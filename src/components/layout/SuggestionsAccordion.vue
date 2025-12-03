@@ -24,7 +24,7 @@ const emit = defineEmits<{
       @click="emit('toggle')"
     >
       <span
-        class="text-amBluePremium font-GarnettSemibold font-semibold text-xs tracking-widest uppercase"
+        class="text-amBluePremium font-sans font-semibold text-xs tracking-widest uppercase"
         >{{ t('navbar.lang.suggested') }}</span
       >
 

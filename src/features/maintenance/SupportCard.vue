@@ -37,7 +37,7 @@ const props = withDefaults(defineProps<Props>(), {
         <div>
           <h3
             :class="[
-              'text-[22px] font-GarnettSemibold font-semibold',
+              'text-[22px] font-sans font-semibold',
               props.isEven ? 'text-amBluePremium' : 'text-white',
             ]"
           >

@@ -30,7 +30,7 @@ const props = defineProps<Props>();
     <div
       class="flex flex-col pt-5 pb-5 lg:pt-[27px] pl-5 lg:pl-6 pr-5 md:pr-16 lg:pr-8"
     >
-      <h3 class="text-2xl leading-[34px] font-GarnettSemibold font-semibold">
+      <h3 class="text-2xl leading-[34px] font-sans font-semibold">
         {{ props.item.title }}
       </h3>
 

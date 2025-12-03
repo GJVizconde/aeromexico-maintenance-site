@@ -142,7 +142,7 @@ const openMaintenance = () => emit('open-maintenance');
           <div class="flex flex-col">
             <div class="flex flex-col gap-3">
               <h3
-                class="text-[21px] font-GarnettSemibold font-semibold leading-[100%] text-warmWhite"
+                class="text-[21px] font-sans font-semibold leading-[100%] text-warmWhite"
               >
                 {{ contactCopy.title }}
               </h3>
@@ -153,7 +153,7 @@ const openMaintenance = () => emit('open-maintenance');
                 as="button"
                 variant="custom"
                 size="none"
-                class="w-full flex cursor-pointer items-center justify-center gap-2.5 rounded bg-amBlueInnovation px-3 py-2.5 text-xs font-semibold leading-5 font-GarnettSemibold shadow-lg transition hover:brightness-110"
+                class="w-full flex cursor-pointer items-center justify-center gap-2.5 rounded bg-amBlueInnovation px-3 py-2.5 text-xs font-semibold leading-5 font-sans shadow-lg transition hover:brightness-110"
                 @click="openMaintenance"
               >
                 <img
@@ -197,7 +197,7 @@ const openMaintenance = () => emit('open-maintenance');
                   @click="toggleMobileSection('about')"
                 >
                   <span
-                    class="text-xs font-GarnettSemibold font-semibold leading-[100%]"
+                    class="text-xs font-sans font-semibold leading-[100%]"
                   >
                     {{ t(aboutColumn?.titleKey ?? '') }}
                   </span>
@@ -233,7 +233,7 @@ const openMaintenance = () => emit('open-maintenance');
                   @click="toggleMobileSection('more')"
                 >
                   <span
-                    class="text-xs font-GarnettSemibold font-semibold leading-[100%]"
+                    class="text-xs font-sans font-semibold leading-[100%]"
                   >
                     {{ discoverCopy.title }}
                   </span>
@@ -276,7 +276,7 @@ const openMaintenance = () => emit('open-maintenance');
           >
             <div class="flex justify-between items-center">
               <h3
-                class="text-[21px] font-GarnettSemibold font-semibold leading-8"
+                class="text-[21px] font-sans font-semibold leading-8"
               >
                 {{ contactCopy.title }}
               </h3>
@@ -284,7 +284,7 @@ const openMaintenance = () => emit('open-maintenance');
                 as="button"
                 variant="custom"
                 size="none"
-                class="flex cursor-pointer items-center justify-center gap-2.5 rounded-md bg-amBlueInnovation px-3 py-2.5 text-sm font-semibold leading-5 font-GarnettSemibold shadow-lg transition hover:brightness-110"
+                class="flex cursor-pointer items-center justify-center gap-2.5 rounded-md bg-amBlueInnovation px-3 py-2.5 text-sm font-semibold leading-5 font-sans shadow-lg transition hover:brightness-110"
                 @click="openMaintenance"
               >
                 <img
@@ -322,7 +322,7 @@ const openMaintenance = () => emit('open-maintenance');
             class="mt-6 grid gap-8 pt-2 md:grid-cols-[0.7fr_1.3fr] md:items-start"
           >
             <div class="md:border-r md:border-white/15">
-              <h3 class="text-lg font-semibold leading-7 font-GarnettSemibold">
+              <h3 class="text-lg font-semibold leading-7 font-sans">
                 {{ t(aboutColumn?.titleKey ?? '') }}
               </h3>
               <ul
@@ -348,7 +348,7 @@ const openMaintenance = () => emit('open-maintenance');
 
             <div>
               <h3
-                class="text-[11px] pt-[7px] font-GarnettSemibold font-semibold leading-[100%]"
+                class="text-[11px] pt-[7px] font-sans font-semibold leading-[100%]"
               >
                 {{ discoverCopy.title }}
               </h3>
@@ -374,7 +374,7 @@ const openMaintenance = () => emit('open-maintenance');
         <div class="hidden lg:block">
           <div class="grid w-full grid-cols-[30%_25%_40%] gap-8 pt-2">
             <div class="border-r border-white/15 pr-10">
-              <h3 class="text-lg font-semibold leading-7 font-GarnettSemibold">
+              <h3 class="text-lg font-semibold leading-7 font-sans">
                 {{ contactCopy.title }}
               </h3>
               <p class="mt-2.5 text-[10px] leading-4 text-warmWhite/60">
@@ -384,7 +384,7 @@ const openMaintenance = () => emit('open-maintenance');
                 as="button"
                 variant="custom"
                 size="none"
-                class="mt-5 flex cursor-pointer items-center justify-center gap-2.5 rounded-md bg-amBlueInnovation px-4.5 py-5 text-sm font-semibold leading-5 font-GarnettSemibold shadow-lg transition hover:brightness-110"
+                class="mt-5 flex cursor-pointer items-center justify-center gap-2.5 rounded-md bg-amBlueInnovation px-4.5 py-5 text-sm font-semibold leading-5 font-sans shadow-lg transition hover:brightness-110"
                 @click="openMaintenance"
               >
                 <img
@@ -416,7 +416,7 @@ const openMaintenance = () => emit('open-maintenance');
 
             <div class="border-r border-white/15">
               <h3
-                class="mb-5 text-lg font-semibold leading-7 font-GarnettSemibold"
+                class="mb-5 text-lg font-semibold leading-7 font-sans"
               >
                 {{ t(aboutColumn?.titleKey ?? '') }}
               </h3>
@@ -443,7 +443,7 @@ const openMaintenance = () => emit('open-maintenance');
 
             <div>
               <h3
-                class="mb-5 text-lg font-semibold leading-7 font-GarnettSemibold"
+                class="mb-5 text-lg font-semibold leading-7 font-sans"
               >
                 {{ discoverCopy.title }}
               </h3>

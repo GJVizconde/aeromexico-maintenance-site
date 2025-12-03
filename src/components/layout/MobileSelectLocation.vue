@@ -45,7 +45,7 @@ const flag = computed(() => getLocaleFlag(language.value.code));
           alt=""
         />
         <span
-          class="text-lg font-GarnettSemibold font-semibold text-amBluePremium tracking-wider"
+          class="text-lg font-sans font-semibold text-amBluePremium tracking-wider"
           >{{ t('navbar.lang.location-language') }}</span
         >
       </div>

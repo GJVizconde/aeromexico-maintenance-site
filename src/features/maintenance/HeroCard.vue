@@ -27,12 +27,12 @@ defineProps<Props>();
     >
       <div>
         <h2
-          class="leading-[19px] text-[8px] md:text-lg lg:text-sm font-GarnettSemibold font-semibold"
+          class="leading-[19px] text-[8px] md:text-lg lg:text-sm font-sans font-semibold"
         >
           {{ badge }}
         </h2>
         <h3
-          class="my-2.5 md:mt-5 text-xs md:text-[28px] lg:text-4xl font-GarnettSemibold font-semibold leading-4.5 md:leading-tight"
+          class="my-2.5 md:mt-5 text-xs md:text-[28px] lg:text-4xl font-sans font-semibold leading-4.5 md:leading-tight"
         >
           {{ title }}
         </h3>

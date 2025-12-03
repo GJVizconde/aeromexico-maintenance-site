@@ -120,7 +120,7 @@ const handleLocation = () => {
             <li v-for="item in navItems" :key="item">
               <button
                 type="button"
-                class="rounded py-1.5 px-2.5 leading-[18px] hover:bg-searchBorder cursor-pointer font-GarnettSemibold font-semibold"
+                class="rounded py-1.5 px-2.5 leading-[18px] hover:bg-searchBorder cursor-pointer font-sans font-semibold"
                 @click="handleOpenMaintenance"
               >
                 {{ item }}
