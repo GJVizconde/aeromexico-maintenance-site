@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import airplaneImg from '@/assets/images/airplane.webp';
+import airplaneImgLg from '@/assets/images/airplane-1280.webp';
+import airplaneImgSm from '@/assets/images/airplane-768.webp';
 import heroContent from '@/data/hero.json';
 import { t } from '@/utils/i18n';
 import HeroCard from './HeroCard.vue';
 import { computed } from 'vue';
+import { useHeroImage } from './useHeroImage';
 
 type HeroCardContent = {
   badge: string;
@@ -11,6 +14,12 @@ type HeroCardContent = {
   description: string;
   ctaLabel: string;
 };
+
+const { src: heroSrc, srcset: heroSrcset, sizes: heroSizes } = useHeroImage({
+  src: airplaneImg,
+  srcSm: airplaneImgSm,
+  srcLg: airplaneImgLg,
+});
 
 const emit = defineEmits<{
   (event: 'open-maintenance'): void;
@@ -29,7 +38,12 @@ const heroCardContent = computed<HeroCardContent>(() => ({
   <section class="relative">
     <img
       class="h-[214px] md:h-[415px] w-full object-cover object-center"
-      :src="airplaneImg"
+      :src="heroSrc"
+      :srcset="heroSrcset"
+      :sizes="heroSizes"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
       :alt="t('accessibility.alt.hero-plane')"
     />
     <div class="absolute inset-0">
