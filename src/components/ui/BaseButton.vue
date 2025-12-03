@@ -32,7 +32,8 @@ withDefaults(defineProps<Props>(), {
     class="items-center justify-center cursor-pointer rounded-md font-sans font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
     :class="[
       // Variantes (no aplicamos nada si es 'custom')
-      variant === 'primary' && 'bg-[#f90083] text-white hover:brightness-110',
+      variant === 'primary' &&
+        'bg-rosaMexicano text-white hover:brightness-110',
       variant === 'secondary' &&
         'bg-white text-amBluePremium border border-amBluePremium hover:bg-amBluePremium/5',
       variant === 'ghost' && 'bg-transparent text-white hover:bg-white/10',
