@@ -19,8 +19,8 @@ const downloadPdf = () => {
   if (!pdf) return;
 
   const link = document.createElement('a');
-  link.href = `/docs/${pdf}`;
-  link.download = pdf;
+  link.href = pdf;
+  link.download = pdf.split('/').pop() ?? 'document';
   link.target = '_blank';
 
   document.body.appendChild(link);
