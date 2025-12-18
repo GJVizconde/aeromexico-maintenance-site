@@ -25,6 +25,13 @@ type FooterLink = {
   icon?: string;
 };
 
+type SocialLink = {
+  name: string;
+  icon?: string;
+  link: string;
+  labelKey?: string;
+};
+
 type FooterColumn = {
   id: string;
   titleKey: string;
@@ -43,7 +50,7 @@ type FooterRow = {
 
 type FooterContent = {
   columns: FooterColumn[];
-  social: FooterLink[];
+  social: SocialLink[];
   rows: FooterRow[];
 };
 
