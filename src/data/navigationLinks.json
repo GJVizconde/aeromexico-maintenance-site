@@ -1,27 +1,32 @@
 [
   {
     "name": "news",
-    "label": "navbar.navigation-links.news",
+    "labelKey": "navbar.navigation-links.news",
+    "labelValue": "Noticias",
     "link": "/news"
   },
   {
     "name": "products",
-    "label": "navbar.navigation-links.products",
+    "labelKey": "navbar.navigation-links.products",
+    "labelValue": "Productos",
     "link": "/products"
   },
   {
     "name": "policies",
-    "label": "navbar.navigation-links.policies",
+    "labelKey": "navbar.navigation-links.policies",
+    "labelValue": "Políticas",
     "link": "/policies"
   },
   {
     "name": "tools",
-    "label": "navbar.navigation-links.tools",
+    "labelKey": "navbar.navigation-links.tools",
+    "labelValue": "Herramientas",
     "link": "/tools"
   },
   {
     "name": "ndc",
-    "label": "navbar.navigation-links.ndc",
+    "labelKey": "navbar.navigation-links.ndc",
+    "labelValue": "NDC",
     "link": "/ndc/principal"
   }
 ]

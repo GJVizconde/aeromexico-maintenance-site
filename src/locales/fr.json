@@ -11,9 +11,9 @@
       "main-menu": "Menu principal"
     },
     "lang": {
+      "title": "Sélectionnez votre localisation",
+      "suggested": "Localisations suggérées",
       "all": "Toutes les localisations",
-      "suggested": "Localisations suggerees",
-      "title": "Choisissez votre localisation",
       "location-language": "Localisation et langue"
     }
   },
@@ -130,7 +130,7 @@
     "alt": {
       "brand": "Logo Aeroméxico Business",
       "hero-plane": "Avion Aeroméxico",
-      "decorative-trails": "Motif décoratif de traînées",
+      "decorative-trails": "Graphique décoratif de traînées",
       "flag": "Drapeau de la localisation sélectionnée",
       "chat": "Icône de chat",
       "pci": "Badge de certification PCI",
@@ -141,7 +141,7 @@
     "close": "Fermer le message de maintenance",
     "title": "Site en maintenance",
     "intro": "Nous sommes désolés pour la gêne occasionnée.",
-    "body-1": "Le site que vous essayez de visiter est en maintenance planifiée ou rencontre des problèmes techniques temporaires.",
+    "body-1": "Le site que vous essayez de visiter est en maintenance programmée ou rencontre des problèmes techniques temporaires.",
     "body-2": "Notre équipe travaille déjà pour rétablir le service au plus vite et assurer une meilleure expérience.",
     "help-title": "Besoin d'aide immédiate ?",
     "help-body": "Nous sommes là pour vous aider. Vous pouvez nous contacter via les canaux suivants :",

@@ -13,7 +13,7 @@
     "lang": {
       "suggested": "Ubicaciones sugeridas",
       "all": "Todas las ubicaciones",
-      "title": "Selecciona tu ubicacion",
+      "title": "Selecciona tu ubicación",
       "location-language": "Ubicación e idioma"
     }
   },
@@ -21,17 +21,17 @@
     "1": {
       "title": "Nuestra visión de distribución",
       "text": "Obtén más información sobre la experiencia limpia y consistente que los viajeros pueden...",
-      "category": "Productos y Servicios"
+      "category": "Productos y servicios"
     },
     "2": {
       "title": "Nuestra visión de distribución",
       "text": "Obtén más información sobre la experiencia limpia y consistente que los viajeros pueden...",
-      "category": "Productos y Servicios"
+      "category": "Productos y servicios"
     },
     "3": {
       "title": "Nuestra visión de distribución",
       "text": "Obtén más información sobre la experiencia limpia y consistente que los viajeros pueden...",
-      "category": "Productos y Servicios"
+      "category": "Productos y servicios"
     }
   },
   "hero": {
@@ -102,7 +102,7 @@
       "agency-lat": "Documentación para Agencias de Viajes (CAAV) Latinoamérica"
     },
     "row": {
-      "rights": "c 2024 Aeroméxico. Todos los derechos reservados",
+      "rights": "© 2024 Aeroméxico. Todos los derechos reservados",
       "certified": "Certificado por",
       "links": {
         "legal": "Legal",

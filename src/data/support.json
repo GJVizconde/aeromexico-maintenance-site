@@ -2,25 +2,33 @@
   {
     "id": "1",
     "titleKey": "support.1.title",
+    "titleValue": "Herramientas",
     "textKey": "support.1.text",
+    "textValue": "Te brindamos recursos de autogestión para un soporte más ágil.",
     "img": "support-1.webp"
   },
   {
     "id": "2",
     "titleKey": "support.2.title",
+    "titleValue": "Asistencia",
     "textKey": "support.2.text",
+    "textValue": "Chat en vivo para apoyarte siempre que lo necesites.",
     "img": "support-2.webp"
   },
   {
     "id": "3",
     "titleKey": "support.3.title",
+    "titleValue": "Información",
     "textKey": "support.3.text",
+    "textValue": "Noticias, avisos y más ¡Todo en un mismo lugar!",
     "img": "support-3.webp"
   },
   {
     "id": "4",
     "titleKey": "support.4.title",
+    "titleValue": "Apoyo",
     "textKey": "support.4.text",
+    "textValue": "Estamos contigo para proteger a nuestros clientes.",
     "img": "support-4.webp"
   }
 ]

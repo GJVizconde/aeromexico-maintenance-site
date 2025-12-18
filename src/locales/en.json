@@ -8,7 +8,7 @@
       "ndc": "NDC"
     },
     "side": {
-      "main-menu": "Main Menu"
+      "main-menu": "Main menu"
     },
     "lang": {
       "title": "Select your location",
@@ -21,24 +21,24 @@
     "1": {
       "title": "Our distribution vision",
       "text": "Learn more about the clean and consistent experience travelers can...",
-      "category": "Products & Services"
+      "category": "Products and services"
     },
     "2": {
       "title": "Our distribution vision",
       "text": "Learn more about the clean and consistent experience travelers can...",
-      "category": "Products & Services"
+      "category": "Products and services"
     },
     "3": {
       "title": "Our distribution vision",
       "text": "Learn more about the clean and consistent experience travelers can...",
-      "category": "Products & Services"
+      "category": "Products and services"
     }
   },
   "hero": {
     "badge": "Service unavailable",
     "title": "Site under maintenance",
     "description": "We suggest calling Global Support or messaging us via chat.",
-    "cta": "Aeroméxico Chat"
+    "cta": "Aeroméxico chat"
   },
   "categories": {
     "1": {
@@ -69,7 +69,7 @@
     },
     "3": {
       "title": "Information",
-      "text": "News, notices, and more. All in one place!"
+      "text": "News, notices, and more—all in one place!"
     },
     "4": {
       "title": "Support",
@@ -128,8 +128,8 @@
       "close-menu": "Close main menu"
     },
     "alt": {
-      "brand": "Aeromexico Business logo",
-      "hero-plane": "Aeromexico airplane",
+      "brand": "Aeroméxico Business logo",
+      "hero-plane": "Aeroméxico airplane",
       "decorative-trails": "Decorative trails graphic",
       "flag": "Selected location flag",
       "chat": "Chat icon",
@@ -139,17 +139,17 @@
   },
   "maintenance-modal": {
     "close": "Close maintenance message",
-    "title": "Site under maintenance",
-    "intro": "We’re sorry for the inconvenience.",
-    "body-1": "The site you’re trying to visit is under scheduled maintenance or experiencing temporary technical issues.",
+    "title": "Page under maintenance",
+    "intro": "We're sorry for the inconvenience.",
+    "body-1": "The site you're trying to visit is under scheduled maintenance or experiencing temporary technical issues.",
     "body-2": "Our team is already working to restore service as soon as possible and ensure a better experience.",
     "help-title": "Need immediate assistance?",
-    "help-body": "We’re here to help. You can reach us through the following channels:",
+    "help-body": "We're here to help. You can reach us through the following channels:",
     "global-support-title": "Global Support:",
     "global-support-body": "Our support team is available to resolve any questions or requests you may have.",
-    "chat-title": "Aeroméxico Business Chat:",
+    "chat-title": "Aeroméxico Business chat:",
     "chat-body": "If you prefer more direct assistance, message us through the chat on our business platform.",
     "thanks-1": "Thank you for your understanding and patience.",
-    "thanks-2": "We’ll be back online soon to keep offering the service you deserve."
+    "thanks-2": "We'll be back online soon to keep offering the service you deserve."
   }
 }

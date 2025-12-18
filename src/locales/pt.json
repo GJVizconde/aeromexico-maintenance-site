@@ -11,9 +11,9 @@
       "main-menu": "Menu principal"
     },
     "lang": {
-      "title": "Selecione sua localizacao",
-      "all": "Todas as localizacoes",
-      "suggested": "Localizacoes sugeridas",
+      "title": "Selecione sua localização",
+      "all": "Todas as localizações",
+      "suggested": "Localizações sugeridas",
       "location-language": "Localização e idioma"
     }
   },
@@ -96,10 +96,10 @@
       "compliance": "Compliance",
       "fly-with-us": "Voe conosco",
       "fleet": "Nossa frota",
-      "agency-mx": "Documentação para agências de viagens (CAAV) México",
-      "agency-us": "Documentação para agências de viagens (CAAV) Estados Unidos",
-      "agency-eur": "Documentação para agências de viagens (CAAV) Europa/Ásia",
-      "agency-lat": "Documentação para agências de viagens (CAAV) América Latina"
+      "agency-mx": "Documentação para Agências de Viagens (CAAV) México",
+      "agency-us": "Documentação para Agências de Viagens (CAAV) Estados Unidos",
+      "agency-eur": "Documentação para Agências de Viagens (CAAV) Europa/Ásia",
+      "agency-lat": "Documentação para Agências de Viagens (CAAV) América Latina"
     },
     "row": {
       "rights": "© 2024 Aeroméxico. Todos os direitos reservados",
@@ -113,13 +113,13 @@
   },
   "home": {
     "featured": "Conteúdo em destaque",
-    "featuredCta": "PDF",
-    "categories": "Nossas categorias",
-    "support": {
-      "title": "Como apoiamos o seu negócio",
-      "prev": "Ver anterior",
-      "next": "Ver seguinte"
-    }
+      "featuredCta": "PDF",
+      "categories": "Nossas categorias",
+      "support": {
+        "title": "Como apoiamos o seu negócio",
+        "prev": "Ver anterior",
+        "next": "Ver seguinte"
+      }
   },
   "accessibility": {
     "aria": {
@@ -128,8 +128,8 @@
       "close-menu": "Fechar menu principal"
     },
     "alt": {
-      "brand": "Logotipo da Aeromexico Business",
-      "hero-plane": "Avião da Aeromexico",
+      "brand": "Logotipo da Aeroméxico Business",
+      "hero-plane": "Avião da Aeroméxico",
       "decorative-trails": "Gráfico decorativo de trilhas",
       "flag": "Bandeira da localização selecionada",
       "chat": "Ícone de chat",

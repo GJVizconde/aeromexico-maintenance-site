@@ -119,6 +119,8 @@ const bottomCopy = computed(() => ({
     })) ?? [],
 }));
 
+const aboutTitle = computed(() => t(aboutColumn?.titleKey ?? ''));
+
 const mobileAccordion = ref<{ about: boolean; more: boolean }>({
   about: false,
   more: false,
@@ -199,7 +201,7 @@ const openMaintenance = () => emit('open-maintenance');
                   <span
                     class="text-xs font-sans font-semibold leading-[100%]"
                   >
-                    {{ t(aboutColumn?.titleKey ?? '') }}
+                    {{ aboutTitle }}
                   </span>
                   <img
                     :src="caretDownIcon"
@@ -330,7 +332,7 @@ const openMaintenance = () => emit('open-maintenance');
           >
             <div class="md:border-r md:border-white/15">
               <h3 class="text-lg font-semibold leading-7 font-sans">
-                {{ t(aboutColumn?.titleKey ?? '') }}
+                {{ aboutTitle }}
               </h3>
               <ul
                 class="mt-5 flex flex-col gap-1.5 text-xs leading-[17px] text-warmWhite"
@@ -426,7 +428,7 @@ const openMaintenance = () => emit('open-maintenance');
               <h3
                 class="mb-5 text-lg font-semibold leading-7 font-sans"
               >
-                {{ t(aboutColumn?.titleKey ?? '') }}
+                {{ aboutTitle }}
               </h3>
               <ul
                 class="flex flex-col gap-3 text-xs leading-4.5 text-warmWhite"

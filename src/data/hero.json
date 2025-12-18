@@ -1,6 +1,10 @@
 {
   "badgeKey": "hero.badge",
+  "badgeValue": "Servicio no disponible",
   "titleKey": "hero.title",
+  "titleValue": "Sitio en mantenimiento",
   "descriptionKey": "hero.description",
-  "ctaLabelKey": "hero.cta"
+  "descriptionValue": "Te sugerimos llamar a Global Support o escribirnos por el chat.",
+  "ctaLabelKey": "hero.cta",
+  "ctaLabelValue": "Chat Aeroméxico"
 }

@@ -2,25 +2,33 @@
   {
     "id": "1",
     "titleKey": "categories.1.title",
+    "titleValue": "NDC",
     "textKey": "categories.1.text",
+    "textValue": "Conoce AM NDC, una solución más para la gestión de vuelos.",
     "img": "category-1.webp"
   },
   {
     "id": "2",
     "titleKey": "categories.2.title",
+    "titleValue": "Productos",
     "textKey": "categories.2.text",
+    "textValue": "Información sobre nuestros servicios y programas.",
     "img": "category-2.webp"
   },
   {
     "id": "3",
     "titleKey": "categories.3.title",
+    "titleValue": "Noticias",
     "textKey": "categories.3.text",
+    "textValue": "Mantente informado sobre la actualidad de Aeroméxico.",
     "img": "category-3.webp"
   },
   {
     "id": "4",
     "titleKey": "categories.4.title",
+    "titleValue": "Políticas",
     "textKey": "categories.4.text",
+    "textValue": "Localiza fácilmente nuestras políticas de protección, flexibilidad y distribución.",
     "img": "category-4.webp"
   }
 ]

@@ -2,24 +2,33 @@
   {
     "id": "1",
     "titleKey": "featured-news.1.title",
+    "titleValue": "Nuestra visión de distribución",
     "textKey": "featured-news.1.text",
+    "textValue": "Obtén más información sobre la experiencia limpia y consistente que los viajeros pueden...",
     "categoryKey": "featured-news.1.category",
+    "categoryValue": "Productos y servicios",
     "img": "distribution.webp",
     "pdf": "maintanance.pdf"
   },
   {
     "id": "2",
     "titleKey": "featured-news.2.title",
+    "titleValue": "Nuestra visión de distribución",
     "textKey": "featured-news.2.text",
+    "textValue": "Obtén más información sobre la experiencia limpia y consistente que los viajeros pueden...",
     "categoryKey": "featured-news.2.category",
+    "categoryValue": "Productos y servicios",
     "img": "distribution.webp",
     "pdf": "maintanance.pdf"
   },
   {
     "id": "3",
     "titleKey": "featured-news.3.title",
+    "titleValue": "Nuestra visión de distribución",
     "textKey": "featured-news.3.text",
+    "textValue": "Obtén más información sobre la experiencia limpia y consistente que los viajeros pueden...",
     "categoryKey": "featured-news.3.category",
+    "categoryValue": "Productos y servicios",
     "img": "distribution.webp",
     "pdf": "maintanance.pdf"
   }

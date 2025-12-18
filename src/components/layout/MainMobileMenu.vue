@@ -5,14 +5,14 @@ import { computed } from 'vue';
 
 type NavigationLink = {
   name: string;
-  label: string;
+  labelKey: string;
   link: string;
 };
 
 const translatedLinks = computed(() =>
   (navigationLinks as NavigationLink[]).map((item) => ({
     ...item,
-    text: t(item.label),
+    text: t(item.labelKey),
   }))
 );
 

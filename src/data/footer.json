@@ -3,41 +3,51 @@
     {
       "id": "contact",
       "titleKey": "footer.contact.title",
+      "titleValue": "¿Tienes preguntas?",
       "subtitleKey": "footer.contact.subtitle",
+      "subtitleValue": "Si tu agencia cuenta con el servicio de Global Sales Support haz clic en el siguiente botón.",
       "ctaLabelKey": "footer.contact.cta",
-      "socialLabelKey": "footer.contact.social"
+      "ctaLabelValue": "Chat en vivo",
+      "socialLabelKey": "footer.contact.social",
+      "socialLabelValue": "Síguenos en"
     },
     {
       "id": "about",
       "titleKey": "footer.about.title",
+      "titleValue": "Sobre Aeroméxico",
       "links": [
         {
           "name": "investors",
           "labelKey": "footer.links.investors",
+          "labelValue": "Inversionistas",
           "icon": "invest.svg",
           "link": "https://aeromexico.com/es-mx/inversionistas"
         },
         {
           "name": "alliances",
           "labelKey": "footer.links.alliances",
+          "labelValue": "Alianzas comerciales",
           "icon": "ally.svg",
           "link": "https://aeromexico.com/es-mx/vuela-con-nosotros/otras-alianzas"
         },
         {
           "name": "compliance",
           "labelKey": "footer.links.compliance",
+          "labelValue": "Compliance",
           "icon": "compliance.svg",
           "link": "https://compliance.aeromexico.com/?_ga=2.154051640.1628337106.1608067820-361651239.1599170126"
         },
         {
           "name": "fly-with-us",
           "labelKey": "footer.links.fly-with-us",
+          "labelValue": "Vuela con nosotros",
           "icon": "fly.svg",
           "link": "https://aeromexico.com/es-mx/vuela-con-nosotros"
         },
         {
           "name": "fleet",
           "labelKey": "footer.links.fleet",
+          "labelValue": "Nuestra flota",
           "icon": "plane.svg",
           "link": "https://aeromexico.com/es-mx/vuela-con-nosotros/flota-aeromexico"
         }
@@ -46,26 +56,32 @@
     {
       "id": "discover",
       "titleKey": "footer.discover.title",
+      "titleValue": "Descubre más de Aeroméxico",
       "descriptionKey": "footer.discover.description",
+      "descriptionValue": "Consulta las guías de nuestro centro de soporte (CAAV):",
       "links": [
         {
           "name": "agency-mx",
           "labelKey": "footer.links.agency-mx",
+          "labelValue": "Documentación para Agencias de Viajes (CAAV) México",
           "link": "https://vuela.aeromexico.com/agencias-de-viaje-mexico/"
         },
         {
           "name": "agency-us",
           "labelKey": "footer.links.agency-us",
+          "labelValue": "Documentación para Agencias de Viajes (CAAV) Estados Unidos",
           "link": "https://vuela.aeromexico.com/agencias-de-viaje-norteamerica/"
         },
         {
           "name": "agency-eur",
           "labelKey": "footer.links.agency-eur",
+          "labelValue": "Documentación para Agencias de Viajes (CAAV) Europa/Asia",
           "link": "https://vuela.aeromexico.com/agencias-de-viaje-europa/"
         },
         {
           "name": "agency-lat",
           "labelKey": "footer.links.agency-lat",
+          "labelValue": "Documentación para Agencias de Viajes (CAAV) Latinoamérica",
           "link": "https://vuela.aeromexico.com/agencias-de-viaje-latam/"
         }
       ]
@@ -81,21 +97,26 @@
   "rows": [
     {
       "titleKey": "footer.row.rights",
+      "titleValue": "© 2024 Aeroméxico. Todos los derechos reservados",
       "certifiedKey": "footer.row.certified",
+      "certifiedValue": "Certificado por",
       "links": [
         {
           "name": "legal",
           "labelKey": "footer.row.links.legal",
+          "labelValue": "Legal",
           "link": "https://aeromexicob2b.my.salesforce-sites.com/terminosycondiciones"
         },
         {
           "name": "privacy",
           "labelKey": "footer.row.links.privacy",
+          "labelValue": "Aviso de privacidad",
           "link": "https://aeromexico.com/es-mx/informacion-legal"
         },
         {
           "name": "accessible",
           "labelKey": "footer.row.links.accessible",
+          "labelValue": "Sitio accesible",
           "link": "https://aeromexico.com/es-mx/accesibilidad"
         }
       ]

@@ -11,9 +11,9 @@
       "main-menu": "Menu principale"
     },
     "lang": {
-      "all": "Tutte le localita",
-      "title": "Seleziona la tua localita",
-      "suggested": "Localita suggerite",
+      "title": "Seleziona la tua località",
+      "suggested": "Località suggerite",
+      "all": "Tutte le località",
       "location-language": "Località e lingua"
     }
   },
@@ -128,8 +128,8 @@
       "close-menu": "Chiudi il menu principale"
     },
     "alt": {
-      "brand": "Logo Aeromexico Business",
-      "hero-plane": "Aereo Aeromexico",
+      "brand": "Logo Aeroméxico Business",
+      "hero-plane": "Aereo Aeroméxico",
       "decorative-trails": "Grafica decorativa di scie",
       "flag": "Bandiera della località selezionata",
       "chat": "Icona della chat",

@@ -13,7 +13,7 @@ import type {
 
 type NavigationLink = {
   name: string;
-  label: string;
+  labelKey: string;
   link: string;
 };
 
@@ -69,7 +69,7 @@ const resolveDocument = (doc: string | undefined) => {
 };
 
 export const NAV_ITEMS = computed<string[]>(() =>
-  (navigationLinks as NavigationLink[]).map(({ label }) => t(label))
+  (navigationLinks as NavigationLink[]).map(({ labelKey }) => t(labelKey))
 );
 
 export const FEATURED_ITEMS = computed<FeaturedItem[]>(() =>
@@ -79,7 +79,7 @@ export const FEATURED_ITEMS = computed<FeaturedItem[]>(() =>
       category: t(categoryKey),
       title: t(titleKey),
       text: t(textKey),
-      img: resolveImage(img, 'distribution-1.webp'),
+      img: resolveImage(img, 'distribution.webp'),
       pdf: resolveDocument(pdf),
     })
   )
