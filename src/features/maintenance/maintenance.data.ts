@@ -1,15 +1,4 @@
 import { computed } from 'vue';
-import distributionImg from '@/assets/images/distribution.webp';
-
-import category1Img from '@/assets/images/category-1.webp';
-import category2Img from '@/assets/images/category-2.webp';
-import category3Img from '@/assets/images/category-3.webp';
-import category4Img from '@/assets/images/category-4.webp';
-
-import support1Img from '@/assets/images/support-1.webp';
-import support2Img from '@/assets/images/support-2.webp';
-import support3Img from '@/assets/images/support-3.webp';
-import support4Img from '@/assets/images/support-4.webp';
 import featuredNews from '@/data/featuredNews.json';
 import categoriesData from '@/data/category.json';
 import supportData from '@/data/support.json';
@@ -51,22 +40,32 @@ type SupportEntry = {
   img: string;
 };
 
-const featuredImages: Record<string, string> = {
-  'distribution.webp': distributionImg,
+const localImages = import.meta.glob(
+  '../../assets/images/*.{jpg,jpeg,png,webp,svg}',
+  { eager: true, import: 'default' }
+);
+
+const imageByFilename = Object.entries(localImages).reduce<
+  Record<string, string>
+>((acc, [path, url]) => {
+  const filename = path.split('/').pop();
+  if (filename) acc[filename] = url as string;
+  return acc;
+}, {});
+
+const isExternalOrPublic = (src: string) =>
+  /^(https?:)?\/\//i.test(src) || src.startsWith('/');
+
+const resolveImage = (img: string | undefined, fallbackFile: string) => {
+  if (!img) return imageByFilename[fallbackFile] ?? fallbackFile;
+  if (isExternalOrPublic(img)) return img;
+  return imageByFilename[img] ?? img;
 };
 
-const categoryImages: Record<string, string> = {
-  'category-1.webp': category1Img,
-  'category-2.webp': category2Img,
-  'category-3.webp': category3Img,
-  'category-4.webp': category4Img,
-};
-
-const supportImages: Record<string, string> = {
-  'support-1.webp': support1Img,
-  'support-2.webp': support2Img,
-  'support-3.webp': support3Img,
-  'support-4.webp': support4Img,
+const resolveDocument = (doc: string | undefined) => {
+  if (!doc) return '';
+  if (isExternalOrPublic(doc)) return doc;
+  return `/docs/${doc}`;
 };
 
 export const NAV_ITEMS = computed<string[]>(() =>
@@ -80,8 +79,8 @@ export const FEATURED_ITEMS = computed<FeaturedItem[]>(() =>
       category: t(categoryKey),
       title: t(titleKey),
       text: t(textKey),
-      img: featuredImages[img] ?? distributionImg,
-      pdf,
+      img: resolveImage(img, 'distribution-1.webp'),
+      pdf: resolveDocument(pdf),
     })
   )
 );
@@ -90,7 +89,7 @@ export const CATEGORY_ITEMS = computed<CategoryItem[]>(() =>
   (categoriesData as CategoryEntry[]).map(({ titleKey, textKey, img }) => ({
     title: t(titleKey),
     text: t(textKey),
-    img: categoryImages[img] ?? category1Img,
+    img: resolveImage(img, 'category-1.webp'),
   }))
 );
 
@@ -98,6 +97,6 @@ export const SUPPORT_ITEMS = computed<SupportItem[]>(() =>
   (supportData as SupportEntry[]).map(({ titleKey, textKey, img }) => ({
     title: t(titleKey),
     text: t(textKey),
-    img: supportImages[img] ?? support1Img,
+    img: resolveImage(img, 'support-1.webp'),
   }))
 );
