@@ -43,6 +43,8 @@
   --color-amDarkGray: #666666;
   --color-amGreen: #48a83e;
   --color-searchBorder: rgba(255, 255, 255, 0.2);
+
+  --breakpoint-xs: 500px;
 }
 
 @layer base {
