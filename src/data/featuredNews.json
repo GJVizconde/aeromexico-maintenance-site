@@ -2,24 +2,24 @@
   {
     "id": "1",
     "titleKey": "featured-news.1.title",
-    "titleValue": "Nuestra visión de distribución",
+    "titleValue": "Política de Flexibilidad por Regulaciones del DOT",
     "textKey": "featured-news.1.text",
-    "textValue": "Obtén más información sobre la experiencia limpia y consistente que los viajeros pueden...",
+    "textValue": "SJU, MFE, NLU-IAH",
     "categoryKey": "featured-news.1.category",
     "categoryValue": "Productos y servicios",
-    "img": "distribution.webp",
-    "pdf": "maintanance.pdf"
+    "img": "https://am-business-prod-s3.s3.us-east-2.amazonaws.com/amx-maintenance/v1/public/images/yellow_jacket.jpg",
+    "pdf": "https://am-business-prod-s3.s3.us-east-2.amazonaws.com/amx-maintenance/v1/public/pdf/07.11.2025+Pol%C3%ADtica+de+Flexibilidad+Por+Ajuste+de+Itinerario+DOT.pdf"
   },
   {
     "id": "2",
     "titleKey": "featured-news.2.title",
-    "titleValue": "Nuestra visión de distribución",
+    "titleValue": "Niebla en AICM",
     "textKey": "featured-news.2.text",
-    "textValue": "Obtén más información sobre la experiencia limpia y consistente que los viajeros pueden...",
+    "textValue": "Ciudad de México (MEX)",
     "categoryKey": "featured-news.2.category",
     "categoryValue": "Productos y servicios",
-    "img": "distribution.webp",
-    "pdf": "maintanance.pdf"
+    "img": "https://am-business-prod-s3.s3.us-east-2.amazonaws.com/amx-maintenance/v1/public/images/dice.jpg",
+    "pdf": "https://am-business-prod-s3.s3.us-east-2.amazonaws.com/amx-maintenance/v1/public/pdf/Politica+de+Proteccion+niebla+AICM.pdf"
   },
   {
     "id": "3",
@@ -29,7 +29,7 @@
     "textValue": "Obtén más información sobre la experiencia limpia y consistente que los viajeros pueden...",
     "categoryKey": "featured-news.3.category",
     "categoryValue": "Productos y servicios",
-    "img": "distribution.webp",
-    "pdf": "maintanance.pdf"
+    "img": "https://am-business-prod-s3.s3.us-east-2.amazonaws.com/amx-maintenance/v1/public/images/dice.jpg",
+    "pdf": "https://am-business-prod-s3.s3.us-east-2.amazonaws.com/amx-maintenance/v1/public/pdf/07.11.2025+Pol%C3%ADtica+de+Flexibilidad+Por+Ajuste+de+Itinerario+DOT.pdf"
   }
 ]

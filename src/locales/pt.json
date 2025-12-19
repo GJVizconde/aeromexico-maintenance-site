@@ -19,13 +19,13 @@
   },
   "featured-news": {
     "1": {
-      "title": "Nossa visão de distribuição",
-      "text": "Saiba mais sobre a experiência limpa e consistente que os viajantes podem...",
+      "title": "Política de flexibilidade devido às regulamentações do DOT",
+      "text": "SJU, MFE, NLU-IAH",
       "category": "Produtos e serviços"
     },
     "2": {
-      "title": "Nossa visão de distribuição",
-      "text": "Saiba mais sobre a experiência limpa e consistente que os viajantes podem...",
+      "title": "Nevoeiro no AICM",
+      "text": "Cidade do México (MEX)",
       "category": "Produtos e serviços"
     },
     "3": {
@@ -113,13 +113,13 @@
   },
   "home": {
     "featured": "Conteúdo em destaque",
-      "featuredCta": "PDF",
-      "categories": "Nossas categorias",
-      "support": {
-        "title": "Como apoiamos o seu negócio",
-        "prev": "Ver anterior",
-        "next": "Ver seguinte"
-      }
+    "featuredCta": "PDF",
+    "categories": "Nossas categorias",
+    "support": {
+      "title": "Como apoiamos o seu negócio",
+      "prev": "Ver anterior",
+      "next": "Ver seguinte"
+    }
   },
   "accessibility": {
     "aria": {
