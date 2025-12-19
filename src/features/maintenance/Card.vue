@@ -54,7 +54,7 @@ const downloadPdf = () => {
       class="hidden md:block h-[188px] w-full rounded-md object-cover"
     />
 
-    <div class="xs:h-10 md:mt-5">
+    <div class="h-[54px] xs:h-10 mt-2 md:mt-5">
       <p class="text-sm leading-5 text-amTextGray line-clamp-2">
         {{ props.item.text }}
       </p>
