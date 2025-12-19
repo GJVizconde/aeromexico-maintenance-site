@@ -12,7 +12,9 @@ interface Props {
 }
 
 const props = defineProps<Props>();
-const resolvedCtaLabel = computed(() => props.ctaLabel ?? t('home.featuredCta'));
+const resolvedCtaLabel = computed(
+  () => props.ctaLabel ?? t('home.featuredCta')
+);
 
 const downloadPdf = () => {
   const pdf = props.item.pdf;
@@ -33,15 +35,17 @@ const downloadPdf = () => {
   <BaseCard
     class="pt-5 md:px-5 lg:px-8 lg:max-w-[352px] transition hover:-translate-y-0.5 hover:shadow-lg"
   >
-    <p class="text-sm lg:font-semibold text-amBlueInnovation leading-[22px]">
+    <p class="text-sm text-amBlueInnovation leading-[22px]">
       {{ props.item.category }}
     </p>
 
-    <h3
-      class="md:mt-2 text-2xl font-sans font-semibold text-amBluePremium leading-[34px] md:mb-[13px] line-clamp-2"
-    >
-      {{ props.item.title }}
-    </h3>
+    <div class="xs:h-[70px] md:mt-2 md:mb-[13px]">
+      <h3
+        class="text-2xl font-sans font-semibold text-amBluePremium leading-8 line-clamp-2"
+      >
+        {{ props.item.title }}
+      </h3>
+    </div>
 
     <img
       v-if="props.item.img"
@@ -50,9 +54,11 @@ const downloadPdf = () => {
       class="hidden md:block h-[188px] w-full rounded-md object-cover"
     />
 
-    <p class="md:mt-5 text-sm leading-5 text-amTextGray">
-      {{ props.item.text }}
-    </p>
+    <div class="xs:h-10 md:mt-5">
+      <p class="text-sm leading-5 text-amTextGray line-clamp-2">
+        {{ props.item.text }}
+      </p>
+    </div>
 
     <BaseButton
       class="mt-2 text-[11px] leading-[17px] md:mt-[19px] bg-amBlueInnovation"
