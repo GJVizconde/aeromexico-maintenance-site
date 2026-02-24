@@ -20,17 +20,17 @@
   "featured-news": {
     "1": {
       "title": "Politica di Flessibilità Disordini nello Stato di Jalisco",
-      "text": "SJU, MFE, NLU-IAH",
+      "text": "Guadalajara (GDL), Puerto Vallarta (PVR), Manzanillo (ZLO), Tepic (TPQ)",
       "category": "Attive"
     },
     "2": {
-      "title": "Nebbia all'AICM",
-      "text": "Città del Messico (MEX)",
+      "title": "Tempesta Invernale negli USA",
+      "text": "Boston (BOS), New York (JFK), Newark (EWR), Philadelphia (PHL), Washington (IAD)",
       "category": "Attive"
     },
     "3": {
-      "title": "Flessibilità per modifiche di itinerario (Riprogrammazione)",
-      "text": "Modifiche di itinerario (Riprogrammazione)",
+      "title": "Politica di flessibilità Requisito Visto in Nicaragua",
+      "text": "Passeggeri con destinazione o scalo in Nicaragua",
       "category": "Attive"
     }
   },

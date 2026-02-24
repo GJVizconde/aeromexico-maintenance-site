@@ -20,17 +20,17 @@
   "featured-news": {
     "1": {
       "title": "Flexibility Policy Unrest in the State of Jalisco",
-      "text": "SJU, MFE, NLU-IAH",
+      "text": "Guadalajara (GDL), Puerto Vallarta (PVR), Manzanillo (ZLO), Tepic (TPQ)",
       "category": "Active"
     },
     "2": {
-      "title": "Fog at AICM",
-      "text": "Mexico City (MEX)",
+      "title": "Winter Storm in the USA",
+      "text": "Boston (BOS), New York (JFK), Newark (EWR), Philadelphia (PHL), Washington (IAD)",
       "category": "Active"
     },
     "3": {
-      "title": "Flexibility for itinerary modifications (Relocation)",
-      "text": "Itinerary modifications (Relocation)",
+      "title": "Flexibility Policy Visa Requirement in Nicaragua",
+      "text": "Passengers with destination or connection in Nicaragua",
       "category": "Active"
     }
   },

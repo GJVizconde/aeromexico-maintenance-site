@@ -20,17 +20,17 @@
   "featured-news": {
     "1": {
       "title": "Politique de Flexibilité Troubles dans l'État de Jalisco",
-      "text": "SJU, MFE, NLU-IAH",
+      "text": "Guadalajara (GDL), Puerto Vallarta (PVR), Manzanillo (ZLO), Tepic (TPQ)",
       "category": "Actives"
     },
     "2": {
-      "title": "Brouillard à l'AICM",
-      "text": "Mexico (MEX)",
+      "title": "Tempête hivernale aux États-Unis",
+      "text": "Boston (BOS), New York (JFK), Newark (EWR), Philadelphia (PHL), Washington (IAD)",
       "category": "Actives"
     },
     "3": {
-      "title": "Flexibilité pour modifications d'itinéraire (Réacheminement)",
-      "text": "Modifications d'itinéraire (Réacheminement)",
+      "title": "Politique de flexibilité Visa requis au Nicaragua",
+      "text": "Passagers à destination ou en correspondance au Nicaragua",
       "category": "Actives"
     }
   },

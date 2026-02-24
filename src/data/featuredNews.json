@@ -4,32 +4,32 @@
     "titleKey": "featured-news.1.title",
     "titleValue": "Política de Flexibilidad Disturbios en el Estado de Jalisco",
     "textKey": "featured-news.1.text",
-    "textValue": "SJU, MFE, NLU-IAH",
+    "textValue": "Guadalajara (GDL),  Puerto Vallarta (PVR),  Manzanillo (ZLO), Tepic  (TPQ)",
     "categoryKey": "featured-news.1.category",
     "categoryValue": "Activas",
     "img": "https://am-business-prod-s3.s3.us-east-2.amazonaws.com/amx-maintenance/v1/public/images/yellow_jacket.jpg",
-    "pdf": "https://aeromexicob2b.my.salesforce.com/sfc/p/#1U000000rQ7X/a/PU00000ASNS9/L5JGIlxbBqE8Pn5qDNHtoRS8kDw7JJzLZfHbWsHc1vc"
+    "pdf": "https://aeromexicob2b.my.salesforce.com/sfc/p/#1U000000rQ7X/a/PU00000ATUEf/8t8PHnQY4sdE3Ea78cX6xjmC7Y6zatbzzEAecjrqt3w"
   },
   {
     "id": "2",
     "titleKey": "featured-news.2.title",
-    "titleValue": "Niebla en AICM",
+    "titleValue": "Tormenta Invernal en USA",
     "textKey": "featured-news.2.text",
-    "textValue": "Ciudad de México (MEX)",
+    "textValue": "Boston (BOS), New York (JFK), Newark (EWR), Philadelphia (PHL), Washington (IAD)",
     "categoryKey": "featured-news.2.category",
     "categoryValue": "Activas",
     "img": "https://am-business-prod-s3.s3.us-east-2.amazonaws.com/amx-maintenance/v1/public/images/dice.jpg",
-    "pdf": "https://am-business-prod-s3.s3.us-east-2.amazonaws.com/amx-maintenance/v1/public/pdf/Politica+de+Proteccion+niebla+AICM.pdf"
+    "pdf": "https://aeromexicob2b.my.salesforce.com/sfc/p/#1U000000rQ7X/a/PU00000AUJHB/Ym9iF_LEteFZX7EwdLcS0_8tGOq4COFTdu85MIXGDfM"
   },
   {
     "id": "3",
     "titleKey": "featured-news.3.title",
-    "titleValue": "Flexibilidad por modificaciones de itinerario (Reubicación)",
+    "titleValue": "Requisición de Visa en Nicaragua",
     "textKey": "featured-news.3.text",
     "textValue": "Modificaciones de itinerario (Reubicación)",
     "categoryKey": "featured-news.3.category",
     "categoryValue": "Activas",
-    "img": "https://am-business-prod-s3.s3.us-east-2.amazonaws.com/amx-maintenance/v1/public/images/passengers.jpg",
-    "pdf": "https://am-business-prod-s3.s3.us-east-2.amazonaws.com/amx-maintenance/v1/public/pdf/Flexibilidad+por+modificaciones+de+itinerario.pdf"
+    "img": "https://aeromexico-images.s3.us-east-1.amazonaws.com/develop/content-image/6990bd71a7557.jpg",
+    "pdf": "https://aeromexicob2b.my.salesforce.com/sfc/p/#1U000000rQ7X/a/PU00000AIIjt/BTGAzLUVEWet2KlVOXl5vA9F4yhCKXff5LfW3YOfwtI"
   }
 ]

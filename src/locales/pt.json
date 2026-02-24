@@ -20,17 +20,17 @@
   "featured-news": {
     "1": {
       "title": "Política de Flexibilidade Distúrbios no Estado de Jalisco",
-      "text": "SJU, MFE, NLU-IAH",
+      "text": "Guadalajara (GDL), Puerto Vallarta (PVR), Manzanillo (ZLO), Tepic (TPQ)",
       "category": "Ativas"
     },
     "2": {
-      "title": "Nevoeiro no AICM",
-      "text": "Cidade do México (MEX)",
+      "title": "Tempestade de Inverno nos EUA",
+      "text": "Boston (BOS), New York (JFK), Newark (EWR), Philadelphia (PHL), Washington (IAD)",
       "category": "Ativas"
     },
     "3": {
-      "title": "Flexibilidade por modificações de itinerário (Reacomodação)",
-      "text": "Modificações de itinerário (Reacomodação)",
+      "title": "Política de flexibilidade Requisição de Visto na Nicarágua",
+      "text": "Passageiros com destino ou conexão na Nicarágua",
       "category": "Ativas"
     }
   },

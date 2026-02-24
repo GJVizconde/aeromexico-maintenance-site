@@ -20,17 +20,17 @@
   "featured-news": {
     "1": {
       "title": "Política de Flexibilidad Disturbios en el Estado de Jalisco",
-      "text": "SJU, MFE, NLU-IAH",
+      "text": "Guadalajara (GDL),  Puerto Vallarta (PVR),  Manzanillo (ZLO), Tepic  (TPQ)",
       "category": "Activas"
     },
     "2": {
-      "title": "Niebla en AICM",
-      "text": "Ciudad de México (MEX)",
+      "title": "Tormenta Invernal en USA",
+      "text": "Boston (BOS), New York (JFK), Newark (EWR), Philadelphia (PHL), Washington (IAD)",
       "category": "Activas"
     },
     "3": {
-      "title": "Flexibilidad por modificaciones de itinerario (Reubicación)",
-      "text": "Modificaciones de itinerario (Reubicación)",
+      "title": "Política de flexibilidad Requisición Visa en Nicaragua",
+      "text": "Pasajeros con destino o conexión en Nicaragua",
       "category": "Activas"
     }
   },
