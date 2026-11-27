@@ -53,19 +53,23 @@ const imageByFilename = Object.entries(localImages).reduce<
   return acc;
 }, {});
 
-const isExternalOrPublic = (src: string) =>
-  /^(https?:)?\/\//i.test(src) || src.startsWith('/');
+const isExternal = (src: string) => /^(https?:)?\/\//i.test(src);
+
+const publicUrl = (path: string) =>
+  `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
 
 const resolveImage = (img: string | undefined, fallbackFile: string) => {
   if (!img) return imageByFilename[fallbackFile] ?? fallbackFile;
-  if (isExternalOrPublic(img)) return img;
+  if (isExternal(img)) return img;
+  if (img.startsWith('/')) return publicUrl(img);
   return imageByFilename[img] ?? img;
 };
 
 const resolveDocument = (doc: string | undefined) => {
   if (!doc) return '';
-  if (isExternalOrPublic(doc)) return doc;
-  return `/docs/${doc}`;
+  if (isExternal(doc)) return doc;
+  if (doc.startsWith('/')) return publicUrl(doc);
+  return publicUrl(`docs/${doc}`);
 };
 
 export const NAV_ITEMS = computed<string[]>(() =>
